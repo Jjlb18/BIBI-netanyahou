@@ -98,7 +98,8 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
   .pcard{display:flex;flex-direction:column;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s,box-shadow .15s}
   .pcard:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 10px 28px rgba(0,0,0,.10)}
-  .avatar{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:24px;color:#fff;background:var(--accent)}
+  .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+  .avatar{width:84px;height:84px;overflow:hidden;box-shadow:0 0 0 3px var(--card),0 0 0 4px var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:24px;color:#fff;background:var(--accent)}
   .pcard h3{font-family:Fraunces,Georgia,serif;font-size:24px;margin:0}
   .pcard p{margin:0;color:var(--muted);font-size:15px}
   .pcard .go{margin-top:auto;font-weight:600;font-size:14px;color:var(--accent)}
@@ -145,6 +146,7 @@
   (function(){
     const LANG = document.documentElement.dataset.lang;
     const COLORS = ['#1d4e89', '#8a2d2d', '#3d5a3a', '#6b4c9a', '#9a6b1d', '#2d6f7a'];
+    const ROOT = LANG === 'fr' ? '' : '../';
     const sw = document.querySelector('.switch');
     const btn = sw.querySelector('button');
     btn.addEventListener('click', e => { e.stopPropagation(); btn.setAttribute('aria-expanded', sw.classList.toggle('open')); });
@@ -159,7 +161,9 @@
       const initials = name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
       const a = document.createElement('a');
       a.className = 'pcard'; a.href = pers.page;
-      const av = document.createElement('div'); av.className = 'avatar'; av.textContent = initials; av.style.background = COLORS[i % COLORS.length];
+      const av = document.createElement('div'); av.className = 'avatar'; av.style.background = COLORS[i % COLORS.length];
+      if (pers.photo){ const img = document.createElement('img'); img.src = ROOT + pers.photo; img.alt = name; img.loading = 'lazy'; img.onerror = () => { img.remove(); av.textContent = initials; }; av.appendChild(img); }
+      else av.textContent = initials;
       const h = document.createElement('h3'); h.textContent = name;
       const p = document.createElement('p'); p.textContent = desc;
       const go = document.createElement('span'); go.className = 'go'; go.textContent = 'Ver el retrato →';
