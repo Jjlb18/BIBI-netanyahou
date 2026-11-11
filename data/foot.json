@@ -1,0 +1,2049 @@
+{
+ "maj": "2026-11-11T21:34:51+00:00",
+ "competitions": {
+  "ucl": {
+   "matchs": [
+    {
+     "d": "2026-11-03T20:00:00Z",
+     "dom": "Villarreal CF",
+     "ext": "Paris Saint-Germain",
+     "st": "post",
+     "sd": 0,
+     "se": 6
+    },
+    {
+     "d": "2026-11-04T17:45:00Z",
+     "dom": "AEK Athens",
+     "ext": "Real Madrid",
+     "st": "post",
+     "sd": 2,
+     "se": 3
+    },
+    {
+     "d": "2026-11-04T17:45:00Z",
+     "dom": "Fenerbahce Istanbul",
+     "ext": "Liverpool FC",
+     "st": "post",
+     "sd": 3,
+     "se": 2
+    },
+    {
+     "d": "2026-11-04T20:00:00Z",
+     "dom": "Borussia Dortmund",
+     "ext": "Real Betis Seville",
+     "st": "post",
+     "sd": 2,
+     "se": 1
+    },
+    {
+     "d": "2026-11-04T20:00:00Z",
+     "dom": "FC Porto",
+     "ext": "SSC Napoli",
+     "st": "post",
+     "sd": 4,
+     "se": 1
+    },
+    {
+     "d": "2026-11-04T20:00:00Z",
+     "dom": "PSV Eindhoven",
+     "ext": "Club Brugge",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-04T20:00:00Z",
+     "dom": "RB Leipzig",
+     "ext": "Manchester City",
+     "st": "post",
+     "sd": 2,
+     "se": 3
+    },
+    {
+     "d": "2026-11-04T20:00:00Z",
+     "dom": "Racing Club De Lens",
+     "ext": "Como 1907",
+     "st": "post",
+     "sd": 1,
+     "se": 9
+    },
+    {
+     "d": "2026-11-04T20:00:00Z",
+     "dom": "Slavia Prague",
+     "ext": "Arsenal FC",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-04T20:00:00Z",
+     "dom": "Viking FK",
+     "ext": "Sabah Masazir",
+     "st": "post",
+     "sd": 4,
+     "se": 1
+    },
+    {
+     "d": "2026-11-24T17:45:00Z",
+     "dom": "Bodoe/Glimt",
+     "ext": "LASK Linz",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-24T17:45:00Z",
+     "dom": "Galatasaray Istanbul",
+     "ext": "Aston Villa",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-24T20:00:00Z",
+     "dom": "Arsenal FC",
+     "ext": "Borussia Dortmund",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-24T20:00:00Z",
+     "dom": "Como 1907",
+     "ext": "AEK Athens",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-24T20:00:00Z",
+     "dom": "Feyenoord Rotterdam",
+     "ext": "FC Porto",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-24T20:00:00Z",
+     "dom": "Manchester City",
+     "ext": "SSC Napoli",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-24T20:00:00Z",
+     "dom": "RB Leipzig",
+     "ext": "Racing Club De Lens",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-24T20:00:00Z",
+     "dom": "Real Madrid",
+     "ext": "PSV Eindhoven",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-24T20:00:00Z",
+     "dom": "SK Slovan Bratislava",
+     "ext": "Real Betis Seville",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-25T17:45:00Z",
+     "dom": "Sabah Masazir",
+     "ext": "FC Barcelona",
+     "st": "pre"
+    }
+   ],
+   "classement": [
+    {
+     "r": 1,
+     "eq": "Paris Saint-Germain",
+     "j": 4,
+     "g": 4,
+     "n": 0,
+     "p": 0,
+     "pts": 12
+    },
+    {
+     "r": 2,
+     "eq": "Real Madrid",
+     "j": 4,
+     "g": 4,
+     "n": 0,
+     "p": 0,
+     "pts": 12
+    },
+    {
+     "r": 3,
+     "eq": "Arsenal FC",
+     "j": 4,
+     "g": 3,
+     "n": 1,
+     "p": 0,
+     "pts": 10
+    },
+    {
+     "r": 4,
+     "eq": "Como 1907",
+     "j": 4,
+     "g": 3,
+     "n": 0,
+     "p": 1,
+     "pts": 9
+    },
+    {
+     "r": 5,
+     "eq": "FC Barcelona",
+     "j": 4,
+     "g": 3,
+     "n": 0,
+     "p": 1,
+     "pts": 9
+    },
+    {
+     "r": 6,
+     "eq": "Aston Villa",
+     "j": 4,
+     "g": 3,
+     "n": 0,
+     "p": 1,
+     "pts": 9
+    },
+    {
+     "r": 7,
+     "eq": "Manchester City",
+     "j": 4,
+     "g": 3,
+     "n": 0,
+     "p": 1,
+     "pts": 9
+    },
+    {
+     "r": 8,
+     "eq": "Liverpool FC",
+     "j": 4,
+     "g": 3,
+     "n": 0,
+     "p": 1,
+     "pts": 9
+    },
+    {
+     "r": 9,
+     "eq": "Club Brugge",
+     "j": 4,
+     "g": 3,
+     "n": 0,
+     "p": 1,
+     "pts": 9
+    },
+    {
+     "r": 10,
+     "eq": "Sporting CP",
+     "j": 4,
+     "g": 3,
+     "n": 0,
+     "p": 1,
+     "pts": 9
+    },
+    {
+     "r": 11,
+     "eq": "Real Betis Seville",
+     "j": 4,
+     "g": 3,
+     "n": 0,
+     "p": 1,
+     "pts": 9
+    },
+    {
+     "r": 12,
+     "eq": "Borussia Dortmund",
+     "j": 4,
+     "g": 3,
+     "n": 0,
+     "p": 1,
+     "pts": 9
+    },
+    {
+     "r": 13,
+     "eq": "Bayern Munich",
+     "j": 4,
+     "g": 2,
+     "n": 2,
+     "p": 0,
+     "pts": 8
+    },
+    {
+     "r": 14,
+     "eq": "VfB Stuttgart",
+     "j": 4,
+     "g": 2,
+     "n": 1,
+     "p": 1,
+     "pts": 7
+    },
+    {
+     "r": 15,
+     "eq": "Inter Milano",
+     "j": 4,
+     "g": 2,
+     "n": 0,
+     "p": 2,
+     "pts": 6
+    },
+    {
+     "r": 16,
+     "eq": "LASK Linz",
+     "j": 4,
+     "g": 2,
+     "n": 0,
+     "p": 2,
+     "pts": 6
+    },
+    {
+     "r": 17,
+     "eq": "Manchester United",
+     "j": 4,
+     "g": 2,
+     "n": 0,
+     "p": 2,
+     "pts": 6
+    },
+    {
+     "r": 18,
+     "eq": "Galatasaray Istanbul",
+     "j": 4,
+     "g": 2,
+     "n": 0,
+     "p": 2,
+     "pts": 6
+    },
+    {
+     "r": 19,
+     "eq": "Fenerbahce Istanbul",
+     "j": 4,
+     "g": 1,
+     "n": 2,
+     "p": 1,
+     "pts": 5
+    },
+    {
+     "r": 20,
+     "eq": "AS Roma",
+     "j": 4,
+     "g": 1,
+     "n": 1,
+     "p": 2,
+     "pts": 4
+    },
+    {
+     "r": 21,
+     "eq": "FC Shakhtar Donetsk",
+     "j": 4,
+     "g": 1,
+     "n": 1,
+     "p": 2,
+     "pts": 4
+    },
+    {
+     "r": 22,
+     "eq": "Viking FK",
+     "j": 4,
+     "g": 1,
+     "n": 1,
+     "p": 2,
+     "pts": 4
+    },
+    {
+     "r": 23,
+     "eq": "Atletico Madrid",
+     "j": 4,
+     "g": 1,
+     "n": 1,
+     "p": 2,
+     "pts": 4
+    },
+    {
+     "r": 24,
+     "eq": "PSV Eindhoven",
+     "j": 4,
+     "g": 1,
+     "n": 1,
+     "p": 2,
+     "pts": 4
+    },
+    {
+     "r": 25,
+     "eq": "Bodoe/Glimt",
+     "j": 4,
+     "g": 1,
+     "n": 1,
+     "p": 2,
+     "pts": 4
+    },
+    {
+     "r": 26,
+     "eq": "FC Porto",
+     "j": 4,
+     "g": 1,
+     "n": 0,
+     "p": 3,
+     "pts": 3
+    },
+    {
+     "r": 27,
+     "eq": "SSC Napoli",
+     "j": 4,
+     "g": 1,
+     "n": 0,
+     "p": 3,
+     "pts": 3
+    },
+    {
+     "r": 28,
+     "eq": "Villarreal CF",
+     "j": 4,
+     "g": 1,
+     "n": 0,
+     "p": 3,
+     "pts": 3
+    },
+    {
+     "r": 29,
+     "eq": "AEK Athens",
+     "j": 4,
+     "g": 1,
+     "n": 0,
+     "p": 3,
+     "pts": 3
+    },
+    {
+     "r": 30,
+     "eq": "RB Leipzig",
+     "j": 4,
+     "g": 1,
+     "n": 0,
+     "p": 3,
+     "pts": 3
+    },
+    {
+     "r": 31,
+     "eq": "Sabah Masazir",
+     "j": 4,
+     "g": 1,
+     "n": 0,
+     "p": 3,
+     "pts": 3
+    },
+    {
+     "r": 32,
+     "eq": "Feyenoord Rotterdam",
+     "j": 4,
+     "g": 1,
+     "n": 0,
+     "p": 3,
+     "pts": 3
+    },
+    {
+     "r": 33,
+     "eq": "Racing Club De Lens",
+     "j": 4,
+     "g": 1,
+     "n": 0,
+     "p": 3,
+     "pts": 3
+    },
+    {
+     "r": 34,
+     "eq": "Slavia Prague",
+     "j": 4,
+     "g": 0,
+     "n": 1,
+     "p": 3,
+     "pts": 1
+    },
+    {
+     "r": 35,
+     "eq": "Lille OSC",
+     "j": 4,
+     "g": 0,
+     "n": 1,
+     "p": 3,
+     "pts": 1
+    },
+    {
+     "r": 36,
+     "eq": "SK Slovan Bratislava",
+     "j": 4,
+     "g": 0,
+     "n": 0,
+     "p": 4,
+     "pts": 0
+    }
+   ]
+  },
+  "uel": {
+   "matchs": [],
+   "classement": []
+  },
+  "uecl": {
+   "matchs": [],
+   "classement": []
+  },
+  "eng": {
+   "matchs": [
+    {
+     "d": "2026-11-06T20:00:00Z",
+     "dom": "Everton FC",
+     "ext": "Coventry City",
+     "st": "post",
+     "sd": 3,
+     "se": 1
+    },
+    {
+     "d": "2026-11-07T12:30:00Z",
+     "dom": "Leeds United",
+     "ext": "Tottenham Hotspur",
+     "st": "post",
+     "sd": 1,
+     "se": 0
+    },
+    {
+     "d": "2026-11-07T15:00:00Z",
+     "dom": "Arsenal FC",
+     "ext": "Hull City",
+     "st": "post",
+     "sd": 1,
+     "se": 0
+    },
+    {
+     "d": "2026-11-07T15:00:00Z",
+     "dom": "Fulham FC",
+     "ext": "Newcastle United",
+     "st": "post",
+     "sd": 1,
+     "se": 1
+    },
+    {
+     "d": "2026-11-07T17:30:00Z",
+     "dom": "Nottingham Forest",
+     "ext": "Manchester City",
+     "st": "post",
+     "sd": 3,
+     "se": 1
+    },
+    {
+     "d": "2026-11-08T14:00:00Z",
+     "dom": "Brighton & Hove Albion",
+     "ext": "Brentford FC",
+     "st": "post",
+     "sd": 2,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T14:00:00Z",
+     "dom": "Crystal Palace",
+     "ext": "Liverpool FC",
+     "st": "post",
+     "sd": 1,
+     "se": 3
+    },
+    {
+     "d": "2026-11-08T14:00:00Z",
+     "dom": "Ipswich Town",
+     "ext": "AFC Bournemouth",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-08T14:00:00Z",
+     "dom": "Sunderland AFC",
+     "ext": "Chelsea FC",
+     "st": "post",
+     "sd": 1,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T16:30:00Z",
+     "dom": "Manchester United",
+     "ext": "Aston Villa",
+     "st": "post",
+     "sd": 4,
+     "se": 4
+    },
+    {
+     "d": "2026-11-21T12:30:00Z",
+     "dom": "Manchester City",
+     "ext": "Fulham FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T15:00:00Z",
+     "dom": "Aston Villa",
+     "ext": "Sunderland AFC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T15:00:00Z",
+     "dom": "AFC Bournemouth",
+     "ext": "Nottingham Forest",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T15:00:00Z",
+     "dom": "Chelsea FC",
+     "ext": "Leeds United",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T15:00:00Z",
+     "dom": "Coventry City",
+     "ext": "Crystal Palace",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T15:00:00Z",
+     "dom": "Tottenham Hotspur",
+     "ext": "Ipswich Town",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T17:30:00Z",
+     "dom": "Newcastle United",
+     "ext": "Arsenal FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T14:00:00Z",
+     "dom": "Hull City",
+     "ext": "Brighton & Hove Albion",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T16:30:00Z",
+     "dom": "Liverpool FC",
+     "ext": "Manchester United",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-23T20:00:00Z",
+     "dom": "Brentford FC",
+     "ext": "Everton FC",
+     "st": "pre"
+    }
+   ],
+   "classement": [
+    {
+     "r": 1,
+     "eq": "Arsenal FC",
+     "j": 10,
+     "g": 9,
+     "n": 0,
+     "p": 1,
+     "pts": 27
+    },
+    {
+     "r": 2,
+     "eq": "Brighton & Hove Albion",
+     "j": 10,
+     "g": 7,
+     "n": 1,
+     "p": 2,
+     "pts": 22
+    },
+    {
+     "r": 3,
+     "eq": "Manchester City",
+     "j": 10,
+     "g": 7,
+     "n": 0,
+     "p": 3,
+     "pts": 21
+    },
+    {
+     "r": 4,
+     "eq": "Liverpool FC",
+     "j": 10,
+     "g": 5,
+     "n": 3,
+     "p": 2,
+     "pts": 18
+    },
+    {
+     "r": 5,
+     "eq": "Chelsea FC",
+     "j": 10,
+     "g": 5,
+     "n": 1,
+     "p": 4,
+     "pts": 16
+    },
+    {
+     "r": 6,
+     "eq": "Everton FC",
+     "j": 10,
+     "g": 4,
+     "n": 4,
+     "p": 2,
+     "pts": 16
+    },
+    {
+     "r": 7,
+     "eq": "AFC Bournemouth",
+     "j": 10,
+     "g": 4,
+     "n": 3,
+     "p": 3,
+     "pts": 15
+    },
+    {
+     "r": 8,
+     "eq": "Brentford FC",
+     "j": 10,
+     "g": 3,
+     "n": 5,
+     "p": 2,
+     "pts": 14
+    },
+    {
+     "r": 9,
+     "eq": "Leeds United",
+     "j": 10,
+     "g": 3,
+     "n": 5,
+     "p": 2,
+     "pts": 14
+    },
+    {
+     "r": 10,
+     "eq": "Aston Villa",
+     "j": 10,
+     "g": 3,
+     "n": 4,
+     "p": 3,
+     "pts": 13
+    },
+    {
+     "r": 11,
+     "eq": "Tottenham Hotspur",
+     "j": 10,
+     "g": 3,
+     "n": 3,
+     "p": 4,
+     "pts": 12
+    },
+    {
+     "r": 12,
+     "eq": "Newcastle United",
+     "j": 10,
+     "g": 3,
+     "n": 3,
+     "p": 4,
+     "pts": 12
+    },
+    {
+     "r": 13,
+     "eq": "Hull City",
+     "j": 10,
+     "g": 2,
+     "n": 5,
+     "p": 3,
+     "pts": 11
+    },
+    {
+     "r": 14,
+     "eq": "Ipswich Town",
+     "j": 10,
+     "g": 3,
+     "n": 2,
+     "p": 5,
+     "pts": 11
+    },
+    {
+     "r": 15,
+     "eq": "Fulham FC",
+     "j": 10,
+     "g": 2,
+     "n": 4,
+     "p": 4,
+     "pts": 10
+    },
+    {
+     "r": 16,
+     "eq": "Nottingham Forest",
+     "j": 10,
+     "g": 2,
+     "n": 3,
+     "p": 5,
+     "pts": 9
+    },
+    {
+     "r": 17,
+     "eq": "Coventry City",
+     "j": 10,
+     "g": 3,
+     "n": 0,
+     "p": 7,
+     "pts": 9
+    },
+    {
+     "r": 18,
+     "eq": "Manchester United",
+     "j": 10,
+     "g": 1,
+     "n": 5,
+     "p": 4,
+     "pts": 8
+    },
+    {
+     "r": 19,
+     "eq": "Sunderland AFC",
+     "j": 10,
+     "g": 2,
+     "n": 2,
+     "p": 6,
+     "pts": 8
+    },
+    {
+     "r": 20,
+     "eq": "Crystal Palace",
+     "j": 10,
+     "g": 2,
+     "n": 1,
+     "p": 7,
+     "pts": 7
+    }
+   ]
+  },
+  "esp": {
+   "matchs": [
+    {
+     "d": "2026-11-06T20:00:00Z",
+     "dom": "Sevilla FC",
+     "ext": "Deportivo Alaves",
+     "st": "post",
+     "sd": 0,
+     "se": 0
+    },
+    {
+     "d": "2026-11-07T13:00:00Z",
+     "dom": "Malaga CF",
+     "ext": "Racing Santander",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-07T15:15:00Z",
+     "dom": "Espanyol Barcelona",
+     "ext": "RC Deportivo de A Coruna",
+     "st": "post",
+     "sd": 0,
+     "se": 0
+    },
+    {
+     "d": "2026-11-07T17:30:00Z",
+     "dom": "CA Osasuna",
+     "ext": "Athletic Bilbao",
+     "st": "post",
+     "sd": 1,
+     "se": 1
+    },
+    {
+     "d": "2026-11-07T20:00:00Z",
+     "dom": "Valencia CF",
+     "ext": "Real Madrid",
+     "st": "post",
+     "sd": 0,
+     "se": 3
+    },
+    {
+     "d": "2026-11-08T13:00:00Z",
+     "dom": "Elche CF",
+     "ext": "Real Betis Seville",
+     "st": "post",
+     "sd": 0,
+     "se": 2
+    },
+    {
+     "d": "2026-11-08T15:15:00Z",
+     "dom": "Real Sociedad",
+     "ext": "Rayo Vallecano",
+     "st": "post",
+     "sd": 1,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T17:30:00Z",
+     "dom": "RC Celta de Vigo",
+     "ext": "Levante UD",
+     "st": "post",
+     "sd": 0,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T17:30:00Z",
+     "dom": "Villarreal CF",
+     "ext": "Getafe CF",
+     "st": "post",
+     "sd": 2,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T20:00:00Z",
+     "dom": "Atletico Madrid",
+     "ext": "FC Barcelona",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-20T20:00:00Z",
+     "dom": "Athletic Bilbao",
+     "ext": "Espanyol Barcelona",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T13:00:00Z",
+     "dom": "Deportivo Alaves",
+     "ext": "RC Deportivo de A Coruna",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T15:15:00Z",
+     "dom": "Rayo Vallecano",
+     "ext": "Valencia CF",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T17:30:00Z",
+     "dom": "Sevilla FC",
+     "ext": "Real Betis Seville",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T20:00:00Z",
+     "dom": "Real Madrid",
+     "ext": "RC Celta de Vigo",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T13:00:00Z",
+     "dom": "FC Barcelona",
+     "ext": "Villarreal CF",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T15:15:00Z",
+     "dom": "Racing Santander",
+     "ext": "Real Sociedad",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T17:30:00Z",
+     "dom": "CA Osasuna",
+     "ext": "Malaga CF",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T20:00:00Z",
+     "dom": "Getafe CF",
+     "ext": "Atletico Madrid",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-23T20:00:00Z",
+     "dom": "Levante UD",
+     "ext": "Elche CF",
+     "st": "pre"
+    }
+   ],
+   "classement": [
+    {
+     "r": 1,
+     "eq": "FC Barcelona",
+     "j": 12,
+     "g": 11,
+     "n": 0,
+     "p": 1,
+     "pts": 33
+    },
+    {
+     "r": 2,
+     "eq": "Real Madrid",
+     "j": 12,
+     "g": 10,
+     "n": 0,
+     "p": 2,
+     "pts": 30
+    },
+    {
+     "r": 3,
+     "eq": "Atletico Madrid",
+     "j": 12,
+     "g": 9,
+     "n": 1,
+     "p": 2,
+     "pts": 28
+    },
+    {
+     "r": 4,
+     "eq": "Real Betis Seville",
+     "j": 12,
+     "g": 8,
+     "n": 2,
+     "p": 2,
+     "pts": 26
+    },
+    {
+     "r": 5,
+     "eq": "Real Sociedad",
+     "j": 12,
+     "g": 7,
+     "n": 1,
+     "p": 4,
+     "pts": 22
+    },
+    {
+     "r": 6,
+     "eq": "Sevilla FC",
+     "j": 12,
+     "g": 5,
+     "n": 3,
+     "p": 4,
+     "pts": 18
+    },
+    {
+     "r": 7,
+     "eq": "Athletic Bilbao",
+     "j": 11,
+     "g": 4,
+     "n": 4,
+     "p": 3,
+     "pts": 16
+    },
+    {
+     "r": 8,
+     "eq": "Villarreal CF",
+     "j": 12,
+     "g": 4,
+     "n": 3,
+     "p": 5,
+     "pts": 15
+    },
+    {
+     "r": 9,
+     "eq": "RC Deportivo de A Coruna",
+     "j": 12,
+     "g": 3,
+     "n": 6,
+     "p": 3,
+     "pts": 15
+    },
+    {
+     "r": 10,
+     "eq": "Racing Santander",
+     "j": 12,
+     "g": 4,
+     "n": 2,
+     "p": 6,
+     "pts": 14
+    },
+    {
+     "r": 11,
+     "eq": "RC Celta de Vigo",
+     "j": 12,
+     "g": 2,
+     "n": 7,
+     "p": 3,
+     "pts": 13
+    },
+    {
+     "r": 12,
+     "eq": "Deportivo Alaves",
+     "j": 12,
+     "g": 3,
+     "n": 4,
+     "p": 5,
+     "pts": 13
+    },
+    {
+     "r": 13,
+     "eq": "Espanyol Barcelona",
+     "j": 12,
+     "g": 3,
+     "n": 3,
+     "p": 6,
+     "pts": 12
+    },
+    {
+     "r": 14,
+     "eq": "Rayo Vallecano",
+     "j": 11,
+     "g": 3,
+     "n": 3,
+     "p": 5,
+     "pts": 12
+    },
+    {
+     "r": 15,
+     "eq": "Getafe CF",
+     "j": 12,
+     "g": 3,
+     "n": 3,
+     "p": 6,
+     "pts": 12
+    },
+    {
+     "r": 16,
+     "eq": "CA Osasuna",
+     "j": 12,
+     "g": 3,
+     "n": 3,
+     "p": 6,
+     "pts": 12
+    },
+    {
+     "r": 17,
+     "eq": "Levante UD",
+     "j": 12,
+     "g": 2,
+     "n": 5,
+     "p": 5,
+     "pts": 11
+    },
+    {
+     "r": 18,
+     "eq": "Elche CF",
+     "j": 12,
+     "g": 2,
+     "n": 4,
+     "p": 6,
+     "pts": 10
+    },
+    {
+     "r": 19,
+     "eq": "Valencia CF",
+     "j": 12,
+     "g": 2,
+     "n": 3,
+     "p": 7,
+     "pts": 9
+    },
+    {
+     "r": 20,
+     "eq": "Malaga CF",
+     "j": 12,
+     "g": 0,
+     "n": 5,
+     "p": 7,
+     "pts": 5
+    }
+   ]
+  },
+  "ita": {
+   "matchs": [
+    {
+     "d": "2026-11-06T19:45:00Z",
+     "dom": "Venezia FC",
+     "ext": "Udinese Calcio",
+     "st": "post",
+     "sd": 2,
+     "se": 1
+    },
+    {
+     "d": "2026-11-07T14:00:00Z",
+     "dom": "Cagliari Calcio",
+     "ext": "Frosinone Calcio",
+     "st": "post",
+     "sd": 1,
+     "se": 0
+    },
+    {
+     "d": "2026-11-07T14:00:00Z",
+     "dom": "Torino FC",
+     "ext": "US Lecce",
+     "st": "post",
+     "sd": 1,
+     "se": 1
+    },
+    {
+     "d": "2026-11-07T17:00:00Z",
+     "dom": "Parma Calcio",
+     "ext": "Bologna FC",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-07T19:45:00Z",
+     "dom": "AS Roma",
+     "ext": "Sassuolo Calcio",
+     "st": "post",
+     "sd": 3,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T11:30:00Z",
+     "dom": "SSC Napoli",
+     "ext": "Lazio Rome",
+     "st": "post",
+     "sd": 1,
+     "se": 1
+    },
+    {
+     "d": "2026-11-08T14:00:00Z",
+     "dom": "Genoa CFC",
+     "ext": "AC Milan",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-08T14:00:00Z",
+     "dom": "AC Monza",
+     "ext": "Atalanta BC",
+     "st": "post",
+     "sd": 0,
+     "se": 1
+    },
+    {
+     "d": "2026-11-08T17:00:00Z",
+     "dom": "Inter Milano",
+     "ext": "Como 1907",
+     "st": "post",
+     "sd": 2,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T19:45:00Z",
+     "dom": "ACF Fiorentina",
+     "ext": "Juventus Turin",
+     "st": "post",
+     "sd": 2,
+     "se": 2
+    },
+    {
+     "d": "2026-11-21T14:00:00Z",
+     "dom": "Como 1907",
+     "ext": "Cagliari Calcio",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T14:00:00Z",
+     "dom": "Lazio Rome",
+     "ext": "US Lecce",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T17:00:00Z",
+     "dom": "Parma Calcio",
+     "ext": "AS Roma",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T19:45:00Z",
+     "dom": "SSC Napoli",
+     "ext": "Torino FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T11:30:00Z",
+     "dom": "Juventus Turin",
+     "ext": "Venezia FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T14:00:00Z",
+     "dom": "Bologna FC",
+     "ext": "Udinese Calcio",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T14:00:00Z",
+     "dom": "Sassuolo Calcio",
+     "ext": "Genoa CFC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T17:00:00Z",
+     "dom": "AC Milan",
+     "ext": "Frosinone Calcio",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T19:45:00Z",
+     "dom": "Atalanta BC",
+     "ext": "Inter Milano",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-23T19:45:00Z",
+     "dom": "AC Monza",
+     "ext": "ACF Fiorentina",
+     "st": "pre"
+    }
+   ],
+   "classement": [
+    {
+     "r": 1,
+     "eq": "Lazio Rome",
+     "j": 11,
+     "g": 9,
+     "n": 2,
+     "p": 0,
+     "pts": 29
+    },
+    {
+     "r": 2,
+     "eq": "Inter Milano",
+     "j": 11,
+     "g": 9,
+     "n": 1,
+     "p": 1,
+     "pts": 28
+    },
+    {
+     "r": 3,
+     "eq": "AS Roma",
+     "j": 11,
+     "g": 8,
+     "n": 3,
+     "p": 0,
+     "pts": 27
+    },
+    {
+     "r": 4,
+     "eq": "AC Milan",
+     "j": 11,
+     "g": 7,
+     "n": 3,
+     "p": 1,
+     "pts": 24
+    },
+    {
+     "r": 5,
+     "eq": "Como 1907",
+     "j": 11,
+     "g": 7,
+     "n": 2,
+     "p": 2,
+     "pts": 23
+    },
+    {
+     "r": 6,
+     "eq": "Frosinone Calcio",
+     "j": 11,
+     "g": 6,
+     "n": 2,
+     "p": 3,
+     "pts": 20
+    },
+    {
+     "r": 7,
+     "eq": "Juventus Turin",
+     "j": 11,
+     "g": 5,
+     "n": 3,
+     "p": 3,
+     "pts": 18
+    },
+    {
+     "r": 8,
+     "eq": "Bologna FC",
+     "j": 11,
+     "g": 5,
+     "n": 2,
+     "p": 4,
+     "pts": 17
+    },
+    {
+     "r": 9,
+     "eq": "Cagliari Calcio",
+     "j": 11,
+     "g": 5,
+     "n": 1,
+     "p": 5,
+     "pts": 16
+    },
+    {
+     "r": 10,
+     "eq": "SSC Napoli",
+     "j": 11,
+     "g": 4,
+     "n": 3,
+     "p": 4,
+     "pts": 15
+    },
+    {
+     "r": 11,
+     "eq": "Torino FC",
+     "j": 11,
+     "g": 4,
+     "n": 2,
+     "p": 5,
+     "pts": 14
+    },
+    {
+     "r": 12,
+     "eq": "Atalanta BC",
+     "j": 11,
+     "g": 4,
+     "n": 2,
+     "p": 5,
+     "pts": 14
+    },
+    {
+     "r": 13,
+     "eq": "Genoa CFC",
+     "j": 11,
+     "g": 4,
+     "n": 1,
+     "p": 6,
+     "pts": 13
+    },
+    {
+     "r": 14,
+     "eq": "US Lecce",
+     "j": 11,
+     "g": 3,
+     "n": 1,
+     "p": 7,
+     "pts": 10
+    },
+    {
+     "r": 15,
+     "eq": "ACF Fiorentina",
+     "j": 11,
+     "g": 2,
+     "n": 3,
+     "p": 6,
+     "pts": 9
+    },
+    {
+     "r": 16,
+     "eq": "Parma Calcio",
+     "j": 11,
+     "g": 2,
+     "n": 2,
+     "p": 7,
+     "pts": 8
+    },
+    {
+     "r": 17,
+     "eq": "Sassuolo Calcio",
+     "j": 11,
+     "g": 2,
+     "n": 2,
+     "p": 7,
+     "pts": 8
+    },
+    {
+     "r": 18,
+     "eq": "AC Monza",
+     "j": 11,
+     "g": 2,
+     "n": 1,
+     "p": 8,
+     "pts": 7
+    },
+    {
+     "r": 19,
+     "eq": "Venezia FC",
+     "j": 11,
+     "g": 2,
+     "n": 0,
+     "p": 9,
+     "pts": 6
+    },
+    {
+     "r": 20,
+     "eq": "Udinese Calcio",
+     "j": 11,
+     "g": 1,
+     "n": 2,
+     "p": 8,
+     "pts": 5
+    }
+   ]
+  },
+  "ger": {
+   "matchs": [
+    {
+     "d": "2026-11-06T19:30:00Z",
+     "dom": "Hamburger SV",
+     "ext": "Borussia Monchengladbach",
+     "st": "post",
+     "sd": 3,
+     "se": 1
+    },
+    {
+     "d": "2026-11-07T14:30:00Z",
+     "dom": "Borussia Dortmund",
+     "ext": "SV 07 Elversberg",
+     "st": "post",
+     "sd": 2,
+     "se": 1
+    },
+    {
+     "d": "2026-11-07T14:30:00Z",
+     "dom": "RB Leipzig",
+     "ext": "FC Augsburg",
+     "st": "post",
+     "sd": 5,
+     "se": 2
+    },
+    {
+     "d": "2026-11-07T14:30:00Z",
+     "dom": "FSV Mainz",
+     "ext": "Bayern Munich",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-07T14:30:00Z",
+     "dom": "SC Paderborn 07",
+     "ext": "Eintracht Frankfurt",
+     "st": "post",
+     "sd": 2,
+     "se": 2
+    },
+    {
+     "d": "2026-11-07T17:30:00Z",
+     "dom": "VfB Stuttgart",
+     "ext": "Werder Bremen",
+     "st": "post",
+     "sd": 1,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T14:30:00Z",
+     "dom": "1. FC Cologne",
+     "ext": "Bayer Leverkusen",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-08T16:30:00Z",
+     "dom": "SC Freiburg",
+     "ext": "Union Berlin",
+     "st": "post",
+     "sd": 2,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T18:30:00Z",
+     "dom": "TSG Hoffenheim",
+     "ext": "Schalke 04",
+     "st": "post",
+     "sd": 2,
+     "se": 1
+    },
+    {
+     "d": "2026-11-20T19:30:00Z",
+     "dom": "Bayern Munich",
+     "ext": "1. FC Cologne",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T14:30:00Z",
+     "dom": "Bayer Leverkusen",
+     "ext": "SC Paderborn 07",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T14:30:00Z",
+     "dom": "Eintracht Frankfurt",
+     "ext": "TSG Hoffenheim",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T14:30:00Z",
+     "dom": "Union Berlin",
+     "ext": "RB Leipzig",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T14:30:00Z",
+     "dom": "Borussia Monchengladbach",
+     "ext": "Borussia Dortmund",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T14:30:00Z",
+     "dom": "SV 07 Elversberg",
+     "ext": "SC Freiburg",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T17:30:00Z",
+     "dom": "Schalke 04",
+     "ext": "VfB Stuttgart",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T14:30:00Z",
+     "dom": "FC Augsburg",
+     "ext": "FSV Mainz",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T16:30:00Z",
+     "dom": "Werder Bremen",
+     "ext": "Hamburger SV",
+     "st": "pre"
+    }
+   ],
+   "classement": [
+    {
+     "r": 1,
+     "eq": "Bayern Munich",
+     "j": 9,
+     "g": 6,
+     "n": 3,
+     "p": 0,
+     "pts": 21
+    },
+    {
+     "r": 2,
+     "eq": "Borussia Dortmund",
+     "j": 9,
+     "g": 6,
+     "n": 3,
+     "p": 0,
+     "pts": 21
+    },
+    {
+     "r": 3,
+     "eq": "SC Freiburg",
+     "j": 9,
+     "g": 6,
+     "n": 1,
+     "p": 2,
+     "pts": 19
+    },
+    {
+     "r": 4,
+     "eq": "RB Leipzig",
+     "j": 9,
+     "g": 6,
+     "n": 0,
+     "p": 3,
+     "pts": 18
+    },
+    {
+     "r": 5,
+     "eq": "Bayer Leverkusen",
+     "j": 9,
+     "g": 5,
+     "n": 1,
+     "p": 3,
+     "pts": 16
+    },
+    {
+     "r": 6,
+     "eq": "Werder Bremen",
+     "j": 9,
+     "g": 4,
+     "n": 3,
+     "p": 2,
+     "pts": 15
+    },
+    {
+     "r": 7,
+     "eq": "SV 07 Elversberg",
+     "j": 9,
+     "g": 4,
+     "n": 1,
+     "p": 4,
+     "pts": 13
+    },
+    {
+     "r": 8,
+     "eq": "VfB Stuttgart",
+     "j": 9,
+     "g": 4,
+     "n": 0,
+     "p": 5,
+     "pts": 12
+    },
+    {
+     "r": 9,
+     "eq": "TSG Hoffenheim",
+     "j": 9,
+     "g": 4,
+     "n": 0,
+     "p": 5,
+     "pts": 12
+    },
+    {
+     "r": 10,
+     "eq": "Eintracht Frankfurt",
+     "j": 9,
+     "g": 3,
+     "n": 3,
+     "p": 3,
+     "pts": 12
+    },
+    {
+     "r": 11,
+     "eq": "Hamburger SV",
+     "j": 9,
+     "g": 4,
+     "n": 0,
+     "p": 5,
+     "pts": 12
+    },
+    {
+     "r": 12,
+     "eq": "FSV Mainz",
+     "j": 9,
+     "g": 3,
+     "n": 1,
+     "p": 5,
+     "pts": 10
+    },
+    {
+     "r": 13,
+     "eq": "SC Paderborn 07",
+     "j": 9,
+     "g": 2,
+     "n": 4,
+     "p": 3,
+     "pts": 10
+    },
+    {
+     "r": 14,
+     "eq": "FC Augsburg",
+     "j": 9,
+     "g": 2,
+     "n": 3,
+     "p": 4,
+     "pts": 9
+    },
+    {
+     "r": 15,
+     "eq": "1. FC Cologne",
+     "j": 9,
+     "g": 2,
+     "n": 3,
+     "p": 4,
+     "pts": 9
+    },
+    {
+     "r": 16,
+     "eq": "Union Berlin",
+     "j": 9,
+     "g": 1,
+     "n": 4,
+     "p": 4,
+     "pts": 7
+    },
+    {
+     "r": 17,
+     "eq": "Schalke 04",
+     "j": 9,
+     "g": 1,
+     "n": 3,
+     "p": 5,
+     "pts": 6
+    },
+    {
+     "r": 18,
+     "eq": "Borussia Monchengladbach",
+     "j": 9,
+     "g": 1,
+     "n": 1,
+     "p": 7,
+     "pts": 4
+    }
+   ]
+  },
+  "fra": {
+   "matchs": [
+    {
+     "d": "2026-11-06T19:45:00Z",
+     "dom": "Toulouse FC",
+     "ext": "Strasbourg Alsace",
+     "st": "post",
+     "sd": 3,
+     "se": 1
+    },
+    {
+     "d": "2026-11-07T18:00:00Z",
+     "dom": "AJ Auxerre",
+     "ext": "Paris FC",
+     "st": "post",
+     "sd": 0,
+     "se": 1
+    },
+    {
+     "d": "2026-11-07T20:05:00Z",
+     "dom": "Paris Saint-Germain",
+     "ext": "ESTAC Troyes",
+     "st": "post",
+     "sd": 1,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T14:00:00Z",
+     "dom": "Stade Rennais FC",
+     "ext": "Lille OSC",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-08T16:15:00Z",
+     "dom": "Angers SCO",
+     "ext": "OGC Nice",
+     "st": "post",
+     "sd": 0,
+     "se": 2
+    },
+    {
+     "d": "2026-11-08T16:15:00Z",
+     "dom": "Stade Brest 29",
+     "ext": "Olympique Lyon",
+     "st": "post",
+     "sd": 2,
+     "se": 0
+    },
+    {
+     "d": "2026-11-08T16:15:00Z",
+     "dom": "Le Havre AC",
+     "ext": "FC Lorient",
+     "st": "post",
+     "sd": 0,
+     "se": 2
+    },
+    {
+     "d": "2026-11-08T16:15:00Z",
+     "dom": "Le Mans FC",
+     "ext": "AS Monaco",
+     "st": "post",
+     "sd": 1,
+     "se": 1
+    },
+    {
+     "d": "2026-11-08T19:45:00Z",
+     "dom": "Racing Club De Lens",
+     "ext": "Olympique Marseille",
+     "st": "post",
+     "sd": 1,
+     "se": 2
+    },
+    {
+     "d": "2026-11-20T19:45:00Z",
+     "dom": "ESTAC Troyes",
+     "ext": "Le Havre AC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T16:15:00Z",
+     "dom": "OGC Nice",
+     "ext": "Paris Saint-Germain",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T19:45:00Z",
+     "dom": "Racing Club De Lens",
+     "ext": "Toulouse FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T19:45:00Z",
+     "dom": "Lille OSC",
+     "ext": "Olympique Lyon",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T19:45:00Z",
+     "dom": "AS Monaco",
+     "ext": "AJ Auxerre",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-21T19:45:00Z",
+     "dom": "Strasbourg Alsace",
+     "ext": "Stade Brest 29",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T14:00:00Z",
+     "dom": "Paris FC",
+     "ext": "Angers SCO",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T16:15:00Z",
+     "dom": "FC Lorient",
+     "ext": "Stade Rennais FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-11-22T19:45:00Z",
+     "dom": "Olympique Marseille",
+     "ext": "Le Mans FC",
+     "st": "pre"
+    }
+   ],
+   "classement": [
+    {
+     "r": 1,
+     "eq": "Paris Saint-Germain",
+     "j": 10,
+     "g": 7,
+     "n": 2,
+     "p": 1,
+     "pts": 23
+    },
+    {
+     "r": 2,
+     "eq": "Lille OSC",
+     "j": 10,
+     "g": 6,
+     "n": 3,
+     "p": 1,
+     "pts": 21
+    },
+    {
+     "r": 3,
+     "eq": "Paris FC",
+     "j": 10,
+     "g": 6,
+     "n": 2,
+     "p": 2,
+     "pts": 20
+    },
+    {
+     "r": 4,
+     "eq": "Olympique Marseille",
+     "j": 10,
+     "g": 6,
+     "n": 0,
+     "p": 4,
+     "pts": 18
+    },
+    {
+     "r": 5,
+     "eq": "Olympique Lyon",
+     "j": 10,
+     "g": 5,
+     "n": 2,
+     "p": 3,
+     "pts": 17
+    },
+    {
+     "r": 6,
+     "eq": "OGC Nice",
+     "j": 10,
+     "g": 5,
+     "n": 2,
+     "p": 3,
+     "pts": 17
+    },
+    {
+     "r": 7,
+     "eq": "AS Monaco",
+     "j": 10,
+     "g": 4,
+     "n": 4,
+     "p": 2,
+     "pts": 16
+    },
+    {
+     "r": 8,
+     "eq": "Stade Rennais FC",
+     "j": 10,
+     "g": 5,
+     "n": 1,
+     "p": 4,
+     "pts": 16
+    },
+    {
+     "r": 9,
+     "eq": "Stade Brest 29",
+     "j": 10,
+     "g": 4,
+     "n": 3,
+     "p": 3,
+     "pts": 15
+    },
+    {
+     "r": 10,
+     "eq": "FC Lorient",
+     "j": 10,
+     "g": 4,
+     "n": 3,
+     "p": 3,
+     "pts": 15
+    },
+    {
+     "r": 11,
+     "eq": "Racing Club De Lens",
+     "j": 10,
+     "g": 4,
+     "n": 1,
+     "p": 5,
+     "pts": 13
+    },
+    {
+     "r": 12,
+     "eq": "Toulouse FC",
+     "j": 10,
+     "g": 3,
+     "n": 4,
+     "p": 3,
+     "pts": 13
+    },
+    {
+     "r": 13,
+     "eq": "Strasbourg Alsace",
+     "j": 10,
+     "g": 3,
+     "n": 1,
+     "p": 6,
+     "pts": 10
+    },
+    {
+     "r": 14,
+     "eq": "AJ Auxerre",
+     "j": 10,
+     "g": 3,
+     "n": 1,
+     "p": 6,
+     "pts": 10
+    },
+    {
+     "r": 15,
+     "eq": "Le Mans FC",
+     "j": 10,
+     "g": 1,
+     "n": 5,
+     "p": 4,
+     "pts": 8
+    },
+    {
+     "r": 16,
+     "eq": "Angers SCO",
+     "j": 10,
+     "g": 2,
+     "n": 2,
+     "p": 6,
+     "pts": 8
+    },
+    {
+     "r": 17,
+     "eq": "ESTAC Troyes",
+     "j": 10,
+     "g": 2,
+     "n": 2,
+     "p": 6,
+     "pts": 8
+    },
+    {
+     "r": 18,
+     "eq": "Le Havre AC",
+     "j": 10,
+     "g": 0,
+     "n": 2,
+     "p": 8,
+     "pts": 2
+    }
+   ]
+  }
+ }
+}

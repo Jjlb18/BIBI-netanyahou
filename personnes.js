@@ -27,6 +27,11 @@ window.PERSONNES = [
     nom: "EA Sports FC", categorie: "jeux", page: "fc.html", sigle: "FC", recherche: "\"EA Sports FC\" OR \"FC 27\"",
     description: { fr: "Dernière version : FC 27 · prochaine : FC 28 (date ???)", en: "Latest: FC 27 · next: FC 28 (date ???)", de: "Neueste: FC 27 · nächste: FC 28 (Termin ???)", it: "Ultima: FC 27 · prossima: FC 28 (data ???)", es: "Última: FC 27 · próxima: FC 28 (fecha ???)" }
   },
+  {
+    nom: "Football", categorie: "sport", page: "foot.html", sigle: "⚽", recherche: "Champions League OR Premier League OR LaLiga OR Bundesliga OR Serie A OR Ligue 1",
+    noms: { de: "Fußball", it: "Calcio", es: "Fútbol" },
+    description: { fr: "Ligue des champions, Premier League, LaLiga, Serie A… : matchs et classements", en: "Champions League, Premier League, LaLiga, Serie A…: matches and standings", de: "Champions League, Premier League, LaLiga, Serie A …: Spiele und Tabellen", it: "Champions League, Premier League, LaLiga, Serie A…: partite e classifiche", es: "Liga de Campeones, Premier League, LaLiga, Serie A…: partidos y clasificaciones" }
+  },
 ];
 
 // Catégories affichées sur la page d'accueil (dans cet ordre).
