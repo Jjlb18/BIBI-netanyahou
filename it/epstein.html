@@ -92,6 +92,18 @@
   @media (max-width:640px){ .switch button .txt{display:none} }
   .home-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:15px}
   .home-btn:hover{border-color:var(--accent)}
+  .person .menu{min-width:270px;max-height:75vh;overflow:auto}
+  .switch .menu .cat-head{border:0;border-radius:9px;padding:9px 10px;background:none}
+  .switch .menu .cat-head:hover{background:var(--accent-soft)}
+  .cat-head{display:flex;align-items:center;gap:8px;width:100%;background:none;border:0;padding:9px 10px;border-radius:9px;font:600 14px Inter,system-ui,sans-serif;color:var(--ink);cursor:pointer;text-align:left}
+  .cat-head:hover{background:var(--accent-soft)}
+  .cat-head .cn{flex:1}
+  .cat-head .cc{font-size:11px;font-weight:600;color:var(--muted);background:rgba(127,127,127,.15);border-radius:999px;padding:0 7px}
+  .cat-head .ca{color:var(--muted);transition:transform .2s}
+  .cat.open .cat-head .ca{transform:rotate(90deg)}
+  .cat-body{display:none;padding:2px 0 6px 16px;border-left:2px solid var(--line);margin-left:18px}
+  .cat.open .cat-body{display:block}
+  .cat-empty{display:block;font-size:13px;color:var(--muted);padding:6px 10px}
 </style>
 </head>
 <body>
@@ -114,8 +126,8 @@
     <div class="menu" role="menu"><div class="label">Lingua</div><a href="../epstein.html">Français <small>FR</small></a><a href="../en/epstein.html">English <small>EN</small></a><a href="../de/epstein.html">Deutsch <small>DE</small></a><a href="../it/epstein.html" class="current">Italiano <small>IT</small></a><a href="../es/epstein.html">Español <small>ES</small></a></div>
   </div>
   <div class="switch person" id="switch" hidden>
-    <button type="button" aria-haspopup="true" aria-expanded="false">👤 <span class="txt">Cambia persona</span> <span class="chev">▾</span></button>
-    <div class="menu" role="menu"><div class="label">Personalità</div><div id="people"></div></div>
+    <button type="button" aria-haspopup="true" aria-expanded="false">☰ <span class="txt">Categorie</span> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div id="people"></div></div>
   </div>
   </div>
 </div></nav>
@@ -289,18 +301,36 @@
     });
     document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
     document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
-    // liste des personnes
+    // menu Catégories
     const list = window.PERSONNES;
     if (!Array.isArray(list) || !list.length) return;
+    const cats = window.CATEGORIES || [{ id: 'personnalites', icone: '👤', noms: {} }];
+    const catOf = p => p.categorie || 'personnalites';
     const box = document.getElementById('people');
-    list.forEach(pers => {
-      const a = document.createElement('a');
-      a.href = pers.page;
-      a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
-      const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
-      if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
-      if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Pagina attuale'; }
-      box.appendChild(a);
+    const here = list.find(p => p.page === HERE);
+    cats.forEach(c => {
+      const items = list.filter(p => catOf(p) === c.id);
+      const grp = document.createElement('div'); grp.className = 'cat';
+      const head = document.createElement('button'); head.type = 'button'; head.className = 'cat-head';
+      head.innerHTML = '<span class="ci"></span><span class="cn"></span><span class="cc"></span><span class="ca">▸</span>';
+      head.children[0].textContent = c.icone || '';
+      head.children[1].textContent = (c.noms && (c.noms[LANG] || c.noms.fr)) || c.id;
+      head.children[2].textContent = items.length;
+      head.addEventListener('click', e => { e.stopPropagation(); grp.classList.toggle('open'); });
+      const body = document.createElement('div'); body.className = 'cat-body';
+      items.forEach(pers => {
+        const a = document.createElement('a');
+        a.href = pers.page;
+        a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
+        const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
+        if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
+        if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Pagina attuale'; }
+        body.appendChild(a);
+      });
+      if (!items.length){ const e = document.createElement('span'); e.className = 'cat-empty'; e.textContent = 'Presto…'; body.appendChild(e); }
+      if (here && catOf(here) === c.id) grp.classList.add('open');
+      grp.append(head, body);
+      box.appendChild(grp);
     });
     document.getElementById('switch').hidden = false;
   })();
