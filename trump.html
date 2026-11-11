@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-root="" data-lang="fr" data-page="trump.html">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +38,7 @@
   .menu a small{font-weight:400;color:var(--muted);font-size:12px}
   .menu a:hover{background:var(--accent-soft)}
   .menu a.current{background:var(--accent-soft);color:var(--accent)}
-  .menu a.current:after{content:"Page actuelle";font-size:11px;font-weight:500;color:var(--muted)}
+  .menu a.current:after{content:attr(data-cur);font-size:11px;font-weight:500;color:var(--muted)}
   header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
   .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
   h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
@@ -85,6 +85,11 @@
   .sources ol{padding-left:20px;font-size:14px;color:var(--muted)}
   .sources li{margin-bottom:6px}
   footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+  .switches{display:flex;gap:8px;flex:none}
+  .lang .menu{min-width:170px}
+  .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
+  .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
+  @media (max-width:640px){ .switch button .txt{display:none} }
 </style>
 </head>
 <body>
@@ -100,9 +105,15 @@
   <a href="#perspectives">Perspectives</a>
   <a href="#sources">Sources</a>
   </div>
-  <div class="switch" id="switch" hidden>
-    <button type="button" aria-haspopup="true" aria-expanded="false">👤 Changer de personne <span class="chev">▾</span></button>
+  <div class="switches">
+  <div class="switch lang">
+    <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Langue</span> <b>FR</b> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Langue</div><a href="trump.html" class="current">Français <small>FR</small></a><a href="en/trump.html">English <small>EN</small></a><a href="de/trump.html">Deutsch <small>DE</small></a><a href="it/trump.html">Italiano <small>IT</small></a><a href="es/trump.html">Español <small>ES</small></a></div>
+  </div>
+  <div class="switch person" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">👤 <span class="txt">Changer de personne</span> <span class="chev">▾</span></button>
     <div class="menu" role="menu"><div class="label">Personnalités</div><div id="people"></div></div>
+  </div>
   </div>
 </div></nav>
 
@@ -244,11 +255,11 @@
 
 </div>
 <script>
+  // Naissance (heure locale du lieu de naissance, UTC-4)
   const el = document.getElementById('age');
   const p = n => String(n).padStart(2, '0');
-  // Naissance : 14 juin 1946, 10 h 54, heure de New York (UTC-4, heure d'été)
   function tick(){
-    const now = new Date(Date.now() - 4 * 3600 * 1000);
+    const now = new Date(Date.now() + (-4) * 3600 * 1000);
     let y = now.getUTCFullYear() - 1946;
     let last = Date.UTC(1946 + y, 5, 14, 10, 54);
     if (now.getTime() < last){ y--; last = Date.UTC(1946 + y, 5, 14, 10, 54); }
@@ -260,32 +271,37 @@
   }
   tick(); setInterval(tick, 1000);
 </script>
-<!-- Sélecteur de personne : la liste se trouve dans personnes.js -->
 <script src="personnes.js"></script>
 <script>
   (function(){
+    const LANG = document.documentElement.dataset.lang;
+    const HERE = document.documentElement.dataset.page;
+    // menus déroulants
+    const all = [...document.querySelectorAll('.switch')];
+    all.forEach(sw => {
+      const btn = sw.querySelector('button');
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        all.forEach(o => { if (o !== sw) o.classList.remove('open'); });
+        btn.setAttribute('aria-expanded', sw.classList.toggle('open'));
+      });
+    });
+    document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
+    // liste des personnes
     const list = window.PERSONNES;
-    if (!Array.isArray(list) || !list.length) return; // pas de liste : le bouton reste caché
-    const sw = document.getElementById('switch');
+    if (!Array.isArray(list) || !list.length) return;
     const box = document.getElementById('people');
-    const here = (location.pathname.split('/').pop() || 'index.html');
-    list.forEach(p => {
+    list.forEach(pers => {
       const a = document.createElement('a');
-      a.href = p.page;
-      a.textContent = p.nom;
-      if (p.description){ const s = document.createElement('small'); s.textContent = p.description; a.appendChild(s); }
-      if (p.page === here) a.className = 'current';
+      a.href = pers.page;
+      a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
+      const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
+      if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
+      if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Page actuelle'; }
       box.appendChild(a);
     });
-    sw.hidden = false;
-    const btn = sw.querySelector('button');
-    btn.addEventListener('click', e => {
-      e.stopPropagation();
-      const open = sw.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open);
-    });
-    document.addEventListener('click', () => { sw.classList.remove('open'); btn.setAttribute('aria-expanded', false); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') sw.classList.remove('open'); });
+    document.getElementById('switch').hidden = false;
   })();
 </script>
 </body>
