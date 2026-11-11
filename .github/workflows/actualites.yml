@@ -1,0 +1,32 @@
+name: Actualités
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"   # toutes les 20 minutes (GitHub peut avoir quelques minutes de retard)
+  workflow_dispatch:          # bouton « Run workflow » pour lancer à la main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualites
+  cancel-in-progress: false
+
+jobs:
+  maj:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Récupérer les derniers titres
+        run: python scripts/actualites.py
+      - name: Publier si quelque chose a changé
+        run: |
+          if git diff --quiet; then echo "Rien de nouveau."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Actualités automatiques"
+          git pull --rebase origin main
+          git push
