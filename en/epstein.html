@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-lang="en" data-page="epstein.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeffrey Epstein — Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --ink:#14181f; --muted:#5b6270; --line:#d9d5cb;
+    --accent:#1d4e89; --accent-soft:#e3ebf5; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#11141a; --ink:#ecebe7; --muted:#9aa1ad; --line:#2a2f39;
+      --accent:#7fb0ea; --accent-soft:#1b2636; --card:#171b22; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px}
+  nav .links{display:flex;gap:18px;overflow-x:auto;flex:1;min-width:0;padding:12px 0;font-size:14px;font-weight:500;white-space:nowrap;scrollbar-width:none}
+  nav .links a{color:var(--muted);text-decoration:none}
+  nav .links a:hover{color:var(--ink)}
+  .switch{position:relative;flex:none}
+  .switch[hidden]{display:none}
+  .switch button{font:600 13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .switch button:hover{border-color:var(--accent)}
+  .switch button .chev{transition:transform .2s}
+  .switch.open button .chev{transform:rotate(180deg)}
+  .menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:6px;display:none}
+  .switch.open .menu{display:block}
+  .menu .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;padding:8px 10px 4px}
+  .menu a{display:flex;flex-direction:column;padding:9px 10px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+  .menu a small{font-weight:400;color:var(--muted);font-size:12px}
+  .menu a:hover{background:var(--accent-soft)}
+  .menu a.current{background:var(--accent-soft);color:var(--accent)}
+  .menu a.current:after{content:attr(data-cur);font-size:11px;font-weight:500;color:var(--muted)}
+  header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+  .lede{font-size:19px;color:var(--muted);max-width:680px;margin:0}
+  .fact em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:4px}
+  .fact.wide{grid-column:span 2}
+  .fact span.age{font-variant-numeric:tabular-nums;font-size:17px}
+  @media (max-width:720px){ .facts{grid-template-columns:1fr 1fr !important} }
+  .live-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .live-head h2{margin:0}
+  .dot{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#c0392b}
+  .dot:before{content:"";width:9px;height:9px;border-radius:50%;background:#e74c3c;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(231,76,60,.6)}70%{box-shadow:0 0 0 9px rgba(231,76,60,0)}100%{box-shadow:0 0 0 0 rgba(231,76,60,0)}}
+  .updated{font-size:13px;color:var(--muted)}
+  .news{display:grid;gap:12px}
+  .news .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:96px 1fr;gap:16px}
+  .news .d{font-size:13px;font-weight:600;color:var(--accent)}
+  .news p{margin:0;font-size:15px}
+  .news a{font-size:13px}
+  @media (max-width:600px){ .news .item{grid-template-columns:1fr;gap:4px} }
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:40px}
+  .fact{background:var(--card);padding:18px 20px}
+  .fact b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .fact span{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:600;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:720px}
+  .status{background:var(--accent-soft);border-left:4px solid var(--accent);padding:22px 24px;border-radius:0 12px 12px 0;max-width:760px}
+  .status small{display:block;color:var(--muted);margin-top:10px}
+  .timeline{list-style:none;margin:0;padding:0;position:relative}
+  .timeline:before{content:"";position:absolute;left:84px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .timeline li{display:grid;grid-template-columns:70px 1fr;gap:34px;padding:10px 0;position:relative}
+  .timeline li:before{content:"";position:absolute;left:79px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .timeline .y{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;text-align:right}
+  .timeline .t{color:var(--ink)}
+  .terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .when{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted);margin:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){ .two{grid-template-columns:1fr} .timeline:before{left:64px} .timeline li{grid-template-columns:52px 1fr;gap:28px} .timeline li:before{left:59px} }
+  ul.plain{margin:0;padding-left:18px} ul.plain li{margin-bottom:8px}
+  .sources ol{padding-left:20px;font-size:14px;color:var(--muted)}
+  .sources li{margin-bottom:6px}
+  footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+  .switches{display:flex;gap:8px;flex:none}
+  .lang .menu{min-width:170px}
+  .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
+  .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
+  @media (max-width:640px){ .switch button .txt{display:none} }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="links">
+  <a href="#direct">Live</a>
+  <a href="#actualite">Epstein files</a>
+  <a href="#biographie">Biography</a>
+  <a href="#mandats">The case</a>
+  <a href="#chronologie">Timeline</a>
+  <a href="#proces">Justice</a>
+  <a href="#perspectives">Open questions</a>
+  <a href="#sources">Sources</a>
+  </div>
+  <div class="switches">
+  <div class="switch lang">
+    <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Language</span> <b>EN</b> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Language</div><a href="../epstein.html">Français <small>FR</small></a><a href="../en/epstein.html" class="current">English <small>EN</small></a><a href="../de/epstein.html">Deutsch <small>DE</small></a><a href="../it/epstein.html">Italiano <small>IT</small></a><a href="../es/epstein.html">Español <small>ES</small></a></div>
+  </div>
+  <div class="switch person" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">👤 <span class="txt">Change person</span> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Public figures</div><div id="people"></div></div>
+  </div>
+  </div>
+</div></nav>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Profile · Legal case · United States</div>
+  <h1>Jeffrey Epstein</h1>
+  <p class="lede">Wealthy American financier convicted of sex crimes involving minors, who died in jail in 2019 before his trial. His network of powerful connections is still under investigation.</p>
+
+  <div class="facts">
+    <div class="fact"><b>Died</b><span class="age" id="age">—</span><em>years · days · hours · minutes · seconds ago, live</em></div>
+    <div class="fact"><b>Age at death</b><span>66</span></div>
+    <div class="fact"><b>Occupation</b><span>Financier, money manager</span></div>
+    <div class="fact"><b>Legal status</b><span>Convicted sex offender (2008)</span></div>
+    <div class="fact"><b>Education</b><span>Cooper Union, NYU (no degree)</span></div>
+    <div class="fact"><b>Height</b><span>Unknown</span><em>no official figure published</em></div>
+    <div class="fact wide"><b>Born – died</b><span>20 Jan 1953, Brooklyn – 10 Aug 2019, Manhattan</span></div>
+  </div>
+</header>
+
+<section id="direct">
+  <div class="live-head"><h2>Right now</h2><span class="dot">Live</span></div>
+  <!--NEWS-START-->
+  <p class="updated">Last updated: 11 November 2026, 7:30 pm (Zurich time)</p>
+  <div class="news">
+    <div class="item"><span class="d">11 Nov 2026</span><div><p>Democrats, who will control Congress from January, promise to keep investigating: new witnesses and possible subpoenas for the Justice Department and major banks.</p><a href="https://www.aljazeera.com/news/2026/11/11/can-democrats-shed-some-new-light-on-the-epstein-files-when-they-take-over">Al Jazeera</a></div></div>
+    <div class="item"><span class="d">10 Nov 2026</span><div><p>The House Oversight Committee (Republican majority) releases the report of its 15‑month inquiry, saying it found no evidence implicating Trump. Democrats call it incomplete and accuse the department of withholding over 2.5 million pages.</p><a href="https://www.abc.net.au/news/2026-11-11/us-politicians-urge-new-epstein-investigations-in-damning-report/107371370">ABC News (Australia)</a></div></div>
+    <div class="item"><span class="d">5 Nov 2026</span><div><p>Republican Thomas Massie says he will force a vote on a second Epstein files transparency law when Congress returns.</p><a href="https://www.axios.com/2026/11/05/epstein-files-vote-push-investigations">Axios</a></div></div>
+    <div class="item"><span class="d">25 Aug 2026</span><div><p>A federal judge in New York rejects Ghislaine Maxwell's bid to overturn her conviction, calling her arguments meritless.</p><a href="https://abc7.com/story/judge-rejects-ghislaine-maxwells-attempt-overturn-conviction/19733195/">ABC News</a></div></div>
+  </div>
+  <!--NEWS-END-->
+</section>
+
+<section id="actualite">
+  <h2>Background: the “Epstein files”</h2>
+  <div class="status">
+    <p><strong>November 2025.</strong> Congress passes, with support from both parties, the <em>Epstein Files Transparency Act</em>, requiring the Justice Department to release its files on Epstein and Ghislaine Maxwell.</p>
+    <p><strong>December 2025 – January 2026.</strong> A first partial release, then on 30 January 2026 more than 3 million pages, 2,000 videos and 180,000 images, often heavily redacted to protect victims.</p>
+    <p style="margin:0">The documents mention many well-known people; being named is not proof of wrongdoing. Democrats say more than 2.5 million pages remain unreleased and want to continue the inquiry in 2027.</p>
+    <small>Situation as of 11 November 2026 — may change.</small>
+  </div>
+</section>
+
+<section id="biographie">
+  <h2>Biography</h2>
+  <div class="two">
+    <div>
+      <h3>Origins</h3>
+      <p>Born in Brooklyn to a modest family, he studied at Cooper Union and then New York University without graduating. He then taught maths and physics at the Dalton School, a private school in Manhattan (1974–1976).</p>
+      <h3>Finance</h3>
+      <p>He joined the investment bank Bear Stearns, then founded his own wealth-management firm for very rich clients. His main client was billionaire Les Wexner, owner of Victoria's Secret.</p>
+    </div>
+    <div>
+      <h3>A powerful network</h3>
+      <p>He owned homes in Manhattan, Palm Beach, Paris and New Mexico, and a private island in the US Virgin Islands. He mixed with politicians, scientists, members of royal families and billionaires.</p>
+      <h3>Ghislaine Maxwell</h3>
+      <p>His girlfriend and later close associate, daughter of press baron Robert Maxwell. She was convicted in 2021 of helping him recruit and exploit underage girls.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mandats">
+  <h2>The case in brief</h2>
+  <div class="terms">
+    <div class="card"><div class="when">2005 – 2008</div><h3>Florida</h3><p>Palm Beach police investigate after a family's complaint. A highly controversial deal with federal prosecutors spares him federal charges: he pleads guilty in a Florida court and serves 13 months with work release.</p></div>
+    <div class="card"><div class="when">2018 – 2019</div><h3>Reopening and death</h3><p>A <em>Miami Herald</em> investigation revives the case. Arrested in July 2019 for sex trafficking of minors, he dies in his cell on 10 August 2019; the medical examiner rules it a suicide.</p></div>
+    <div class="card"><div class="when">2020 – today</div><h3>Aftermath</h3><p>Ghislaine Maxwell sentenced to 20 years, compensation for victims from banks and a dedicated fund, then a political battle over releasing the files.</p></div>
+  </div>
+</section>
+
+<section id="chronologie">
+  <h2>Timeline</h2>
+  <ul class="timeline">
+    <li><span class="y">1953</span><span class="t">Born in Brooklyn (New York) on 20 January.</span></li>
+    <li><span class="y">1976</span><span class="t">Joins Bear Stearns.</span></li>
+    <li><span class="y">1982</span><span class="t">Founds his wealth-management firm.</span></li>
+    <li><span class="y">2005</span><span class="t">Palm Beach police open an investigation.</span></li>
+    <li><span class="y">2008</span><span class="t">Pleads guilty in Florida; sentenced to 18 months, serves 13 and must register as a sex offender.</span></li>
+    <li><span class="y">2018</span><span class="t">The <em>Miami Herald</em> publishes a major investigation into the 2008 deal and the victims.</span></li>
+    <li><span class="y">2019</span><span class="t">Arrested on 6 July in New York; dies in custody on 10 August.</span></li>
+    <li><span class="y">2020</span><span class="t">Ghislaine Maxwell is arrested.</span></li>
+    <li><span class="y">2021</span><span class="t">Maxwell is found guilty of sex trafficking of minors; sentenced to 20 years in 2022.</span></li>
+    <li><span class="y">2023</span><span class="t">JPMorgan and Deutsche Bank reach settlements worth hundreds of millions of dollars with victims.</span></li>
+    <li><span class="y">2025</span><span class="t">Congress passes the Epstein files transparency law; first releases in December.</span></li>
+    <li><span class="y">2026</span><span class="t">More than 3 million pages released (January); House committee report (November).</span></li>
+  </ul>
+</section>
+
+<section id="proces">
+  <h2>Justice and victims</h2>
+  <p>Dozens of women, many of them minors at the time, came forward against Epstein. His death ended the criminal case against him, but other proceedings continued:</p>
+  <ul class="plain">
+    <li><strong>Ghislaine Maxwell</strong> — sentenced to 20 years in prison; her appeals, including to the Supreme Court, have been rejected.</li>
+    <li><strong>Compensation</strong> — a fund paid for by Epstein's estate compensated more than a hundred victims; banks also reached settlements.</li>
+    <li><strong>The 2008 deal</strong> — a 2020 Justice Department report found that the prosecutor at the time showed “poor judgment”.</li>
+    <li><strong>His death</strong> — a 2023 inspector general report found serious negligence by prison guards.</li>
+  </ul>
+</section>
+
+<section id="perspectives">
+  <h2>Questions still open</h2>
+  <div class="two">
+    <div class="card">
+      <h3>His death</h3>
+      <ul class="plain">
+        <li>The official finding (medical examiner, FBI, Justice Department) is suicide.</li>
+        <li>Failures in supervision (cameras, guards) fuelled doubts and many theories.</li>
+        <li>No official investigation has concluded it was a homicide.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>His network</h3>
+      <ul class="plain">
+        <li>Who knew, and who may have taken part? Apart from Maxwell, no one else has been charged in the US.</li>
+        <li>Why was the 2008 deal so lenient?</li>
+        <li>What the unreleased pages contain remains a political battle.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sources" class="sources">
+  <h2>Sources</h2>
+  <ol>
+    <li><a href="https://www.aljazeera.com/news/2026/1/30/us-department-of-justice-releases-three-million-new-epstein-documents">Al Jazeera — 3 million new documents released (January 2026)</a></li>
+    <li><a href="https://www.clickorlando.com/news/politics/2026/01/30/justice-department-releases-many-more-records-from-its-jeffrey-epstein-files/">AP — Justice Department releases 3 million pages</a></li>
+    <li><a href="https://www.abc.net.au/news/2026-11-11/us-politicians-urge-new-epstein-investigations-in-damning-report/107371370">ABC News (Australia) — The House committee report</a></li>
+    <li><a href="https://www.aljazeera.com/news/2026/11/11/can-democrats-shed-some-new-light-on-the-epstein-files-when-they-take-over">Al Jazeera — What Democrats plan to do</a></li>
+    <li><a href="https://www.axios.com/2026/11/05/epstein-files-vote-push-investigations">Axios — A new transparency law in the works</a></li>
+    <li><a href="https://abc7.com/story/judge-rejects-ghislaine-maxwells-attempt-overturn-conviction/19733195/">ABC News — Ghislaine Maxwell's challenge rejected</a></li>
+  </ol>
+</section>
+
+<footer>Neutral, informative page, written on 11 November 2026. Out of respect for the victims, it contains no details of the abuse or their identities.</footer>
+
+</div>
+<script>
+  // Date de référence (heure locale du lieu de naissance, UTC-4)
+  const el = document.getElementById('age');
+  const p = n => String(n).padStart(2, '0');
+  function tick(){
+    const now = new Date(Date.now() + (-4) * 3600 * 1000);
+    let y = now.getUTCFullYear() - 2019;
+    let last = Date.UTC(2019 + y, 7, 10, 0, 0);
+    if (now.getTime() < last){ y--; last = Date.UTC(2019 + y, 7, 10, 0, 0); }
+    let s = Math.floor((now.getTime() - last) / 1000);
+    const d = Math.floor(s / 86400); s %= 86400;
+    const h = Math.floor(s / 3600); s %= 3600;
+    const m = Math.floor(s / 60); s %= 60;
+    el.textContent = `${y} yrs, ${d} d, ${p(h)} h ${p(m)} min ${p(s)} s`;
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+<script src="../personnes.js"></script>
+<script>
+  (function(){
+    const LANG = document.documentElement.dataset.lang;
+    const HERE = document.documentElement.dataset.page;
+    // menus déroulants
+    const all = [...document.querySelectorAll('.switch')];
+    all.forEach(sw => {
+      const btn = sw.querySelector('button');
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        all.forEach(o => { if (o !== sw) o.classList.remove('open'); });
+        btn.setAttribute('aria-expanded', sw.classList.toggle('open'));
+      });
+    });
+    document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
+    // liste des personnes
+    const list = window.PERSONNES;
+    if (!Array.isArray(list) || !list.length) return;
+    const box = document.getElementById('people');
+    list.forEach(pers => {
+      const a = document.createElement('a');
+      a.href = pers.page;
+      a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
+      const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
+      if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
+      if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Current page'; }
+      box.appendChild(a);
+    });
+    document.getElementById('switch').hidden = false;
+  })();
+</script>
+</body>
+</html>
