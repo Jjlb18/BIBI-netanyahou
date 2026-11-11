@@ -21,15 +21,15 @@ window.PERSONNES = [
     description: { fr: "Financier, condamné pour crimes sexuels", en: "Financier, convicted sex offender", de: "Finanzier, verurteilter Sexualstraftäter", it: "Finanziere, condannato per reati sessuali", es: "Financiero, condenado por delitos sexuales" }
   },
   {
-    nom: "Elon Musk", categorie: "personnalites", type: "richesse", page: "musk.html", recherche: "\"Elon Musk\"",
+    nom: "Elon Musk", categorie: "personnalites", type: "richesse", page: "musk.html", photo: "images/musk.jpg", recherche: "\"Elon Musk\"",
     description: { fr: "Patron de Tesla et SpaceX, homme le plus riche du monde", en: "Head of Tesla and SpaceX, world's richest person", de: "Chef von Tesla und SpaceX, reichster Mensch der Welt", it: "Capo di Tesla e SpaceX, l'uomo più ricco del mondo", es: "Jefe de Tesla y SpaceX, la persona más rica del mundo" }
   },
   {
-    nom: "Jeff Bezos", categorie: "personnalites", type: "richesse", page: "bezos.html", recherche: "\"Jeff Bezos\"",
+    nom: "Jeff Bezos", categorie: "personnalites", type: "richesse", page: "bezos.html", photo: "images/bezos.jpg", recherche: "\"Jeff Bezos\"",
     description: { fr: "Fondateur d'Amazon et de Blue Origin", en: "Founder of Amazon and Blue Origin", de: "Gründer von Amazon und Blue Origin", it: "Fondatore di Amazon e Blue Origin", es: "Fundador de Amazon y Blue Origin" }
   },
   {
-    nom: "Bernard Arnault", categorie: "personnalites", type: "richesse", page: "arnault.html", recherche: "\"Bernard Arnault\"",
+    nom: "Bernard Arnault", categorie: "personnalites", type: "richesse", page: "arnault.html", photo: "images/arnault.jpg", recherche: "\"Bernard Arnault\"",
     description: { fr: "PDG de LVMH, numéro un mondial du luxe", en: "CEO of LVMH, the world's largest luxury group", de: "Chef von LVMH, größter Luxuskonzern der Welt", it: "AD di LVMH, primo gruppo del lusso al mondo", es: "Director general de LVMH, líder mundial del lujo" }
   },
   {
