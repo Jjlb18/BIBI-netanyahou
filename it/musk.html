@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="it" data-root="../" data-lang="it" data-page="musk.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elon Musk — Ritratto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --ink:#14181f; --muted:#5b6270; --line:#d9d5cb;
+    --accent:#1d4e89; --accent-soft:#e3ebf5; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#11141a; --ink:#ecebe7; --muted:#9aa1ad; --line:#2a2f39;
+      --accent:#7fb0ea; --accent-soft:#1b2636; --card:#171b22; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px}
+  nav .links{display:flex;gap:18px;overflow-x:auto;flex:1;min-width:0;padding:12px 0;font-size:14px;font-weight:500;white-space:nowrap;scrollbar-width:none}
+  nav .links a{color:var(--muted);text-decoration:none}
+  nav .links a:hover{color:var(--ink)}
+  .switch{position:relative;flex:none}
+  .switch[hidden]{display:none}
+  .switch button{font:600 13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .switch button:hover{border-color:var(--accent)}
+  .switch button .chev{transition:transform .2s}
+  .switch.open button .chev{transform:rotate(180deg)}
+  .menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:6px;display:none}
+  .switch.open .menu{display:block}
+  .menu .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;padding:8px 10px 4px}
+  .menu a{display:flex;flex-direction:column;padding:9px 10px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+  .menu a small{font-weight:400;color:var(--muted);font-size:12px}
+  .menu a:hover{background:var(--accent-soft)}
+  .menu a.current{background:var(--accent-soft);color:var(--accent)}
+  .menu a.current:after{content:attr(data-cur);font-size:11px;font-weight:500;color:var(--muted)}
+  header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+  .lede{font-size:19px;color:var(--muted);max-width:680px;margin:0}
+  .fact em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:4px}
+  .fact.wide{grid-column:span 2}
+  .fact span.age{font-variant-numeric:tabular-nums;font-size:17px}
+  @media (max-width:720px){ .facts{grid-template-columns:1fr 1fr !important} }
+  .live-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .live-head h2{margin:0}
+  .dot{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#c0392b}
+  .dot:before{content:"";width:9px;height:9px;border-radius:50%;background:#e74c3c;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(231,76,60,.6)}70%{box-shadow:0 0 0 9px rgba(231,76,60,0)}100%{box-shadow:0 0 0 0 rgba(231,76,60,0)}}
+  .updated{font-size:13px;color:var(--muted)}
+  .news{display:grid;gap:12px}
+  .news .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:96px 1fr;gap:16px}
+  .news .d{font-size:13px;font-weight:600;color:var(--accent)}
+  .news p{margin:0;font-size:15px}
+  .news a{font-size:13px}
+  @media (max-width:600px){ .news .item{grid-template-columns:1fr;gap:4px} }
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:40px}
+  .fact{background:var(--card);padding:18px 20px}
+  .fact b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .fact span{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:600;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:720px}
+  .status{background:var(--accent-soft);border-left:4px solid var(--accent);padding:22px 24px;border-radius:0 12px 12px 0;max-width:760px}
+  .status small{display:block;color:var(--muted);margin-top:10px}
+  .timeline{list-style:none;margin:0;padding:0;position:relative}
+  .timeline:before{content:"";position:absolute;left:84px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .timeline li{display:grid;grid-template-columns:70px 1fr;gap:34px;padding:10px 0;position:relative}
+  .timeline li:before{content:"";position:absolute;left:79px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .timeline .y{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;text-align:right}
+  .timeline .t{color:var(--ink)}
+  .terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .when{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted);margin:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){ .two{grid-template-columns:1fr} .timeline:before{left:64px} .timeline li{grid-template-columns:52px 1fr;gap:28px} .timeline li:before{left:59px} }
+  ul.plain{margin:0;padding-left:18px} ul.plain li{margin-bottom:8px}
+  .sources ol{padding-left:20px;font-size:14px;color:var(--muted)}
+  .sources li{margin-bottom:6px}
+  footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+  .home-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:15px}
+  .home-btn:hover{border-color:var(--accent)}
+  .switches{display:flex;gap:8px;flex:none}
+  .lang .menu{min-width:170px}
+  .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
+  .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
+  @media (max-width:640px){ .switch button .txt{display:none} }
+  .person .menu{min-width:270px;max-height:75vh;overflow:auto}
+  .switch .menu .cat-head{border:0;border-radius:9px;padding:9px 10px;background:none}
+  .switch .menu .cat-head:hover{background:var(--accent-soft)}
+  .cat-head{display:flex;align-items:center;gap:8px;width:100%;background:none;border:0;padding:9px 10px;border-radius:9px;font:600 14px Inter,system-ui,sans-serif;color:var(--ink);cursor:pointer;text-align:left}
+  .cat-head:hover{background:var(--accent-soft)}
+  .cat-head .cn{flex:1}
+  .cat-head .cc{font-size:11px;font-weight:600;color:var(--muted);background:rgba(127,127,127,.15);border-radius:999px;padding:0 7px}
+  .cat-head .ca{color:var(--muted);transition:transform .2s}
+  .cat.open .cat-head .ca{transform:rotate(90deg)}
+  .cat-body{display:none;padding:2px 0 6px 16px;border-left:2px solid var(--line);margin-left:18px}
+  .cat.open .cat-body{display:block}
+  .cat-sub{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:10px 10px 2px}
+  .cat-empty{display:block;font-size:13px;color:var(--muted);padding:6px 10px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="links">
+  <a href="#direct">In diretta</a>
+  <a href="#actualite">Contesto 2026</a>
+  <a href="#biographie">Biografia</a>
+  <a href="#mandats">Aziende</a>
+  <a href="#chronologie">Cronologia</a>
+  <a href="#proces">Polemiche</a>
+  <a href="#perspectives">Punti di vista</a>
+  <a href="#sources">Fonti</a>
+  </div>
+  <div class="switches">
+  <a class="home-btn" href="index.html" title="Home" aria-label="Home">🏠</a>
+  <div class="switch lang">
+    <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Lingua</span> <b>IT</b> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Lingua</div><a href="../musk.html">Français <small>FR</small></a><a href="../en/musk.html">English <small>EN</small></a><a href="../de/musk.html">Deutsch <small>DE</small></a><a href="../it/musk.html" class="current">Italiano <small>IT</small></a><a href="../es/musk.html">Español <small>ES</small></a></div>
+  </div>
+  <div class="switch person" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">☰ <span class="txt">Categorie</span> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div id="people"></div></div>
+  </div>
+  </div>
+</div></nav>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Ritratto · Ricchezza · Stati Uniti</div>
+  <h1>Elon Musk</h1>
+  <p class="lede">Imprenditore nato in Sudafrica, a capo di Tesla e SpaceX, proprietario del social X e fondatore di xAI. È la persona più ricca del mondo da maggio 2024.</p>
+
+  <div class="facts">
+    <div class="fact"><b>Età esatta</b><span class="age" id="age">—</span><em>anni · giorni · ore · minuti · secondi, in diretta</em></div>
+    <div class="fact"><b>Patrimonio</b><span>≈ 869 miliardi $</span><em>Forbes, 1° novembre 2026</em></div>
+    <div class="fact"><b>Posizione mondiale</b><span>N. 1</span></div>
+    <div class="fact"><b>Aziende</b><span>Tesla, SpaceX (con xAI), X, Neuralink, The Boring Company</span></div>
+    <div class="fact"><b>Cittadinanza</b><span>Sudafricana, canadese, statunitense</span></div>
+    <div class="fact"><b>Residenza</b><span>Austin (Texas)</span></div>
+    <div class="fact wide"><b>Nascita</b><span>28 giugno 1971, Pretoria (Sudafrica)</span></div>
+  </div>
+</header>
+
+<section id="direct">
+  <div class="live-head"><h2>In questo momento</h2><span class="dot">In diretta</span></div>
+  <!--NEWS-START-->
+  <p class="updated">Ultimo aggiornamento: 11 novembre 2026, 20:00 (ora di Zurigo)</p>
+  <div class="news">
+    <div class="item"><span class="d">8 nov. 2026</span><div><p>SpaceX punta non prima del 13 novembre per il volo 15 di Starship, con il tentativo di recuperare sia il booster sia la navicella.</p><a href="https://www.teslarati.com/?p=303991">Teslarati</a></div></div>
+    <div class="item"><span class="d">4 nov. 2026</span><div><p>Le azioni di SpaceX e Tesla calano dopo la sconfitta in Texas dei candidati sostenuti da Musk alle elezioni di metà mandato.</p><a href="https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2pWM0lPaUVoSDRma1NfZE5ZMU9pZ0FQAQ">Google News</a></div></div>
+    <div class="item"><span class="d">1° nov. 2026</span><div><p>Il suo patrimonio scende di circa 68 miliardi $ in un mese, a 869 miliardi, con il calo dei titoli tecnologici.</p><a href="https://www.forbes.com.au/news/billionaires/the-top-10-richest-people-in-the-world-january-2026/">Forbes</a></div></div>
+  </div>
+  <!--NEWS-END-->
+</section>
+
+<section id="actualite">
+  <h2>Contesto: patrimonio e politica nel 2026</h2>
+  <div class="status">
+    <p><strong>Un patrimonio record.</strong> La quotazione in Borsa di SpaceX nel 2026 ha portato alcune stime oltre i 1.000 miliardi $; a inizio novembre è sceso sotto questa soglia.</p>
+    <p><strong>Politica.</strong> Ha speso oltre 440 milioni $ per sostenere i repubblicani alle elezioni di metà mandato del 3 novembre 2026, vinte dai democratici.</p>
+  </div>
+</section>
+
+<section id="biographie">
+  <h2>Biografia</h2>
+  <div class="two">
+    <div>
+      <h3>Giovinezza</h3>
+      <p>Nato a Pretoria, a 17 anni si trasferisce in Canada e poi studia fisica ed economia all'Università della Pennsylvania.</p>
+      <h3>Primi successi</h3>
+      <p>Cofonda Zip2 (venduta nel 1999) e poi X.com, diventata PayPal e acquistata da eBay nel 2002.</p>
+    </div>
+    <div>
+      <h3>Le grandi scommesse</h3>
+      <p>Con i soldi di PayPal fonda SpaceX (2002) e investe in Tesla, di cui diventa amministratore delegato nel 2008.</p>
+      <h3>Famiglia</h3>
+      <p>Ha molti figli da diverse relazioni, tra cui alcuni con la cantante Grimes.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mandats">
+  <h2>Le sue aziende</h2>
+  <div class="terms">
+    <div class="card"><div class="when">Dal 2002</div><h3>SpaceX</h3><p>Razzi riutilizzabili Falcon e Starship, internet satellitare Starlink. Ha assorbito xAI (il chatbot Grok) ed è entrata in Borsa nel 2026.</p></div>
+    <div class="card"><div class="when">Dal 2004</div><h3>Tesla</h3><p>Auto elettriche, batterie, guida autonoma e robotaxi Cybercab. Nel 2025 gli azionisti gli hanno approvato un piano di compensi gigantesco.</p></div>
+    <div class="card"><div class="when">Dal 2022</div><h3>X (ex Twitter)</h3><p>Acquistato per 44 miliardi $ e ribattezzato X. Musk ha fondato anche Neuralink (impianti cerebrali) e The Boring Company (tunnel).</p></div>
+  </div>
+</section>
+
+<section id="chronologie">
+  <h2>Cronologia</h2>
+  <ul class="timeline">
+    <li><span class="y">1971</span><span class="t">Nasce a Pretoria il 28 giugno.</span></li>
+    <li><span class="y">1999</span><span class="t">Vende Zip2; fonda X.com (futura PayPal).</span></li>
+    <li><span class="y">2002</span><span class="t">eBay acquista PayPal; nasce SpaceX.</span></li>
+    <li><span class="y">2008</span><span class="t">Diventa AD di Tesla.</span></li>
+    <li><span class="y">2021</span><span class="t">Per la prima volta l'uomo più ricco del mondo.</span></li>
+    <li><span class="y">2022</span><span class="t">Acquista Twitter, ribattezzato X nel 2023.</span></li>
+    <li><span class="y">2025</span><span class="t">Guida il DOGE (tagli alla spesa federale) per Trump, poi lascia il ruolo in primavera.</span></li>
+    <li><span class="y">2026</span><span class="t">Fusione SpaceX‑xAI e quotazione di SpaceX; grandi finanziamenti ai repubblicani per le elezioni di metà mandato.</span></li>
+  </ul>
+</section>
+
+<section id="proces">
+  <h2>Polemiche e processi</h2>
+  <p>Le sue dichiarazioni e la gestione delle sue aziende gli valgono numerosi procedimenti.</p>
+  <ul class="plain">
+    <li><strong>Acquisto di Twitter</strong> — A marzo 2026 una giuria lo ha ritenuto responsabile verso gli azionisti di Twitter per frode legata all'acquisizione.</li>
+    <li><strong>Autorità di Borsa (SEC)</strong> — A maggio 2026 ha chiuso con un accordo la causa della SEC sulla comunicazione tardiva della sua quota in Twitter (multa di 1,5 milioni $).</li>
+    <li><strong>OpenAI</strong> — Nel 2026 ha testimoniato nella sua causa contro OpenAI, che accusa di aver tradito la missione originaria.</li>
+    <li><strong>Politica</strong> — Il ruolo al DOGE e le donazioni elettorali hanno provocato le proteste «Tesla Takedown» contro il marchio.</li>
+  </ul>
+</section>
+
+<section id="perspectives">
+  <h2>Un personaggio che divide</h2>
+  <div class="two">
+    <div class="card">
+      <h3>Cosa sottolineano gli estimatori</h3>
+      <ul class="plain">
+        <li>Pioniere dei razzi riutilizzabili e dell'auto elettrica di massa.</li>
+        <li>Starlink porta internet in zone isolate e di guerra.</li>
+        <li>Rischi enormi su progetti ritenuti impossibili.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Cosa gli rimproverano i critici</h3>
+      <ul class="plain">
+        <li>Influenza politica giudicata eccessiva per una sola persona.</li>
+        <li>Messaggi polemici e disinformazione diffusi su X.</li>
+        <li>Promesse spesso in ritardo (guida autonoma, Marte).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sources" class="sources">
+  <h2>Fonti</h2>
+  <ol>
+    <li><a href="https://www.forbes.com.au/news/billionaires/the-top-10-richest-people-in-the-world-january-2026/">Forbes — The top 10 richest people in the world (November 2026)</a></li>
+    <li><a href="https://www.teslarati.com/?p=303991">Teslarati — Starship Flight 15</a></li>
+    <li><a href="https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2pWM0lPaUVoSDRma1NfZE5ZMU9pZ0FQAQ">Google News — Musk & midterms 2026</a></li>
+    <li><a href="https://www.dzrh.com.ph/tag/elon-musk">DZRH / Reuters — Musk 2026 (SEC, Twitter, xAI)</a></li>
+    <li><a href="https://www.forbes.com.au/news/billionaires/the-forbes-billionaires-list-top-200/">Forbes — World’s Billionaires 2026</a></li>
+  </ol>
+</section>
+
+<footer>Pagina informativa e neutrale, redatta l'11 novembre 2026. I patrimoni cambiano ogni giorno con la Borsa.</footer>
+
+</div>
+<script>
+  const el = document.getElementById('age');
+  const p = n => String(n).padStart(2, '0');
+  // Date de référence (heure locale du lieu, UTC+2)
+  function tick(){
+    const now = new Date(Date.now() + (2) * 3600 * 1000);
+    let y = now.getUTCFullYear() - 1971;
+    let last = Date.UTC(1971 + y, 5, 28, 0, 0);
+    if (now.getTime() < last){ y--; last = Date.UTC(1971 + y, 5, 28, 0, 0); }
+    let s = Math.floor((now.getTime() - last) / 1000);
+    const d = Math.floor(s / 86400); s %= 86400;
+    const h = Math.floor(s / 3600); s %= 3600;
+    const m = Math.floor(s / 60); s %= 60;
+    el.textContent = `${y} anni, ${d} g, ${p(h)} h ${p(m)} min ${p(s)} s`;
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+<script src="../personnes.js"></script>
+<script>
+  (function(){
+    const LANG = document.documentElement.dataset.lang;
+    const HERE = document.documentElement.dataset.page;
+    // menus déroulants
+    const all = [...document.querySelectorAll('.switch')];
+    all.forEach(sw => {
+      const btn = sw.querySelector('button');
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        all.forEach(o => { if (o !== sw) o.classList.remove('open'); });
+        btn.setAttribute('aria-expanded', sw.classList.toggle('open'));
+      });
+    });
+    document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
+    // menu Catégories
+    const list = window.PERSONNES;
+    if (!Array.isArray(list) || !list.length) return;
+    const cats = window.CATEGORIES || [{ id: 'personnalites', icone: '👤', noms: {} }];
+    const catOf = p => p.categorie || 'personnalites';
+    const box = document.getElementById('people');
+    const here = list.find(p => p.page === HERE);
+    cats.forEach(c => {
+      const items = list.filter(p => catOf(p) === c.id);
+      const grp = document.createElement('div'); grp.className = 'cat';
+      const head = document.createElement('button'); head.type = 'button'; head.className = 'cat-head';
+      head.innerHTML = '<span class="ci"></span><span class="cn"></span><span class="cc"></span><span class="ca">▸</span>';
+      head.children[0].textContent = c.icone || '';
+      head.children[1].textContent = (c.noms && (c.noms[LANG] || c.noms.fr)) || c.id;
+      head.children[2].textContent = items.length;
+      head.addEventListener('click', e => { e.stopPropagation(); grp.classList.toggle('open'); });
+      const body = document.createElement('div'); body.className = 'cat-body';
+      const add = pers => {
+        const a = document.createElement('a');
+        a.href = pers.page;
+        a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
+        const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
+        if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
+        if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Pagina attuale'; }
+        body.appendChild(a);
+      };
+      const types = window.TYPES || [];
+      if (c.id === 'personnalites' && types.length){
+        types.forEach(t => {
+          const st = document.createElement('div'); st.className = 'cat-sub';
+          st.textContent = (t.icone || '') + ' ' + ((t.noms && (t.noms[LANG] || t.noms.fr)) || t.id);
+          body.appendChild(st);
+          const ti = items.filter(p => p.type === t.id);
+          ti.forEach(add);
+          if (!ti.length){ const e = document.createElement('span'); e.className = 'cat-empty'; e.textContent = 'Presto…'; body.appendChild(e); }
+        });
+        items.filter(p => !types.some(t => t.id === p.type)).forEach(add);
+      } else items.forEach(add);
+      if (!items.length){ const e = document.createElement('span'); e.className = 'cat-empty'; e.textContent = 'Presto…'; body.appendChild(e); }
+      if (here && catOf(here) === c.id) grp.classList.add('open');
+      grp.append(head, body);
+      box.appendChild(grp);
+    });
+    document.getElementById('switch').hidden = false;
+  })();
+</script>
+</body>
+</html>

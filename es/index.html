@@ -197,7 +197,7 @@
       subtabs.replaceChildren();
       subtabs.hidden = !(id === 'personnalites' && types.length);
       if (!subtabs.hidden){
-        if (!types.some(t => t.id === sub)) sub = '';
+        if (!types.some(t => t.id === sub)) sub = types.some(t => t.id === 'richesse') ? 'richesse' : types[0].id;
         const chip = (tid, icone, label, n) => {
           const b = document.createElement('button'); b.type = 'button'; b.className = 'stab';
           b.setAttribute('aria-pressed', (tid || '') === sub);
@@ -206,9 +206,8 @@
           b.addEventListener('click', () => { const h = tid ? id + '-' + tid : id; history.replaceState(null, '', '#' + h); show(h); });
           subtabs.appendChild(b);
         };
-        chip('', '✨', 'Todos', items.length);
         types.forEach(t => chip(t.id, t.icone, (t.noms && (t.noms[LANG] || t.noms.fr)) || t.id, items.filter(p => p.type === t.id).length));
-        if (sub) items = items.filter(p => p.type === sub);
+        items = items.filter(p => p.type === sub);
       }
       grid.replaceChildren(...items.map(card));
       empty.hidden = grid.children.length > 0;
