@@ -20,8 +20,8 @@ window.PERSONNES = [
     description: { fr: "Financier, condamné pour crimes sexuels", en: "Financier, convicted sex offender", de: "Finanzier, verurteilter Sexualstraftäter", it: "Finanziere, condannato per reati sessuali", es: "Financiero, condenado por delitos sexuales" }
   },
   {
-    nom: "GTA 6", categorie: "jeux", page: "gta6.html", sigle: "VI", recherche: "\"GTA 6\" OR \"GTA VI\"",
-    description: { fr: "Rockstar Games · sortie le 19 novembre 2026", en: "Rockstar Games · out 19 November 2026", de: "Rockstar Games · erscheint am 19. November 2026", it: "Rockstar Games · esce il 19 novembre 2026", es: "Rockstar Games · sale el 19 de noviembre de 2026" }
+    nom: "GTA", categorie: "jeux", page: "gta.html", sigle: "GTA", recherche: "\"GTA 6\" OR \"GTA VI\"",
+    description: { fr: "Dernière version : GTA V · prochaine : GTA VI (19 novembre 2026)", en: "Latest: GTA V · next: GTA VI (19 November 2026)", de: "Neueste: GTA V · nächste: GTA VI (19. November 2026)", it: "Ultima: GTA V · prossima: GTA VI (19 novembre 2026)", es: "Última: GTA V · próxima: GTA VI (19 de noviembre de 2026)" }
   },
   {
     nom: "EA Sports FC", categorie: "jeux", page: "fc.html", sigle: "FC", recherche: "\"EA Sports FC\" OR \"FC 27\"",
