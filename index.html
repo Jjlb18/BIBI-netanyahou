@@ -21,9 +21,24 @@
   a{color:var(--accent)}
   .wrap{max-width:980px;margin:0 auto;padding:0 24px}
   nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex;gap:22px;overflow-x:auto;padding-top:12px;padding-bottom:12px;font-size:14px;font-weight:500;white-space:nowrap}
-  nav a{color:var(--muted);text-decoration:none}
-  nav a:hover{color:var(--ink)}
+  nav .wrap{display:flex;align-items:center;gap:16px}
+  nav .links{display:flex;gap:22px;overflow-x:auto;flex:1;min-width:0;padding:12px 0;font-size:14px;font-weight:500;white-space:nowrap;scrollbar-width:none}
+  nav .links a{color:var(--muted);text-decoration:none}
+  nav .links a:hover{color:var(--ink)}
+  .switch{position:relative;flex:none}
+  .switch[hidden]{display:none}
+  .switch button{font:600 13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .switch button:hover{border-color:var(--accent)}
+  .switch button .chev{transition:transform .2s}
+  .switch.open button .chev{transform:rotate(180deg)}
+  .menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:6px;display:none}
+  .switch.open .menu{display:block}
+  .menu .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;padding:8px 10px 4px}
+  .menu a{display:flex;flex-direction:column;padding:9px 10px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+  .menu a small{font-weight:400;color:var(--muted);font-size:12px}
+  .menu a:hover{background:var(--accent-soft)}
+  .menu a.current{background:var(--accent-soft);color:var(--accent)}
+  .menu a.current:after{content:"Page actuelle";font-size:11px;font-weight:500;color:var(--muted)}
   header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
   .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
   h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
@@ -75,6 +90,7 @@
 <body>
 
 <nav><div class="wrap">
+  <div class="links">
   <a href="#direct">En direct</a>
   <a href="#actualite">Élections 2026</a>
   <a href="#biographie">Biographie</a>
@@ -83,6 +99,11 @@
   <a href="#proces">Procès</a>
   <a href="#perspectives">Perspectives</a>
   <a href="#sources">Sources</a>
+  </div>
+  <div class="switch" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">👤 Changer de personne <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Personnalités</div><div id="people"></div></div>
+  </div>
 </div></nav>
 
 <div class="wrap">
@@ -239,6 +260,34 @@
     el.textContent = `${y} ans, ${d} j, ${p(h)} h ${p(m)} min ${p(s)} s`;
   }
   tick(); setInterval(tick, 1000);
+</script>
+<!-- Sélecteur de personne : la liste se trouve dans personnes.js -->
+<script src="personnes.js"></script>
+<script>
+  (function(){
+    const list = window.PERSONNES;
+    if (!Array.isArray(list) || !list.length) return; // pas de liste : le bouton reste caché
+    const sw = document.getElementById('switch');
+    const box = document.getElementById('people');
+    const here = (location.pathname.split('/').pop() || 'index.html');
+    list.forEach(p => {
+      const a = document.createElement('a');
+      a.href = p.page;
+      a.textContent = p.nom;
+      if (p.description){ const s = document.createElement('small'); s.textContent = p.description; a.appendChild(s); }
+      if (p.page === here) a.className = 'current';
+      box.appendChild(a);
+    });
+    sw.hidden = false;
+    const btn = sw.querySelector('button');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const open = sw.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', () => { sw.classList.remove('open'); btn.setAttribute('aria-expanded', false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') sw.classList.remove('open'); });
+  })();
 </script>
 </body>
 </html>
