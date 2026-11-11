@@ -29,7 +29,7 @@ def get(path):
     req = urllib.request.Request(API + path, headers={'User-Agent': 'BIBI-netanyahou-site/1.0 (github.com/Jjlb18/BIBI-netanyahou)'})
     with urllib.request.urlopen(req, timeout=30) as r:
         data = json.load(r)
-    time.sleep(2.5)  # reste sous 30 requêtes par minute
+    time.sleep(4)  # clé partagée : on reste bien sous 30 requêtes par minute
     return data or {}
 
 
@@ -111,7 +111,8 @@ def main():
     for cid, lid in COMPETITIONS.items():
         avant = ancien.get('competitions', {}).get(cid, {'matchs': [], 'classement': []})
         apres = dict(avant)
-        for cle, f in (('matchs', matchs), ('classement', classement)):
+        etapes = [('matchs', matchs)] + ([('classement', classement)] if KEY != '123' else [])  # pas de classements rugby avec la clé gratuite
+        for cle, f in etapes:
             try:
                 v = f(lid)
                 if v:
