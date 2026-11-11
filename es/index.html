@@ -109,6 +109,12 @@
   .tab:hover{border-color:var(--accent)}
   .tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
   .tab .n{font-size:12px;font-weight:600;opacity:.75;background:rgba(127,127,127,.18);border-radius:999px;padding:1px 8px}
+  .subtabs{display:flex;flex-wrap:wrap;gap:8px;margin:-10px 0 24px}
+  .subtabs[hidden]{display:none}
+  .stab{font:600 13px Inter,system-ui,sans-serif;display:flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;border:1px dashed var(--line);background:transparent;color:var(--ink);cursor:pointer}
+  .stab:hover{border-color:var(--accent)}
+  .stab[aria-pressed="true"]{border-style:solid;border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+  .stab .n{font-size:11px;opacity:.7}
   .empty{color:var(--muted);font-size:17px;background:var(--card);border:1px dashed var(--line);border-radius:18px;padding:40px 24px;text-align:center;max-width:none}
 </style>
 </head>
@@ -139,6 +145,7 @@
 <section>
   <h2>Explorar</h2>
   <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="subtabs" id="subtabs" hidden></div>
   <div class="grid" id="grid"></div>
   <p class="empty" id="empty" hidden>Aún no hay nada aquí… ¡pronto llegarán nuevas páginas!</p>
 </section>
@@ -180,10 +187,30 @@
       a.append(av, h, p, go);
       return a;
     }
-    function show(id){
+    const types = window.TYPES || [];
+    const subtabs = document.getElementById('subtabs');
+    function show(hash){
+      let [id, sub] = (hash || '').split('-');
       if (!cats.some(c => c.id === id)) id = cats[0].id;
       [...tabs.children].forEach(b => b.setAttribute('aria-selected', b.dataset.id === id));
-      grid.replaceChildren(...list.filter(p => catOf(p) === id).map(card));
+      let items = list.filter(p => catOf(p) === id);
+      subtabs.replaceChildren();
+      subtabs.hidden = !(id === 'personnalites' && types.length);
+      if (!subtabs.hidden){
+        if (!types.some(t => t.id === sub)) sub = '';
+        const chip = (tid, icone, label, n) => {
+          const b = document.createElement('button'); b.type = 'button'; b.className = 'stab';
+          b.setAttribute('aria-pressed', (tid || '') === sub);
+          b.innerHTML = '<span></span><span></span><span class="n"></span>';
+          b.children[0].textContent = icone; b.children[1].textContent = label; b.children[2].textContent = n;
+          b.addEventListener('click', () => { const h = tid ? id + '-' + tid : id; history.replaceState(null, '', '#' + h); show(h); });
+          subtabs.appendChild(b);
+        };
+        chip('', '✨', 'Todos', items.length);
+        types.forEach(t => chip(t.id, t.icone, (t.noms && (t.noms[LANG] || t.noms.fr)) || t.id, items.filter(p => p.type === t.id).length));
+        if (sub) items = items.filter(p => p.type === sub);
+      }
+      grid.replaceChildren(...items.map(card));
       empty.hidden = grid.children.length > 0;
     }
     cats.forEach(c => {
