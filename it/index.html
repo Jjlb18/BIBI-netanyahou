@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it" data-root="../" data-lang="it" data-page="index.html">
+<html lang="it" data-lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Benjamin Netanyahu — Ritratto</title>
+<title>Ritratti in diretta — Home</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -38,7 +38,7 @@
   .menu a small{font-weight:400;color:var(--muted);font-size:12px}
   .menu a:hover{background:var(--accent-soft)}
   .menu a.current{background:var(--accent-soft);color:var(--accent)}
-  .menu a.current:after{content:attr(data-cur);font-size:11px;font-weight:500;color:var(--muted)}
+  .menu a.current:after{content:"Page actuelle";font-size:11px;font-weight:500;color:var(--muted)}
   header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
   .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
   h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
@@ -89,221 +89,83 @@
   .lang .menu{min-width:170px}
   .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
   .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
-  @media (max-width:640px){ .switch button .txt{display:none} }
+  .brand{flex:1;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:17px;padding:12px 0;color:var(--ink);text-decoration:none}
+  .hero{padding:96px 0 56px;border-bottom:1px solid var(--line)}
+  .hero h1{font-size:clamp(46px,8vw,92px)}
+  .stats{display:flex;flex-wrap:wrap;gap:36px;margin-top:36px}
+  .stats div b{display:block;font-family:Fraunces,Georgia,serif;font-size:34px;font-weight:700;line-height:1.1}
+  .stats div span{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+  .pcard{display:flex;flex-direction:column;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s,box-shadow .15s}
+  .pcard:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 10px 28px rgba(0,0,0,.10)}
+  .avatar{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:24px;color:#fff;background:var(--accent)}
+  .pcard h3{font-family:Fraunces,Georgia,serif;font-size:24px;margin:0}
+  .pcard p{margin:0;color:var(--muted);font-size:15px}
+  .pcard .go{margin-top:auto;font-weight:600;font-size:14px;color:var(--accent)}
+  .about{color:var(--muted);max-width:720px}
 </style>
 </head>
 <body>
 
 <nav><div class="wrap">
-  <div class="links">
-  <a href="#direct">In diretta</a>
-  <a href="#actualite">Elezioni 2026</a>
-  <a href="#biographie">Biografia</a>
-  <a href="#mandats">Mandati</a>
-  <a href="#chronologie">Cronologia</a>
-  <a href="#proces">Processo</a>
-  <a href="#perspectives">Punti di vista</a>
-  <a href="#sources">Fonti</a>
-  </div>
+  <a class="brand" href="index.html">Ritratti in diretta</a>
   <div class="switches">
   <div class="switch lang">
     <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Lingua</span> <b>IT</b> <span class="chev">▾</span></button>
     <div class="menu" role="menu"><div class="label">Lingua</div><a href="../index.html">Français <small>FR</small></a><a href="../en/index.html">English <small>EN</small></a><a href="../de/index.html">Deutsch <small>DE</small></a><a href="../it/index.html" class="current">Italiano <small>IT</small></a><a href="../es/index.html">Español <small>ES</small></a></div>
   </div>
-  <div class="switch person" id="switch" hidden>
-    <button type="button" aria-haspopup="true" aria-expanded="false">👤 <span class="txt">Cambia persona</span> <span class="chev">▾</span></button>
-    <div class="menu" role="menu"><div class="label">Personalità</div><div id="people"></div></div>
-  </div>
   </div>
 </div></nav>
 
 <div class="wrap">
-<header>
-  <div class="eyebrow">Ritratto politico · Israele</div>
-  <h1>Benjamin Netanyahu</h1>
-  <p class="lede">Leader del Likud e primo ministro israeliano rimasto più a lungo in carica, figura centrale – e divisiva – della politica israeliana dalla metà degli anni Novanta.</p>
-
-  <div class="facts">
-    <div class="fact"><b>Età esatta</b><span class="age" id="age">—</span><em>anni · giorni · ore · minuti · secondi, in diretta</em></div>
-    <div class="fact"><b>Soprannome</b><span>«Bibi»</span></div>
-    <div class="fact"><b>Partito</b><span>Likud (destra)</span></div>
-    <div class="fact"><b>Carica</b><span>Primo ministro (ad interim)</span></div>
-    <div class="fact"><b>Formazione</b><span>MIT (architettura, gestione)</span></div>
-    <div class="fact"><b>Altezza</b><span>≈ 1,75 – 1,80 m</span><em>stima, nessun dato ufficiale</em></div>
-    <div class="fact wide"><b>Nascita</b><span>21 ottobre 1949, Tel Aviv</span></div>
+<header class="hero">
+  <div class="eyebrow">Benvenuto</div>
+  <h1>Ritratti in diretta</h1>
+  <p class="lede">Schede chiare e neutrali su personalità di attualità: biografia, cronologia e le loro ultime notizie, aggiornate automaticamente.</p>
+  <div class="stats">
+    <div><b id="count">—</b><span>personalità</span></div>
+    <div><b>5</b><span>lingue</span></div>
+    <div><b>Ogni ora</b><span>notizie aggiornate</span></div>
   </div>
 </header>
 
-<section id="direct">
-  <div class="live-head"><h2>In questo momento</h2><span class="dot">In diretta</span></div>
-  <!--NEWS-START-->
-  <p class="updated">Ultimo aggiornamento: 11 novembre 2026, 19:30 (ora di Zurigo)</p>
-  <div class="news">
-    <div class="item"><span class="d">9 nov. 2026</span><div><p>Netanyahu chiede un governo di unità nazionale e si dice pronto a trattare subito con qualsiasi partito; secondo lui non si può formare un governo che dipenda dai partiti arabi.</p><a href="https://www.israelhayom.com/2026/11/09/eisenkot-liberman-meet-for-coalition-talks-as-major-hurdles-remain/">Israel Hayom</a></div></div>
-    <div class="item"><span class="d">9 nov. 2026</span><div><p>Eisenkot e Avigdor Liberman si incontrano; il rifiuto di Liberman di appoggiarsi ai partiti arabi resta il principale ostacolo a una coalizione anti-Netanyahu.</p><a href="https://www.freepressjournal.in/world/israels-next-govt-remains-uncertain-as-netanyahu-pushes-unity-proposal-eisenkot-negotiates-coalition">Free Press Journal / ANI</a></div></div>
-    <div class="item"><span class="d">8 nov. 2026</span><div><p>Il presidente Herzog affida ufficialmente a Gadi Eisenkot l'incarico di formare il governo (28 giorni + fino a 14). Netanyahu resta primo ministro ad interim.</p><a href="https://www.ynetnews.com/article/sjygemraml">Ynet</a></div></div>
-    <div class="item"><span class="d">Nov. 2026</span><div><p>Prosegue il processo per corruzione di Netanyahu davanti al tribunale distrettuale di Gerusalemme.</p><a href="https://timesofisrael.com/liveblog-october-11-2026">Times of Israel</a></div></div>
-  </div>
-  <!--NEWS-END-->
+<section>
+  <h2>Scegli una personalità</h2>
+  <div class="grid" id="grid"></div>
 </section>
 
-<section id="actualite">
-  <h2>Contesto: le elezioni del 2026</h2>
-  <div class="status">
-    <p><strong>Elezioni del 27 ottobre 2026.</strong> Il Likud è arrivato primo, e il blocco di Netanyahu ha ottenuto 53 seggi su 120, contro 48 per il blocco d'opposizione di Gadi Eisenkot – non abbastanza per governare da solo.</p>
-    <p><strong>8 novembre 2026.</strong> Dopo le consultazioni, il presidente Isaac Herzog ha affidato l'incarico di formare il governo a Gadi Eisenkot (partito Yashar), raccomandato da 67 deputati contro 46 per Netanyahu. Eisenkot ha 28 giorni, prorogabili di 14.</p>
-    <p style="margin:0">Nel frattempo Netanyahu resta primo ministro ad interim e spinge per un governo di unità nazionale. Se Eisenkot fallisce, l'incarico potrebbe passare a lui.</p>
-    <small>Situazione all'11 novembre 2026 – può cambiare rapidamente.</small>
-  </div>
+<section>
+  <p class="about">Le informazioni provengono da media affermati, citati in fondo a ogni pagina. Le pagine restano neutrali: presentano i fatti e i diversi punti di vista.</p>
 </section>
 
-<section id="biographie">
-  <h2>Biografia</h2>
-  <div class="two">
-    <div>
-      <h3>Giovinezza ed esercito</h3>
-      <p>Nato a Tel Aviv, figlio dello storico Benzion Netanyahu, trascorre parte della giovinezza negli Stati Uniti. Dal 1967 al 1972 presta servizio nell'unità d'élite Sayeret Matkal, partecipando tra l'altro alla liberazione del volo Sabena dirottato nel 1972.</p>
-      <h3>Il fratello Yoni</h3>
-      <p>Il fratello maggiore Yonatan («Yoni») muore nel 1976 al comando del raid di Entebbe, in Uganda. L'evento segna profondamente il suo percorso e il suo impegno contro il terrorismo.</p>
-    </div>
-    <div>
-      <h3>Studi e diplomazia</h3>
-      <p>Laureato al MIT, lavora per breve tempo nella consulenza aziendale. Diventa poi numero due dell'ambasciata d'Israele a Washington (1982) e ambasciatore all'ONU (1984–1988), dove si fa notare per la sua abilità mediatica in inglese.</p>
-      <h3>L'ingresso in politica</h3>
-      <p>Eletto alla Knesset nel 1988, diventa leader del Likud nel 1993 e nel 1996, a 46 anni, il più giovane primo ministro della storia del paese.</p>
-    </div>
-  </div>
-</section>
-
-<section id="mandats">
-  <h2>I suoi mandati da primo ministro</h2>
-  <div class="terms">
-    <div class="card"><div class="when">1996 – 1999</div><h3>Primo mandato</h3><p>Eletto direttamente dopo l'assassinio di Yitzhak Rabin. Firma gli accordi di Hebron e di Wye River con l'Autorità palestinese, poi perde contro Ehud Barak.</p></div>
-    <div class="card"><div class="when">2009 – 2021</div><h3>Dodici anni di fila</h3><p>Periodo segnato dall'opposizione all'accordo nucleare con l'Iran, dal trasferimento dell'ambasciata USA a Gerusalemme (2018) e dagli Accordi di Abramo (2020). Sostituito dalla coalizione Bennett–Lapid.</p></div>
-    <div class="card"><div class="when">Dic. 2022 – oggi</div><h3>Ritorno al potere</h3><p>Coalizione con partiti ultraortodossi e di estrema destra; contestata riforma della giustizia, attacco del 7 ottobre 2023, guerre a Gaza, in Libano e contro l'Iran.</p></div>
-  </div>
-</section>
-
-<section id="chronologie">
-  <h2>Cronologia</h2>
-  <ul class="timeline">
-    <li><span class="y">1949</span><span class="t">Nasce a Tel Aviv.</span></li>
-    <li><span class="y">1967</span><span class="t">Servizio militare nella Sayeret Matkal (fino al 1972).</span></li>
-    <li><span class="y">1976</span><span class="t">Il fratello Yoni muore nel raid di Entebbe.</span></li>
-    <li><span class="y">1984</span><span class="t">Nominato ambasciatore d'Israele all'ONU.</span></li>
-    <li><span class="y">1993</span><span class="t">Eletto leader del Likud.</span></li>
-    <li><span class="y">1996</span><span class="t">Diventa primo ministro per la prima volta.</span></li>
-    <li><span class="y">2003</span><span class="t">Ministro delle Finanze con Ariel Sharon; si dimette nel 2005 per protesta contro il ritiro da Gaza.</span></li>
-    <li><span class="y">2009</span><span class="t">Torna primo ministro.</span></li>
-    <li><span class="y">2019</span><span class="t">Incriminato per corruzione, frode e abuso di fiducia; inizia una serie di cinque elezioni in meno di quattro anni.</span></li>
-    <li><span class="y">2020</span><span class="t">Accordi di Abramo con Emirati Arabi Uniti e Bahrein.</span></li>
-    <li><span class="y">2021</span><span class="t">Passa all'opposizione contro la coalizione Bennett–Lapid.</span></li>
-    <li><span class="y">2022</span><span class="t">Vince le elezioni e forma il suo sesto governo.</span></li>
-    <li><span class="y">2023</span><span class="t">Proteste di massa contro la riforma della giustizia; attacco di Hamas del 7 ottobre e inizio della guerra a Gaza.</span></li>
-    <li><span class="y">2024</span><span class="t">La Corte penale internazionale emette un mandato d'arresto nei suoi confronti (novembre), respinto da Israele.</span></li>
-    <li><span class="y">2025</span><span class="t">Guerra di dodici giorni contro l'Iran (giugno); cessate il fuoco a Gaza (ottobre); richiesta di grazia presidenziale (novembre).</span></li>
-    <li><span class="y">2026</span><span class="t">Elezioni del 27 ottobre: Likud primo partito, ma l'incarico va a Gadi Eisenkot l'8 novembre.</span></li>
-  </ul>
-</section>
-
-<section id="proces">
-  <h2>Il processo per corruzione</h2>
-  <p>Incriminato nel 2019, Netanyahu è sotto processo dal 2020 in tre casi distinti, che nega in blocco definendoli una «caccia alle streghe»:</p>
-  <ul class="plain">
-    <li><strong>Caso 1000</strong> – regali di lusso (sigari, champagne) ricevuti da ricchi uomini d'affari.</li>
-    <li><strong>Caso 2000</strong> – presunte trattative con l'editore del quotidiano <em>Yedioth Ahronoth</em> per ottenere una copertura favorevole.</li>
-    <li><strong>Caso 4000</strong> – presunti vantaggi normativi al gruppo Bezeq in cambio di una copertura favorevole sul sito Walla.</li>
-  </ul>
-  <p style="margin-top:14px">A fine 2025 ha chiesto la grazia al presidente Herzog. Il processo proseguiva nel 2026, con diverse udienze a settimana.</p>
-</section>
-
-<section id="perspectives">
-  <h2>Un leader che divide</h2>
-  <div class="two">
-    <div class="card">
-      <h3>Cosa sottolineano i suoi sostenitori</h3>
-      <ul class="plain">
-        <li>Fermezza sulla sicurezza nei confronti di Iran, Hamas ed Hezbollah.</li>
-        <li>Normalizzazione con diversi paesi arabi (Accordi di Abramo).</li>
-        <li>Rapporto stretto con gli Stati Uniti, in particolare con Donald Trump.</li>
-        <li>Crescita economica e riforme liberali da ministro delle Finanze.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Cosa gli rimproverano i critici</h3>
-      <ul class="plain">
-        <li>Responsabilità politica per le falle del 7 ottobre 2023.</li>
-        <li>La conduzione della guerra a Gaza e il bilancio umanitario; il mandato d'arresto della CPI.</li>
-        <li>Una riforma della giustizia ritenuta una minaccia all'equilibrio dei poteri.</li>
-        <li>La permanenza al potere nonostante il processo per corruzione; le alleanze con l'estrema destra.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="sources" class="sources">
-  <h2>Fonti</h2>
-  <ol>
-    <li><a href="https://jns.org/news/israel-news/right-wing-bloc-wins-israeli-election-with-53-seats-likud-emerges-as-largest-party">JNS — Risultati definitivi delle elezioni del 27 ottobre 2026</a></li>
-    <li><a href="https://www.aljazeera.com/news/2026/11/7/israels-president-picks-eisenkot-over-netanyahu-to-form-next-government">Al Jazeera — Herzog sceglie Eisenkot per formare il governo</a></li>
-    <li><a href="https://www.ynetnews.com/article/sjygemraml">Ynet — Eisenkot riceve ufficialmente l'incarico</a></li>
-    <li><a href="https://www.al-monitor.com/originals/2026/10/netanyahu-set-remain-caretaker-after-inconclusive-israeli-election">Al-Monitor / Reuters — Netanyahu resta primo ministro ad interim</a></li>
-    <li><a href="https://english.aawsat.com/node/5334109">Asharq Al-Awsat — Ritratto: il primo ministro più longevo d'Israele</a></li>
-    <li><a href="https://www.goodmorningamerica.com/International/live-updates/israel-gaza-live-updates-lebanon-president-condemns-israeli-127814834/netanyahu-alleges-new-ceasefire-violation-over-hostage-remains-127855884">ABC News — Richiesta di grazia (novembre 2025)</a></li>
-  </ol>
-</section>
-
-<footer>Pagina informativa e neutrale, redatta l'11 novembre 2026. La situazione politica israeliana cambia rapidamente.</footer>
-
+<footer>Sito realizzato con Claude. Contenuto informativo, aggiornato automaticamente.</footer>
 </div>
-<script>
-  // Date de référence (heure locale du lieu de naissance, UTC+2)
-  const el = document.getElementById('age');
-  const p = n => String(n).padStart(2, '0');
-  function tick(){
-    const now = new Date(Date.now() + (2) * 3600 * 1000);
-    let y = now.getUTCFullYear() - 1949;
-    let last = Date.UTC(1949 + y, 9, 21, 0, 0);
-    if (now.getTime() < last){ y--; last = Date.UTC(1949 + y, 9, 21, 0, 0); }
-    let s = Math.floor((now.getTime() - last) / 1000);
-    const d = Math.floor(s / 86400); s %= 86400;
-    const h = Math.floor(s / 3600); s %= 3600;
-    const m = Math.floor(s / 60); s %= 60;
-    el.textContent = `${y} anni, ${d} g, ${p(h)} h ${p(m)} min ${p(s)} s`;
-  }
-  tick(); setInterval(tick, 1000);
-</script>
 <script src="../personnes.js"></script>
 <script>
   (function(){
     const LANG = document.documentElement.dataset.lang;
-    const HERE = document.documentElement.dataset.page;
-    // menus déroulants
-    const all = [...document.querySelectorAll('.switch')];
-    all.forEach(sw => {
-      const btn = sw.querySelector('button');
-      btn.addEventListener('click', e => {
-        e.stopPropagation();
-        all.forEach(o => { if (o !== sw) o.classList.remove('open'); });
-        btn.setAttribute('aria-expanded', sw.classList.toggle('open'));
-      });
-    });
-    document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
-    // liste des personnes
-    const list = window.PERSONNES;
-    if (!Array.isArray(list) || !list.length) return;
-    const box = document.getElementById('people');
-    list.forEach(pers => {
+    const COLORS = ['#1d4e89', '#8a2d2d', '#3d5a3a', '#6b4c9a', '#9a6b1d', '#2d6f7a'];
+    const sw = document.querySelector('.switch');
+    const btn = sw.querySelector('button');
+    btn.addEventListener('click', e => { e.stopPropagation(); btn.setAttribute('aria-expanded', sw.classList.toggle('open')); });
+    document.addEventListener('click', () => sw.classList.remove('open'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') sw.classList.remove('open'); });
+    const list = window.PERSONNES || [];
+    document.getElementById('count').textContent = list.length;
+    const grid = document.getElementById('grid');
+    list.forEach((pers, i) => {
+      const name = (pers.noms && pers.noms[LANG]) || pers.nom;
+      const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : (pers.description || '');
+      const initials = name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
       const a = document.createElement('a');
-      a.href = pers.page;
-      a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
-      const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
-      if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
-      if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Pagina attuale'; }
-      box.appendChild(a);
+      a.className = 'pcard'; a.href = pers.page;
+      const av = document.createElement('div'); av.className = 'avatar'; av.textContent = initials; av.style.background = COLORS[i % COLORS.length];
+      const h = document.createElement('h3'); h.textContent = name;
+      const p = document.createElement('p'); p.textContent = desc;
+      const go = document.createElement('span'); go.className = 'go'; go.textContent = 'Vedi il ritratto →';
+      a.append(av, h, p, go);
+      grid.appendChild(a);
     });
-    document.getElementById('switch').hidden = false;
   })();
 </script>
 </body>

@@ -1,8 +1,9 @@
 // Liste des personnes affichées dans le menu « Changer de personne » (en haut à droite).
 // Pour ajouter quelqu'un : crée sa page dans chaque langue (par ex. macron.html, en/macron.html…) puis ajoute une entrée ici.
+// La page d'accueil (index.html) affiche automatiquement toutes les personnes de cette liste.
 window.PERSONNES = [
   {
-    nom: "Benjamin Netanyahou", page: "index.html",
+    nom: "Benjamin Netanyahou", page: "netanyahou.html",
     noms: { en: "Benjamin Netanyahu", de: "Benjamin Netanjahu", it: "Benjamin Netanyahu", es: "Benjamín Netanyahu" },
     description: { fr: "Premier ministre d'Israël", en: "Prime Minister of Israel", de: "Ministerpräsident Israels", it: "Primo ministro d'Israele", es: "Primer ministro de Israel" }
   },

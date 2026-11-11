@@ -90,6 +90,8 @@
   .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
   .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
   @media (max-width:640px){ .switch button .txt{display:none} }
+  .home-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:15px}
+  .home-btn:hover{border-color:var(--accent)}
 </style>
 </head>
 <body>
@@ -106,6 +108,7 @@
   <a href="#sources">Fuentes</a>
   </div>
   <div class="switches">
+  <a class="home-btn" href="index.html" title="Inicio" aria-label="Inicio">🏠</a>
   <div class="switch lang">
     <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Idioma</span> <b>ES</b> <span class="chev">▾</span></button>
     <div class="menu" role="menu"><div class="label">Idioma</div><a href="../epstein.html">Français <small>FR</small></a><a href="../en/epstein.html">English <small>EN</small></a><a href="../de/epstein.html">Deutsch <small>DE</small></a><a href="../it/epstein.html">Italiano <small>IT</small></a><a href="../es/epstein.html" class="current">Español <small>ES</small></a></div>

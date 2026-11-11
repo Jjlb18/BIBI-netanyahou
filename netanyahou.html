@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr" data-root="" data-lang="fr" data-page="netanyahou.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benjamin Netanyahou — Portrait</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --ink:#14181f; --muted:#5b6270; --line:#d9d5cb;
+    --accent:#1d4e89; --accent-soft:#e3ebf5; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#11141a; --ink:#ecebe7; --muted:#9aa1ad; --line:#2a2f39;
+      --accent:#7fb0ea; --accent-soft:#1b2636; --card:#171b22; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px}
+  nav .links{display:flex;gap:18px;overflow-x:auto;flex:1;min-width:0;padding:12px 0;font-size:14px;font-weight:500;white-space:nowrap;scrollbar-width:none}
+  nav .links a{color:var(--muted);text-decoration:none}
+  nav .links a:hover{color:var(--ink)}
+  .switch{position:relative;flex:none}
+  .switch[hidden]{display:none}
+  .switch button{font:600 13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .switch button:hover{border-color:var(--accent)}
+  .switch button .chev{transition:transform .2s}
+  .switch.open button .chev{transform:rotate(180deg)}
+  .menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:6px;display:none}
+  .switch.open .menu{display:block}
+  .menu .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;padding:8px 10px 4px}
+  .menu a{display:flex;flex-direction:column;padding:9px 10px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+  .menu a small{font-weight:400;color:var(--muted);font-size:12px}
+  .menu a:hover{background:var(--accent-soft)}
+  .menu a.current{background:var(--accent-soft);color:var(--accent)}
+  .menu a.current:after{content:attr(data-cur);font-size:11px;font-weight:500;color:var(--muted)}
+  header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+  .lede{font-size:19px;color:var(--muted);max-width:680px;margin:0}
+  .fact em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:4px}
+  .fact.wide{grid-column:span 2}
+  .fact span.age{font-variant-numeric:tabular-nums;font-size:17px}
+  @media (max-width:720px){ .facts{grid-template-columns:1fr 1fr !important} }
+  .live-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .live-head h2{margin:0}
+  .dot{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#c0392b}
+  .dot:before{content:"";width:9px;height:9px;border-radius:50%;background:#e74c3c;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(231,76,60,.6)}70%{box-shadow:0 0 0 9px rgba(231,76,60,0)}100%{box-shadow:0 0 0 0 rgba(231,76,60,0)}}
+  .updated{font-size:13px;color:var(--muted)}
+  .news{display:grid;gap:12px}
+  .news .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:96px 1fr;gap:16px}
+  .news .d{font-size:13px;font-weight:600;color:var(--accent)}
+  .news p{margin:0;font-size:15px}
+  .news a{font-size:13px}
+  @media (max-width:600px){ .news .item{grid-template-columns:1fr;gap:4px} }
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:40px}
+  .fact{background:var(--card);padding:18px 20px}
+  .fact b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .fact span{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:600;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:720px}
+  .status{background:var(--accent-soft);border-left:4px solid var(--accent);padding:22px 24px;border-radius:0 12px 12px 0;max-width:760px}
+  .status small{display:block;color:var(--muted);margin-top:10px}
+  .timeline{list-style:none;margin:0;padding:0;position:relative}
+  .timeline:before{content:"";position:absolute;left:84px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .timeline li{display:grid;grid-template-columns:70px 1fr;gap:34px;padding:10px 0;position:relative}
+  .timeline li:before{content:"";position:absolute;left:79px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .timeline .y{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;text-align:right}
+  .timeline .t{color:var(--ink)}
+  .terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .when{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted);margin:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){ .two{grid-template-columns:1fr} .timeline:before{left:64px} .timeline li{grid-template-columns:52px 1fr;gap:28px} .timeline li:before{left:59px} }
+  ul.plain{margin:0;padding-left:18px} ul.plain li{margin-bottom:8px}
+  .sources ol{padding-left:20px;font-size:14px;color:var(--muted)}
+  .sources li{margin-bottom:6px}
+  footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+  .switches{display:flex;gap:8px;flex:none}
+  .lang .menu{min-width:170px}
+  .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
+  .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
+  @media (max-width:640px){ .switch button .txt{display:none} }
+  .home-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:15px}
+  .home-btn:hover{border-color:var(--accent)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="links">
+  <a href="#direct">En direct</a>
+  <a href="#actualite">Élections 2026</a>
+  <a href="#biographie">Biographie</a>
+  <a href="#mandats">Mandats</a>
+  <a href="#chronologie">Chronologie</a>
+  <a href="#proces">Procès</a>
+  <a href="#perspectives">Perspectives</a>
+  <a href="#sources">Sources</a>
+  </div>
+  <div class="switches">
+  <a class="home-btn" href="index.html" title="Accueil" aria-label="Accueil">🏠</a>
+  <div class="switch lang">
+    <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Langue</span> <b>FR</b> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Langue</div><a href="netanyahou.html" class="current">Français <small>FR</small></a><a href="en/netanyahou.html">English <small>EN</small></a><a href="de/netanyahou.html">Deutsch <small>DE</small></a><a href="it/netanyahou.html">Italiano <small>IT</small></a><a href="es/netanyahou.html">Español <small>ES</small></a></div>
+  </div>
+  <div class="switch person" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">👤 <span class="txt">Changer de personne</span> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Personnalités</div><div id="people"></div></div>
+  </div>
+  </div>
+</div></nav>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Portrait politique · Israël</div>
+  <h1>Benjamin Netanyahou</h1>
+  <p class="lede">Chef du Likoud et Premier ministre d'Israël ayant exercé le plus longtemps cette fonction, figure centrale — et clivante — de la vie politique israélienne depuis le milieu des années 1990.</p>
+
+  <div class="facts">
+    <div class="fact"><b>Âge exact</b><span class="age" id="age">—</span><em>ans · jours · heures · minutes · secondes, en direct</em></div>
+    <div class="fact"><b>Surnom</b><span>« Bibi »</span></div>
+    <div class="fact"><b>Parti</b><span>Likoud (droite)</span></div>
+    <div class="fact"><b>Fonction</b><span>Premier ministre (intérim)</span></div>
+    <div class="fact"><b>Formation</b><span>MIT (architecture, gestion)</span></div>
+    <div class="fact"><b>Taille</b><span>≈ 1,75 – 1,80 m</span><em>estimation, aucune donnée officielle</em></div>
+    <div class="fact wide"><b>Naissance</b><span>21 octobre 1949, Tel Aviv</span></div>
+  </div>
+</header>
+
+<section id="direct">
+  <div class="live-head"><h2>En ce moment</h2><span class="dot">En direct</span></div>
+  <!--NEWS-START-->
+  <p class="updated">Dernière mise à jour : 11 novembre 2026, 18 h 50 (heure de Zurich)</p>
+  <div class="news">
+    <div class="item"><span class="d">9 nov. 2026</span><div><p>Netanyahou appelle à un gouvernement d'union nationale et se dit prêt à négocier immédiatement avec tout parti intéressé ; il affirme qu'un gouvernement dépendant des partis arabes ne peut pas être formé.</p><a href="https://www.israelhayom.com/2026/11/09/eisenkot-liberman-meet-for-coalition-talks-as-major-hurdles-remain/">Israel Hayom</a></div></div>
+    <div class="item"><span class="d">9 nov. 2026</span><div><p>Eisenkot et Avigdor Liberman se rencontrent ; le refus de Liberman de s'appuyer sur les partis arabes reste le principal obstacle à une coalition anti‑Netanyahou.</p><a href="https://www.freepressjournal.in/world/israels-next-govt-remains-uncertain-as-netanyahu-pushes-unity-proposal-eisenkot-negotiates-coalition">Free Press Journal / ANI</a></div></div>
+    <div class="item"><span class="d">8 nov. 2026</span><div><p>Le président Herzog remet officiellement à Gadi Eisenkot le mandat de former le gouvernement (28 jours + 14 possibles). Netanyahou reste Premier ministre par intérim.</p><a href="https://www.ynetnews.com/article/sjygemraml">Ynet</a></div></div>
+    <div class="item"><span class="d">Nov. 2026</span><div><p>Le procès pour corruption de Netanyahou se poursuit au tribunal de district de Jérusalem.</p><a href="https://timesofisrael.com/liveblog-october-11-2026">Times of Israel</a></div></div>
+  </div>
+  <!--NEWS-END-->
+</section>
+
+<section id="actualite">
+  <h2>Contexte : les élections de 2026</h2>
+  <div class="status">
+    <p><strong>Élections du 27 octobre 2026.</strong> Le Likoud est arrivé en tête comme premier parti, et le bloc de Netanyahou a obtenu 53 sièges sur 120, contre 48 pour le bloc d'opposition de Gadi Eisenkot — insuffisant pour gouverner seul.</p>
+    <p><strong>8 novembre 2026.</strong> Après ses consultations, le président Isaac Herzog a confié le mandat de former le gouvernement à Gadi Eisenkot (parti Yashar), recommandé par 67 députés contre 46 pour Netanyahou. Eisenkot dispose de 28 jours, prolongeables de 14.</p>
+    <p style="margin:0">En attendant, Netanyahou reste Premier ministre par intérim et plaide pour un gouvernement d'union nationale. Si Eisenkot échoue, le mandat pourrait lui revenir.</p>
+    <small>Situation au 11 novembre 2026 — susceptible d'évoluer rapidement.</small>
+  </div>
+</section>
+
+<section id="biographie">
+  <h2>Biographie</h2>
+  <div class="two">
+    <div>
+      <h3>Jeunesse et armée</h3>
+      <p>Né à Tel Aviv, fils de l'historien Benzion Netanyahou, il passe une partie de sa jeunesse aux États-Unis. De 1967 à 1972, il sert dans l'unité d'élite Sayeret Matkal, où il participe notamment à l'opération de libération du vol Sabena en 1972.</p>
+      <h3>Le frère, Yoni</h3>
+      <p>Son frère aîné Yonatan (« Yoni ») est tué en 1976 en commandant le raid d'Entebbe en Ouganda. Cet événement marque profondément sa trajectoire et son engagement contre le terrorisme.</p>
+    </div>
+    <div>
+      <h3>Études et diplomatie</h3>
+      <p>Diplômé du MIT, il travaille brièvement dans le conseil en entreprise. Il devient ensuite numéro deux de l'ambassade d'Israël à Washington (1982), puis ambassadeur auprès de l'ONU (1984‑1988), où il se fait connaître par son aisance médiatique en anglais.</p>
+      <h3>Entrée en politique</h3>
+      <p>Élu à la Knesset en 1988, il prend la tête du Likoud en 1993 et devient en 1996, à 46 ans, le plus jeune Premier ministre de l'histoire du pays.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mandats">
+  <h2>Ses mandats de Premier ministre</h2>
+  <div class="terms">
+    <div class="card"><div class="when">1996 – 1999</div><h3>Premier mandat</h3><p>Élu au suffrage direct après l'assassinat de Yitzhak Rabin. Signe les accords d'Hébron et de Wye River avec l'Autorité palestinienne, puis perd face à Ehud Barak.</p></div>
+    <div class="card"><div class="when">2009 – 2021</div><h3>Douze ans consécutifs</h3><p>Période marquée par l'opposition à l'accord nucléaire iranien, le transfert de l'ambassade américaine à Jérusalem (2018) et les accords d'Abraham (2020). Écarté par la coalition Bennett‑Lapid.</p></div>
+    <div class="card"><div class="when">Déc. 2022 – aujourd'hui</div><h3>Retour au pouvoir</h3><p>Coalition avec des partis ultra‑orthodoxes et d'extrême droite ; réforme judiciaire contestée, attaque du 7 octobre 2023, guerres à Gaza, au Liban et contre l'Iran.</p></div>
+  </div>
+</section>
+
+<section id="chronologie">
+  <h2>Chronologie</h2>
+  <ul class="timeline">
+    <li><span class="y">1949</span><span class="t">Naissance à Tel Aviv.</span></li>
+    <li><span class="y">1967</span><span class="t">Service militaire dans la Sayeret Matkal (jusqu'en 1972).</span></li>
+    <li><span class="y">1976</span><span class="t">Mort de son frère Yoni lors du raid d'Entebbe.</span></li>
+    <li><span class="y">1984</span><span class="t">Nommé ambassadeur d'Israël à l'ONU.</span></li>
+    <li><span class="y">1993</span><span class="t">Élu à la tête du Likoud.</span></li>
+    <li><span class="y">1996</span><span class="t">Devient Premier ministre pour la première fois.</span></li>
+    <li><span class="y">2003</span><span class="t">Ministre des Finances sous Ariel Sharon ; démissionne en 2005 pour protester contre le retrait de Gaza.</span></li>
+    <li><span class="y">2009</span><span class="t">Retour au poste de Premier ministre.</span></li>
+    <li><span class="y">2019</span><span class="t">Inculpé pour corruption, fraude et abus de confiance ; début d'une série de cinq élections en moins de quatre ans.</span></li>
+    <li><span class="y">2020</span><span class="t">Accords d'Abraham avec les Émirats arabes unis et Bahreïn.</span></li>
+    <li><span class="y">2021</span><span class="t">Passe dans l'opposition face à la coalition Bennett‑Lapid.</span></li>
+    <li><span class="y">2022</span><span class="t">Remporte les élections et forme son sixième gouvernement.</span></li>
+    <li><span class="y">2023</span><span class="t">Manifestations massives contre la réforme judiciaire ; attaque du Hamas le 7 octobre et début de la guerre à Gaza.</span></li>
+    <li><span class="y">2024</span><span class="t">La Cour pénale internationale émet un mandat d'arrêt contre lui (novembre), qu'Israël rejette.</span></li>
+    <li><span class="y">2025</span><span class="t">Guerre de douze jours contre l'Iran (juin) ; cessez‑le‑feu à Gaza (octobre) ; demande de grâce présidentielle (novembre).</span></li>
+    <li><span class="y">2026</span><span class="t">Élections du 27 octobre : Likoud premier parti, mais mandat confié à Gadi Eisenkot le 8 novembre.</span></li>
+  </ul>
+</section>
+
+<section id="proces">
+  <h2>Le procès pour corruption</h2>
+  <p>Inculpé en 2019, Netanyahou est jugé depuis 2020 dans trois dossiers distincts, qu'il nie en bloc et qualifie de « chasse aux sorcières » :</p>
+  <ul class="plain">
+    <li><strong>Dossier 1000</strong> — cadeaux de luxe (cigares, champagne) reçus de riches hommes d'affaires.</li>
+    <li><strong>Dossier 2000</strong> — tractations présumées avec l'éditeur du quotidien <em>Yediot Aharonot</em> pour obtenir une couverture favorable.</li>
+    <li><strong>Dossier 4000</strong> — avantages réglementaires présumés accordés au groupe Bezeq en échange d'une couverture favorable sur le site Walla.</li>
+  </ul>
+  <p style="margin-top:14px">Fin 2025, il a demandé une grâce au président Herzog. Le procès se poursuivait en 2026, avec plusieurs audiences par semaine.</p>
+</section>
+
+<section id="perspectives">
+  <h2>Un dirigeant qui divise</h2>
+  <div class="two">
+    <div class="card">
+      <h3>Ce que mettent en avant ses partisans</h3>
+      <ul class="plain">
+        <li>Fermeté sécuritaire face à l'Iran, au Hamas et au Hezbollah.</li>
+        <li>Normalisation avec plusieurs pays arabes (accords d'Abraham).</li>
+        <li>Relation étroite avec les États‑Unis, notamment avec Donald Trump.</li>
+        <li>Croissance économique et réformes libérales menées comme ministre des Finances.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Ce que lui reprochent ses critiques</h3>
+      <ul class="plain">
+        <li>Responsabilité politique dans les failles du 7 octobre 2023.</li>
+        <li>Conduite de la guerre à Gaza et bilan humanitaire, mandat d'arrêt de la CPI.</li>
+        <li>Réforme judiciaire jugée menaçante pour l'équilibre des pouvoirs.</li>
+        <li>Maintien au pouvoir malgré un procès pour corruption ; alliances avec l'extrême droite.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sources" class="sources">
+  <h2>Sources</h2>
+  <ol>
+    <li><a href="https://jns.org/news/israel-news/right-wing-bloc-wins-israeli-election-with-53-seats-likud-emerges-as-largest-party">JNS — Résultats définitifs des élections du 27 octobre 2026</a></li>
+    <li><a href="https://www.aljazeera.com/news/2026/11/7/israels-president-picks-eisenkot-over-netanyahu-to-form-next-government">Al Jazeera — Herzog choisit Eisenkot pour former le gouvernement</a></li>
+    <li><a href="https://www.ynetnews.com/article/sjygemraml">Ynet — Eisenkot reçoit officiellement le mandat</a></li>
+    <li><a href="https://www.al-monitor.com/originals/2026/10/netanyahu-set-remain-caretaker-after-inconclusive-israeli-election">Al‑Monitor / Reuters — Netanyahou reste Premier ministre par intérim</a></li>
+    <li><a href="https://english.aawsat.com/node/5334109">Asharq Al‑Awsat — Portrait : le Premier ministre le plus durable d'Israël</a></li>
+    <li><a href="https://www.goodmorningamerica.com/International/live-updates/israel-gaza-live-updates-lebanon-president-condemns-israeli-127814834/netanyahu-alleges-new-ceasefire-violation-over-hostage-remains-127855884">ABC News — Demande de grâce (novembre 2025)</a></li>
+  </ol>
+</section>
+
+<footer>Page informative et neutre, établie le 11 novembre 2026. La situation politique israélienne évolue rapidement.</footer>
+</div>
+<script>
+  // Date de référence (heure locale du lieu de naissance, UTC+2)
+  const el = document.getElementById('age');
+  const p = n => String(n).padStart(2, '0');
+  function tick(){
+    const now = new Date(Date.now() + (2) * 3600 * 1000);
+    let y = now.getUTCFullYear() - 1949;
+    let last = Date.UTC(1949 + y, 9, 21, 0, 0);
+    if (now.getTime() < last){ y--; last = Date.UTC(1949 + y, 9, 21, 0, 0); }
+    let s = Math.floor((now.getTime() - last) / 1000);
+    const d = Math.floor(s / 86400); s %= 86400;
+    const h = Math.floor(s / 3600); s %= 3600;
+    const m = Math.floor(s / 60); s %= 60;
+    el.textContent = `${y} ans, ${d} j, ${p(h)} h ${p(m)} min ${p(s)} s`;
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+<script src="personnes.js"></script>
+<script>
+  (function(){
+    const LANG = document.documentElement.dataset.lang;
+    const HERE = document.documentElement.dataset.page;
+    // menus déroulants
+    const all = [...document.querySelectorAll('.switch')];
+    all.forEach(sw => {
+      const btn = sw.querySelector('button');
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        all.forEach(o => { if (o !== sw) o.classList.remove('open'); });
+        btn.setAttribute('aria-expanded', sw.classList.toggle('open'));
+      });
+    });
+    document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
+    // liste des personnes
+    const list = window.PERSONNES;
+    if (!Array.isArray(list) || !list.length) return;
+    const box = document.getElementById('people');
+    list.forEach(pers => {
+      const a = document.createElement('a');
+      a.href = pers.page;
+      a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
+      const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
+      if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
+      if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Page actuelle'; }
+      box.appendChild(a);
+    });
+    document.getElementById('switch').hidden = false;
+  })();
+</script>
+</body>
+</html>
