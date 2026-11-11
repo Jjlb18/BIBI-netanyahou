@@ -157,6 +157,8 @@
   .ftable .rk{color:var(--muted);width:28px}
   .fwide{grid-column:1/-1}
   .fnote{color:var(--muted);font-size:14px;margin:0}
+  .fmore{display:block;margin:14px auto 0;font:600 14px Inter,system-ui,sans-serif;color:var(--accent);background:var(--accent-soft);border:1px solid transparent;border-radius:999px;padding:8px 18px;cursor:pointer}
+  .fmore:hover{border-color:var(--accent)}
   .fmaj{font-size:13px;color:var(--muted);margin-top:14px}
 </style>
 <header>
@@ -211,7 +213,7 @@
 <footer>Page mise à jour automatiquement. Les horaires sont affichés à ton heure locale.</footer>
 <script>
 (function(){
-  const T = {"res": "Derniers résultats", "up": "Prochains matchs", "table": "Classement", "team": "Équipe", "pl": "J", "w": "G", "d": "N", "l": "P", "pts": "Pts", "nolive": "EN DIRECT", "ft": "Terminé", "post": "Reporté", "nodata": "Les matchs de cette compétition ne sont pas encore disponibles ici (pas de source gratuite pour l'instant).", "none": "Aucun match pour le moment.", "maj": "Données mises à jour", "loading": "Chargement…", "err": "Impossible de charger les matchs pour l'instant."};
+  const T = {"more": "Voir tout le classement", "less": "Réduire", "res": "Derniers résultats", "up": "Prochains matchs", "table": "Classement", "team": "Équipe", "pl": "J", "w": "G", "d": "N", "l": "P", "pts": "Pts", "nolive": "EN DIRECT", "ft": "Terminé", "post": "Reporté", "nodata": "Les matchs de cette compétition ne sont pas encore disponibles ici (pas de source gratuite pour l'instant).", "none": "Aucun match pour le moment.", "maj": "Données mises à jour", "loading": "Chargement…", "err": "Impossible de charger les matchs pour l'instant."};
   const COMPS = [["ucl", "⭐", {"fr": "Ligue des champions", "en": "Champions League", "de": "Champions League", "it": "Champions League", "es": "Liga de Campeones"}], ["uel", "🟠", {"fr": "Ligue Europa", "en": "Europa League", "de": "Europa League", "it": "Europa League", "es": "Liga Europa"}], ["uecl", "🟢", {"fr": "Ligue Conférence", "en": "Conference League", "de": "Conference League", "it": "Conference League", "es": "Liga Conferencia"}], ["eng", "🏴󠁧󠁢󠁥󠁮󠁧󠁿", {"fr": "Premier League", "en": "Premier League", "de": "Premier League", "it": "Premier League", "es": "Premier League"}], ["esp", "🇪🇸", {"fr": "LaLiga", "en": "LaLiga", "de": "LaLiga", "it": "LaLiga", "es": "LaLiga"}], ["ita", "🇮🇹", {"fr": "Serie A", "en": "Serie A", "de": "Serie A", "it": "Serie A", "es": "Serie A"}], ["ger", "🇩🇪", {"fr": "Bundesliga", "en": "Bundesliga", "de": "Bundesliga", "it": "Bundesliga", "es": "Bundesliga"}], ["fra", "🇫🇷", {"fr": "Ligue 1", "en": "Ligue 1", "de": "Ligue 1", "it": "Ligue 1", "es": "Ligue 1"}]];
   const LANG = document.documentElement.dataset.lang;
   const ROOT = document.documentElement.dataset.root || '';
@@ -250,8 +252,16 @@
       const t = el('table', 'ftable'); const hr = el('tr');
       ['#', T.team, T.pl, T.w, T.d, T.l, T.pts].forEach(h => hr.append(el('th', '', h)));
       t.append(hr);
-      c.classement.forEach(x => { const tr = el('tr'); [x.r, x.eq, x.j, x.g, x.n, x.p, x.pts].forEach((v, i) => tr.append(el('td', i === 0 ? 'rk' : '', v))); t.append(tr); });
-      b3.append(t); g.append(b3);
+      const rows = c.classement.map(x => { const tr = el('tr'); [x.r, x.eq, x.j, x.g, x.n, x.p, x.pts].forEach((v, i) => tr.append(el('td', i === 0 ? 'rk' : '', v))); t.append(tr); return tr; });
+      b3.append(t);
+      if (rows.length > 10){
+        const btn = el('button', 'fmore'); btn.type = 'button';
+        let open = false;
+        const upd = () => { rows.forEach((r, i) => { r.hidden = !open && i >= 10; }); btn.textContent = open ? T.less : T.more + ' (' + rows.length + ')'; };
+        btn.addEventListener('click', () => { open = !open; upd(); if (!open) b3.scrollIntoView({block: 'nearest'}); });
+        upd(); b3.append(btn);
+      }
+      g.append(b3);
     }
     out.append(g);
     if (DATA.maj) out.append(el('p', 'fmaj', T.maj + ' : ' + fmt.format(new Date(DATA.maj))));
