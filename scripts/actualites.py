@@ -58,10 +58,10 @@ def personnes():
     for block in re.findall(r'\{[^{}]*?(?:\{[^{}]*\}[^{}]*?)*\}', src.split('window.PERSONNES', 1)[1]):
         nom = re.search(r'\bnom:\s*"([^"]+)"', block)
         page = re.search(r'\bpage:\s*"([^"]+)"', block)
-        q = re.search(r'\brecherche:\s*"([^"]+)"', block)
+        q = re.search(r'\brecherche:\s*"((?:[^"\\]|\\.)*)"', block)
         if nom and page:
             out.append({'nom': nom.group(1), 'page': page.group(1),
-                        'recherche': q.group(1) if q else nom.group(1)})
+                        'recherche': q.group(1).replace('\\"', '"') if q else nom.group(1)})
     return out
 
 

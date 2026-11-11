@@ -168,7 +168,7 @@
     function card(pers, i){
       const name = (pers.noms && pers.noms[LANG]) || pers.nom;
       const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : (pers.description || '');
-      const initials = name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
+      const initials = pers.sigle || name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
       const a = document.createElement('a');
       a.className = 'pcard'; a.href = pers.page;
       const av = document.createElement('div'); av.className = 'avatar'; av.style.background = COLORS[i % COLORS.length];
@@ -176,7 +176,7 @@
       else av.textContent = initials;
       const h = document.createElement('h3'); h.textContent = name;
       const p = document.createElement('p'); p.textContent = desc;
-      const go = document.createElement('span'); go.className = 'go'; go.textContent = 'Ver el retrato →';
+      const go = document.createElement('span'); go.className = 'go'; go.textContent = 'Ver la página →';
       a.append(av, h, p, go);
       return a;
     }

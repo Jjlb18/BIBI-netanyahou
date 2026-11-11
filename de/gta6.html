@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de" data-root="../" data-lang="de" data-page="gta6.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA 6 — Spielporträt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --ink:#14181f; --muted:#5b6270; --line:#d9d5cb;
+    --accent:#1d4e89; --accent-soft:#e3ebf5; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#11141a; --ink:#ecebe7; --muted:#9aa1ad; --line:#2a2f39;
+      --accent:#7fb0ea; --accent-soft:#1b2636; --card:#171b22; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px}
+  nav .links{display:flex;gap:18px;overflow-x:auto;flex:1;min-width:0;padding:12px 0;font-size:14px;font-weight:500;white-space:nowrap;scrollbar-width:none}
+  nav .links a{color:var(--muted);text-decoration:none}
+  nav .links a:hover{color:var(--ink)}
+  .switch{position:relative;flex:none}
+  .switch[hidden]{display:none}
+  .switch button{font:600 13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .switch button:hover{border-color:var(--accent)}
+  .switch button .chev{transition:transform .2s}
+  .switch.open button .chev{transform:rotate(180deg)}
+  .menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:6px;display:none}
+  .switch.open .menu{display:block}
+  .menu .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;padding:8px 10px 4px}
+  .menu a{display:flex;flex-direction:column;padding:9px 10px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+  .menu a small{font-weight:400;color:var(--muted);font-size:12px}
+  .menu a:hover{background:var(--accent-soft)}
+  .menu a.current{background:var(--accent-soft);color:var(--accent)}
+  .menu a.current:after{content:attr(data-cur);font-size:11px;font-weight:500;color:var(--muted)}
+  header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+  .lede{font-size:19px;color:var(--muted);max-width:680px;margin:0}
+  .fact em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:4px}
+  .fact.wide{grid-column:span 2}
+  .fact span.age{font-variant-numeric:tabular-nums;font-size:17px}
+  @media (max-width:720px){ .facts{grid-template-columns:1fr 1fr !important} }
+  .live-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .live-head h2{margin:0}
+  .dot{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#c0392b}
+  .dot:before{content:"";width:9px;height:9px;border-radius:50%;background:#e74c3c;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(231,76,60,.6)}70%{box-shadow:0 0 0 9px rgba(231,76,60,0)}100%{box-shadow:0 0 0 0 rgba(231,76,60,0)}}
+  .updated{font-size:13px;color:var(--muted)}
+  .news{display:grid;gap:12px}
+  .news .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:96px 1fr;gap:16px}
+  .news .d{font-size:13px;font-weight:600;color:var(--accent)}
+  .news p{margin:0;font-size:15px}
+  .news a{font-size:13px}
+  @media (max-width:600px){ .news .item{grid-template-columns:1fr;gap:4px} }
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:40px}
+  .fact{background:var(--card);padding:18px 20px}
+  .fact b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .fact span{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:600;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:720px}
+  .status{background:var(--accent-soft);border-left:4px solid var(--accent);padding:22px 24px;border-radius:0 12px 12px 0;max-width:760px}
+  .status small{display:block;color:var(--muted);margin-top:10px}
+  .timeline{list-style:none;margin:0;padding:0;position:relative}
+  .timeline:before{content:"";position:absolute;left:84px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .timeline li{display:grid;grid-template-columns:70px 1fr;gap:34px;padding:10px 0;position:relative}
+  .timeline li:before{content:"";position:absolute;left:79px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .timeline .y{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;text-align:right}
+  .timeline .t{color:var(--ink)}
+  .terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .when{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted);margin:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){ .two{grid-template-columns:1fr} .timeline:before{left:64px} .timeline li{grid-template-columns:52px 1fr;gap:28px} .timeline li:before{left:59px} }
+  ul.plain{margin:0;padding-left:18px} ul.plain li{margin-bottom:8px}
+  .sources ol{padding-left:20px;font-size:14px;color:var(--muted)}
+  .sources li{margin-bottom:6px}
+  footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+  .home-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:15px}
+  .home-btn:hover{border-color:var(--accent)}
+  .switches{display:flex;gap:8px;flex:none}
+  .lang .menu{min-width:170px}
+  .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
+  .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
+  @media (max-width:640px){ .switch button .txt{display:none} }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="links">
+  <a href="#direct">Live</a>
+  <a href="#actualite">Der Start</a>
+  <a href="#biographie">Das Spiel</a>
+  <a href="#mandats">Die Reihe</a>
+  <a href="#chronologie">Chronik</a>
+  <a href="#proces">Kontroversen</a>
+  <a href="#perspectives">Meinungen</a>
+  <a href="#sources">Quellen</a>
+  </div>
+  <div class="switches">
+  <a class="home-btn" href="index.html" title="Startseite" aria-label="Startseite">🏠</a>
+  <div class="switch lang">
+    <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Sprache</span> <b>DE</b> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Sprache</div><a href="../gta6.html">Français <small>FR</small></a><a href="../en/gta6.html">English <small>EN</small></a><a href="../de/gta6.html" class="current">Deutsch <small>DE</small></a><a href="../it/gta6.html">Italiano <small>IT</small></a><a href="../es/gta6.html">Español <small>ES</small></a></div>
+  </div>
+  <div class="switch person" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">👤 <span class="txt">Person wechseln</span> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Persönlichkeiten</div><div id="people"></div></div>
+  </div>
+  </div>
+</div></nav>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Videospiel · Action / Open World</div>
+  <h1>GTA 6</h1>
+  <p class="lede"><em>Grand Theft Auto VI</em>, das neue Spiel von Rockstar Games, auf das Fans seit über zehn Jahren warten. Es spielt im fiktiven Bundesstaat Leonida nach dem Vorbild Floridas und erscheint am 19. November 2026.</p>
+
+  <div class="facts">
+    <div class="fact"><b>Erscheint in</b><span class="age" id="age">—</span><em>Tage · Stunden · Minuten · Sekunden, live</em></div>
+    <div class="fact"><b>Studio</b><span>Rockstar Games (Take-Two)</span></div>
+    <div class="fact"><b>Plattformen</b><span>PS5, Xbox Series X|S</span><em>keine PC-Version angekündigt</em></div>
+    <div class="fact"><b>Preis</b><span>79,99 $ / 99,99 $</span><em>Standard- / Ultimate-Edition</em></div>
+    <div class="fact"><b>Hauptfiguren</b><span>Lucia Caminos und Jason Duval</span></div>
+    <div class="fact"><b>Größe</b><span>≈ 212 GB</span><em>kompletter Download</em></div>
+    <div class="fact wide"><b>Schauplatz</b><span>Leonida und Vice City (nach Vorbild von Florida und Miami)</span></div>
+  </div>
+</header>
+
+<section id="direct">
+  <div class="live-head"><h2>Aktuell</h2><span class="dot">Live</span></div>
+  <!--NEWS-START-->
+  <p class="updated">Zuletzt aktualisiert: 11. November 2026, 22:00 Uhr (Zürcher Zeit)</p>
+  <div class="news">
+    <div class="item"><span class="d">10. Nov. 2026</span><div><p>Der Preload auf PS5 und Xbox Series ist für Vorbesteller offen: Man braucht etwa 212 GB freien Speicher. Die Vorbestellungen sollen bei rund 8 Millionen Exemplaren liegen.</p><a href="https://www.engadget.com/2311841/gta-6-now-available-for-preload/">Engadget</a></div></div>
+    <div class="item"><span class="d">10. Nov. 2026</span><div><p>Rockstar veröffentlicht einen kurzen neuen Trailer mit unbekannten Szenen von Jason und Lucia.</p><a href="https://www.gamer.org/gta-6-new-trailer-preload-november-2026/">Gamer.org</a></div></div>
+    <div class="item"><span class="d">Nov. 2026</span><div><p>Das Spiel zielt auf 30 Bilder pro Sekunde auf Konsolen; die PS5 Pro bekommt grafische Verbesserungen. Freigeschaltet wird um Mitternacht Ortszeit in jedem Land.</p><a href="https://www.mmoexp.com/News/gta-6-preload-is-live-30-fps-new-trailer-and-global-unlock-times.html">MMOexp</a></div></div>
+    <div class="item"><span class="d">12. Nov. 2026</span><div><p>Die physischen Editionen kommen in den Handel: Sie enthalten einen Download-Code statt einer Disc.</p><a href="https://www.engadget.com/2311841/gta-6-now-available-for-preload/">Engadget</a></div></div>
+  </div>
+  <!--NEWS-END-->
+</section>
+
+<section id="actualite">
+  <h2>Hintergrund: ein sehnlich erwarteter Start</h2>
+  <div class="status">
+    <p><strong>Zwei Verschiebungen.</strong> Ursprünglich für Herbst 2025 geplant, wurde das Spiel auf den 26. Mai 2026 und dann auf den 19. November 2026 verschoben – laut Rockstar für mehr Feinschliff.</p>
+    <p><strong>Vorbestellungen seit dem 25. Juni 2026.</strong> Die Standard-Edition kostet 79,99 $, die Ultimate-Edition 99,99 $. Der Online-Modus soll nach dem Start separat folgen.</p>
+    <p style="margin:0">Mehr als dreizehn Jahre nach GTA V (2013) ist es eines der meisterwarteten Spiele der Videospielgeschichte.</p>
+    <small>Stand: 11. November 2026.</small>
+  </div>
+</section>
+
+<section id="biographie">
+  <h2>Das Spiel</h2>
+  <div class="two">
+    <div>
+      <h3>Die Geschichte</h3>
+      <p>Man spielt ein kriminelles Duo, Lucia Caminos und Jason Duval. Lucia ist die erste weibliche Hauptfigur der Reihe seit dem Wechsel zu 3D.</p>
+      <h3>Die Welt</h3>
+      <p>Leonida ist ein fiktiver Bundesstaat nach dem Vorbild Floridas, mit Vice City (nach Vorbild Miamis), Sümpfen, Stränden und Kleinstädten.</p>
+    </div>
+    <div>
+      <h3>Das Studio</h3>
+      <p>Rockstar Games, Teil von Take-Two Interactive, steht auch hinter <em>Red Dead Redemption</em>. Die Entwicklung von GTA 6 wurde im Februar 2022 offiziell bestätigt.</p>
+      <h3>Technik</h3>
+      <p>Zum Start nur auf aktuellen Konsolen, mit einem Ziel von 30 Bildern pro Sekunde.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mandats">
+  <h2>Die Reihe</h2>
+  <div class="terms">
+    <div class="card"><div class="when">1997 – 2008</div><h3>Die Anfänge</h3><p>Vom ersten GTA aus der Vogelperspektive bis GTA III (2001), das offene 3D-Welten populär machte, dann Vice City, San Andreas und GTA IV.</p></div>
+    <div class="card"><div class="when">2013</div><h3>GTA V</h3><p>Eines der meistverkauften Spiele aller Zeiten mit über 200 Millionen Exemplaren, verlängert durch den Erfolg von GTA Online.</p></div>
+    <div class="card"><div class="when">2026</div><h3>GTA VI</h3><p>Die Rückkehr nach Vice City, mehr als dreizehn Jahre nach dem letzten Hauptteil.</p></div>
+  </div>
+</section>
+
+<section id="chronologie">
+  <h2>Chronik</h2>
+  <ul class="timeline">
+    <li><span class="y">2013</span><span class="t">GTA V erscheint.</span></li>
+    <li><span class="y">2022</span><span class="t">Rockstar bestätigt die Entwicklung (Februar); im September gibt es ein riesiges Leak von Entwicklungsvideos.</span></li>
+    <li><span class="y">2023</span><span class="t">Erster Trailer im Dezember, mit Rekord-Aufrufen auf YouTube.</span></li>
+    <li><span class="y">2025</span><span class="t">Verschiebung auf Mai 2026 und zweiter Trailer (Mai), dann erneute Verschiebung auf den 19. November 2026 (November).</span></li>
+    <li><span class="y">2026</span><span class="t">Vorbestellungen (25. Juni), Preload (10. November) und Release (19. November).</span></li>
+  </ul>
+</section>
+
+<section id="proces">
+  <h2>Kontroversen und Debatten</h2>
+  <ul class="plain">
+    <li><strong>Verschiebungen</strong> – zwei Verschiebungen hintereinander haben viele Fans frustriert.</li>
+    <li><strong>Preis</strong> – 80 $ für die Standard-Edition sind manchen zu viel, andere erinnern daran, dass es inflationsbereinigt günstiger ist als GTA V.</li>
+    <li><strong>Entlassungen</strong> – Ende 2025 entließ Rockstar mehrere Dutzend Mitarbeitende wegen angeblicher Weitergabe vertraulicher Informationen; eine britische Gewerkschaft sprach von Gewerkschaftsbekämpfung.</li>
+    <li><strong>Keine Disc</strong> – die physischen Boxen enthalten nur einen Download-Code.</li>
+    <li><strong>Kein PC</strong> – für eine PC-Version wurde kein Termin angekündigt.</li>
+  </ul>
+</section>
+
+<section id="perspectives">
+  <h2>Was man darüber sagt</h2>
+  <div class="two">
+    <div class="card">
+      <h3>Was begeistert</h3>
+      <ul class="plain">
+        <li>Eine sehr detaillierte, lebendige Welt, wie die Trailer zeigen.</li>
+        <li>Die Rückkehr nach Vice City und das Heldenduo.</li>
+        <li>Rockstars Ruf für Qualität.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Was Sorgen macht</h3>
+      <ul class="plain">
+        <li>Der Preis und die fehlende PC-Version.</li>
+        <li>Nur 30 Bilder pro Sekunde auf Konsolen.</li>
+        <li>Die Downloadgröße (über 200 GB).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sources" class="sources">
+  <h2>Quellen</h2>
+  <ol>
+    <li><a href="https://www.pcgamer.com/games/action/grand-theft-auto-6-is-delayed-to-november-these-extra-months-will-allow-us-to-finish-the-game-with-the-level-of-polish-you-have-come-to-expect-and-deserve">PC Gamer — Verschiebung auf den 19. November 2026</a></li>
+    <li><a href="https://games.gg/news/gta-6-preorders-live-price-editions/">Games.gg — Vorbestellungen und Preis</a></li>
+    <li><a href="https://www.engadget.com/2311841/gta-6-now-available-for-preload/">Engadget — Preload gestartet</a></li>
+    <li><a href="https://gameinformer.com/2026/11/03/you-can-preload-grand-theft-auto-vi-on-ps5-and-xbox-next-week-and-youll-want-to-because">Game Informer — Preload und Dateigröße</a></li>
+    <li><a href="https://www.gamer.org/gta-6-new-trailer-preload-november-2026/">Gamer.org — Neuer Trailer</a></li>
+  </ol>
+</section>
+
+<footer>Informationsseite, erstellt am 11. November 2026.</footer>
+
+</div>
+<script>
+  const el = document.getElementById('age');
+  const p = n => String(n).padStart(2, '0');
+  const REF = new Date(2026, 10, 19).getTime()  // minuit, heure locale du visiteur;
+  const lbl = el.parentElement.querySelector('b');
+  function tick(){
+    let diff = Math.floor((REF - Date.now()) / 1000);
+    if (diff < 0){ diff = -diff; if (lbl) lbl.textContent = 'Erschienen vor'; }
+    const d = Math.floor(diff / 86400); diff %= 86400;
+    const h = Math.floor(diff / 3600); diff %= 3600;
+    const m = Math.floor(diff / 60); const s = diff % 60;
+    el.textContent = `${d} T., ${p(h)} Std. ${p(m)} Min. ${p(s)} Sek.`;
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+<script src="../personnes.js"></script>
+<script>
+  (function(){
+    const LANG = document.documentElement.dataset.lang;
+    const HERE = document.documentElement.dataset.page;
+    // menus déroulants
+    const all = [...document.querySelectorAll('.switch')];
+    all.forEach(sw => {
+      const btn = sw.querySelector('button');
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        all.forEach(o => { if (o !== sw) o.classList.remove('open'); });
+        btn.setAttribute('aria-expanded', sw.classList.toggle('open'));
+      });
+    });
+    document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
+    // liste des personnes
+    const list = window.PERSONNES;
+    if (!Array.isArray(list) || !list.length) return;
+    const box = document.getElementById('people');
+    list.forEach(pers => {
+      const a = document.createElement('a');
+      a.href = pers.page;
+      a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
+      const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
+      if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
+      if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Aktuelle Seite'; }
+      box.appendChild(a);
+    });
+    document.getElementById('switch').hidden = false;
+  })();
+</script>
+</body>
+</html>
