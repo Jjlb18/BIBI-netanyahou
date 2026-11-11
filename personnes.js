@@ -17,7 +17,7 @@ window.PERSONNES = [
     description: { fr: "Président des États-Unis", en: "President of the United States", de: "Präsident der USA", it: "Presidente degli Stati Uniti", es: "Presidente de Estados Unidos" }
   },
   {
-    nom: "Jeffrey Epstein", categorie: "personnalites", type: "richesse", page: "epstein.html", photo: "images/epstein.jpg",
+    nom: "Jeffrey Epstein", categorie: "personnalites", type: "politique", page: "epstein.html", photo: "images/epstein.jpg",
     description: { fr: "Financier, condamné pour crimes sexuels", en: "Financier, convicted sex offender", de: "Finanzier, verurteilter Sexualstraftäter", it: "Finanziere, condannato per reati sessuali", es: "Financiero, condenado por delitos sexuales" }
   },
   {
