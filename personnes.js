@@ -24,8 +24,8 @@ window.PERSONNES = [
     description: { fr: "Rockstar Games · sortie le 19 novembre 2026", en: "Rockstar Games · out 19 November 2026", de: "Rockstar Games · erscheint am 19. November 2026", it: "Rockstar Games · esce il 19 novembre 2026", es: "Rockstar Games · sale el 19 de noviembre de 2026" }
   },
   {
-    nom: "EA Sports FC 27", categorie: "jeux", page: "fc27.html", sigle: "FC", recherche: "\"EA Sports FC\" OR \"FC 27\"",
-    description: { fr: "Jeu de football d'EA Sports · sorti en septembre 2026", en: "EA Sports football game · out September 2026", de: "Fußballspiel von EA Sports · erschienen im September 2026", it: "Gioco di calcio di EA Sports · uscito a settembre 2026", es: "Juego de fútbol de EA Sports · salió en septiembre de 2026" }
+    nom: "EA Sports FC", categorie: "jeux", page: "fc.html", sigle: "FC", recherche: "\"EA Sports FC\" OR \"FC 27\"",
+    description: { fr: "Dernière version : FC 27 · prochaine : FC 28 (date ???)", en: "Latest: FC 27 · next: FC 28 (date ???)", de: "Neueste: FC 27 · nächste: FC 28 (Termin ???)", it: "Ultima: FC 27 · prossima: FC 28 (data ???)", es: "Última: FC 27 · próxima: FC 28 (fecha ???)" }
   },
 ];
 
