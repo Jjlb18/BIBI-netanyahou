@@ -1,5 +1,28 @@
 {
  "maj": null,
+ "essai": "2026-11-11T22:25:05+00:00",
+ "ids": {
+  "top14": {
+   "id": 16,
+   "saison": 2026
+  },
+  "prem": {
+   "id": 13,
+   "saison": 2026
+  },
+  "urc": {
+   "id": 76,
+   "saison": 2026
+  },
+  "ercc": {
+   "id": 54,
+   "saison": 2026
+  },
+  "six": {
+   "id": 51,
+   "saison": 2017
+  }
+ },
  "competitions": {
   "top14": {
    "matchs": [],
