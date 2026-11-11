@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donald Trump — Portrait</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --ink:#14181f; --muted:#5b6270; --line:#d9d5cb;
+    --accent:#1d4e89; --accent-soft:#e3ebf5; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#11141a; --ink:#ecebe7; --muted:#9aa1ad; --line:#2a2f39;
+      --accent:#7fb0ea; --accent-soft:#1b2636; --card:#171b22; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px}
+  nav .links{display:flex;gap:18px;overflow-x:auto;flex:1;min-width:0;padding:12px 0;font-size:14px;font-weight:500;white-space:nowrap;scrollbar-width:none}
+  nav .links a{color:var(--muted);text-decoration:none}
+  nav .links a:hover{color:var(--ink)}
+  .switch{position:relative;flex:none}
+  .switch[hidden]{display:none}
+  .switch button{font:600 13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .switch button:hover{border-color:var(--accent)}
+  .switch button .chev{transition:transform .2s}
+  .switch.open button .chev{transform:rotate(180deg)}
+  .menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:6px;display:none}
+  .switch.open .menu{display:block}
+  .menu .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;padding:8px 10px 4px}
+  .menu a{display:flex;flex-direction:column;padding:9px 10px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+  .menu a small{font-weight:400;color:var(--muted);font-size:12px}
+  .menu a:hover{background:var(--accent-soft)}
+  .menu a.current{background:var(--accent-soft);color:var(--accent)}
+  .menu a.current:after{content:"Page actuelle";font-size:11px;font-weight:500;color:var(--muted)}
+  header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+  .lede{font-size:19px;color:var(--muted);max-width:680px;margin:0}
+  .fact em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:4px}
+  .fact.wide{grid-column:span 2}
+  .fact span.age{font-variant-numeric:tabular-nums;font-size:17px}
+  @media (max-width:720px){ .facts{grid-template-columns:1fr 1fr !important} }
+  .live-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .live-head h2{margin:0}
+  .dot{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#c0392b}
+  .dot:before{content:"";width:9px;height:9px;border-radius:50%;background:#e74c3c;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(231,76,60,.6)}70%{box-shadow:0 0 0 9px rgba(231,76,60,0)}100%{box-shadow:0 0 0 0 rgba(231,76,60,0)}}
+  .updated{font-size:13px;color:var(--muted)}
+  .news{display:grid;gap:12px}
+  .news .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:96px 1fr;gap:16px}
+  .news .d{font-size:13px;font-weight:600;color:var(--accent)}
+  .news p{margin:0;font-size:15px}
+  .news a{font-size:13px}
+  @media (max-width:600px){ .news .item{grid-template-columns:1fr;gap:4px} }
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:40px}
+  .fact{background:var(--card);padding:18px 20px}
+  .fact b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .fact span{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:600;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:720px}
+  .status{background:var(--accent-soft);border-left:4px solid var(--accent);padding:22px 24px;border-radius:0 12px 12px 0;max-width:760px}
+  .status small{display:block;color:var(--muted);margin-top:10px}
+  .timeline{list-style:none;margin:0;padding:0;position:relative}
+  .timeline:before{content:"";position:absolute;left:84px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .timeline li{display:grid;grid-template-columns:70px 1fr;gap:34px;padding:10px 0;position:relative}
+  .timeline li:before{content:"";position:absolute;left:79px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .timeline .y{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;text-align:right}
+  .timeline .t{color:var(--ink)}
+  .terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .when{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted);margin:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){ .two{grid-template-columns:1fr} .timeline:before{left:64px} .timeline li{grid-template-columns:52px 1fr;gap:28px} .timeline li:before{left:59px} }
+  ul.plain{margin:0;padding-left:18px} ul.plain li{margin-bottom:8px}
+  .sources ol{padding-left:20px;font-size:14px;color:var(--muted)}
+  .sources li{margin-bottom:6px}
+  footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="links">
+  <a href="#direct">En direct</a>
+  <a href="#actualite">Mi-mandat 2026</a>
+  <a href="#biographie">Biographie</a>
+  <a href="#mandats">Mandats</a>
+  <a href="#chronologie">Chronologie</a>
+  <a href="#proces">Justice</a>
+  <a href="#perspectives">Perspectives</a>
+  <a href="#sources">Sources</a>
+  </div>
+  <div class="switch" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">👤 Changer de personne <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Personnalités</div><div id="people"></div></div>
+  </div>
+</div></nav>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Portrait politique · États-Unis</div>
+  <h1>Donald Trump</h1>
+  <p class="lede">Homme d'affaires, star de télé‑réalité puis 45e et 47e président des États‑Unis, figure centrale — et clivante — de la politique américaine depuis 2015.</p>
+
+  <div class="facts">
+    <div class="fact"><b>Âge exact</b><span class="age" id="age">—</span><em>ans · jours · heures · minutes · secondes, en direct</em></div>
+    <div class="fact"><b>Surnom</b><span>« The Donald »</span></div>
+    <div class="fact"><b>Parti</b><span>Républicain</span></div>
+    <div class="fact"><b>Fonction</b><span>47e président des États‑Unis</span></div>
+    <div class="fact"><b>Formation</b><span>Wharton (Univ. de Pennsylvanie), économie</span></div>
+    <div class="fact"><b>Taille</b><span>1,90 m</span><em>selon son bilan médical officiel (2025)</em></div>
+    <div class="fact wide"><b>Naissance</b><span>14 juin 1946, 10 h 54, Queens (New York)</span></div>
+  </div>
+</header>
+
+<section id="direct">
+  <div class="live-head"><h2>En ce moment</h2><span class="dot">En direct</span></div>
+  <!--NEWS-START-->
+  <p class="updated">Dernière mise à jour : 11 novembre 2026, 19 h 10 (heure de Zurich)</p>
+  <div class="news">
+    <div class="item"><span class="d">9 nov. 2026</span><div><p>Trump estime que la guerre contre l'Iran est militairement presque terminée, tout en voulant une solution durable sur le programme nucléaire iranien.</p><a href="https://www.ajc.com/news/2026/11/the-latest-trump-says-his-deportation-policy-might-have-been-too-tough-for-voters/">AP / AJC</a></div></div>
+    <div class="item"><span class="d">9 nov. 2026</span><div><p>Le député républicain Thomas Massie dépose une résolution de destitution contre le ministre de la Défense Pete Hegseth ; Trump annonce qu'il le soutient.</p><a href="https://www.ajc.com/news/2026/11/the-latest-trump-says-his-deportation-policy-might-have-been-too-tough-for-voters/">AP / AJC</a></div></div>
+    <div class="item"><span class="d">8 nov. 2026</span><div><p>Après la défaite des républicains, Trump admet que sa politique d'expulsions a peut‑être été trop dure aux yeux des électeurs, mais exclut toute amnistie.</p><a href="https://www.ajc.com/news/2026/11/the-latest-trump-says-his-deportation-policy-might-have-been-too-tough-for-voters/">AP / AJC</a></div></div>
+    <div class="item"><span class="d">6 nov. 2026</span><div><p>Stephen Miller, architecte de sa politique d'immigration, devient chef de cabinet de la Maison‑Blanche.</p><a href="https://www.ajc.com/news/2026/11/the-latest-trump-says-his-deportation-policy-might-have-been-too-tough-for-voters/">AP / AJC</a></div></div>
+    <div class="item"><span class="d">3‑4 nov. 2026</span><div><p>Élections de mi‑mandat : les démocrates prennent le contrôle de la Chambre et du Sénat. Trump accepte le résultat et félicite les démocrates.</p><a href="https://www.newstribune.com/news/2026/nov/04/democrats-seize-congress-in-sweeping-midterm-repudiation-of-trump/">Reuters / News Tribune</a></div></div>
+  </div>
+  <!--NEWS-END-->
+</section>
+
+<section id="actualite">
+  <h2>Contexte : les élections de mi‑mandat 2026</h2>
+  <div class="status">
+    <p><strong>3 novembre 2026.</strong> Les républicains perdent le contrôle des deux chambres du Congrès. Les démocrates gagnent sept sièges au Sénat (majorité d'environ 54‑44) et une large majorité à la Chambre des représentants.</p>
+    <p><strong>Les causes avancées.</strong> Les électeurs ont surtout exprimé leur mécontentement face à la hausse des prix, à la guerre contre l'Iran et aux soupçons de corruption.</p>
+    <p style="margin:0">Pour les deux dernières années de son mandat (jusqu'en janvier 2029), Trump devra composer avec un Congrès d'opposition ; il a annoncé qu'il utiliserait son droit de veto contre les textes démocrates.</p>
+    <small>Situation au 11 novembre 2026 — susceptible d'évoluer.</small>
+  </div>
+</section>
+
+<section id="biographie">
+  <h2>Biographie</h2>
+  <div class="two">
+    <div>
+      <h3>Jeunesse et études</h3>
+      <p>Né dans le quartier du Queens à New York, il est le quatrième des cinq enfants de Fred Trump, promoteur immobilier, et de Mary Anne MacLeod, née en Écosse. Il fréquente une académie militaire puis étudie l'économie à la Wharton School, dont il sort diplômé en 1968.</p>
+      <h3>L'homme d'affaires</h3>
+      <p>Il reprend l'entreprise familiale, rebaptisée Trump Organization, et se fait connaître à Manhattan avec la Trump Tower (1983). Il investit aussi dans des casinos, des hôtels et des golfs, avec plusieurs faillites d'entreprises dans les années 1990.</p>
+    </div>
+    <div>
+      <h3>La télévision</h3>
+      <p>De 2004 à 2015, il anime l'émission de télé‑réalité <em>The Apprentice</em>, qui le rend célèbre auprès du grand public américain.</p>
+      <h3>Famille</h3>
+      <p>Marié trois fois (Ivana Zelníčková, Marla Maples, puis Melania Knauss en 2005), il a cinq enfants : Donald Jr., Ivanka, Eric, Tiffany et Barron.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mandats">
+  <h2>Ses mandats de président</h2>
+  <div class="terms">
+    <div class="card"><div class="when">2017 – 2021</div><h3>45e président</h3><p>Élu face à Hillary Clinton. Baisse d'impôts de 2017, nomination de trois juges à la Cour suprême, guerre commerciale avec la Chine, accords d'Abraham. Deux procédures de destitution, conclues par des acquittements au Sénat.</p></div>
+    <div class="card"><div class="when">2021 – 2025</div><h3>Entre deux mandats</h3><p>Battu par Joe Biden, il conteste le résultat ; ses partisans envahissent le Capitole le 6 janvier 2021. Plusieurs inculpations, une condamnation à New York (2024) et une tentative d'assassinat en juillet 2024.</p></div>
+    <div class="card"><div class="when">Depuis le 20 janv. 2025</div><h3>47e président</h3><p>Élu face à Kamala Harris. Droits de douane massifs, politique d'expulsions, frappes contre l'Iran (2025) puis guerre en 2026, défaite des républicains aux élections de mi‑mandat.</p></div>
+  </div>
+</section>
+
+<section id="chronologie">
+  <h2>Chronologie</h2>
+  <ul class="timeline">
+    <li><span class="y">1946</span><span class="t">Naissance à New York, le 14 juin.</span></li>
+    <li><span class="y">1968</span><span class="t">Diplômé de la Wharton School ; rejoint l'entreprise de son père.</span></li>
+    <li><span class="y">1983</span><span class="t">Inauguration de la Trump Tower sur la 5e Avenue.</span></li>
+    <li><span class="y">2004</span><span class="t">Début de l'émission <em>The Apprentice</em>.</span></li>
+    <li><span class="y">2015</span><span class="t">Annonce sa candidature à la présidence.</span></li>
+    <li><span class="y">2016</span><span class="t">Élu président face à Hillary Clinton.</span></li>
+    <li><span class="y">2019</span><span class="t">Première procédure de destitution (affaire ukrainienne) ; acquitté en 2020.</span></li>
+    <li><span class="y">2020</span><span class="t">Battu par Joe Biden ; conteste les résultats.</span></li>
+    <li><span class="y">2021</span><span class="t">Assaut du Capitole le 6 janvier ; seconde procédure de destitution, acquitté.</span></li>
+    <li><span class="y">2023</span><span class="t">Inculpé dans quatre affaires pénales différentes.</span></li>
+    <li><span class="y">2024</span><span class="t">Reconnu coupable à New York de falsification de documents comptables (mai) ; survit à une tentative d'assassinat (juillet) ; élu face à Kamala Harris (novembre).</span></li>
+    <li><span class="y">2025</span><span class="t">Investi le 20 janvier ; vague de droits de douane ; frappes sur des sites nucléaires iraniens (juin).</span></li>
+    <li><span class="y">2026</span><span class="t">Guerre avec l'Iran à partir du 28 février, cessez‑le‑feu en avril puis accord intérimaire en juin ; défaite aux élections de mi‑mandat (3 novembre).</span></li>
+  </ul>
+</section>
+
+<section id="proces">
+  <h2>Affaires judiciaires</h2>
+  <p>Trump est le premier ancien président américain à avoir été inculpé pénalement. Il a toujours dénoncé une « chasse aux sorcières » politique.</p>
+  <ul class="plain">
+    <li><strong>New York (paiements à Stormy Daniels)</strong> — reconnu coupable de 34 chefs de falsification de documents comptables en mai 2024 ; condamné en janvier 2025 à une « dispense inconditionnelle », sans peine de prison ni amende.</li>
+    <li><strong>Affaires fédérales</strong> (élection de 2020 et documents classifiés) — abandonnées après sa victoire de 2024, la justice fédérale ne poursuivant pas un président en exercice.</li>
+    <li><strong>Géorgie</strong> (tentative d'inverser le résultat de 2020) — procédure enlisée puis abandonnée.</li>
+    <li><strong>Civil</strong> — condamné à New York pour diffamation envers E. Jean Carroll et, dans un procès pour fraude financière, à une lourde amende annulée ensuite en appel.</li>
+  </ul>
+</section>
+
+<section id="perspectives">
+  <h2>Un dirigeant qui divise</h2>
+  <div class="two">
+    <div class="card">
+      <h3>Ce que mettent en avant ses partisans</h3>
+      <ul class="plain">
+        <li>Défense des travailleurs américains et de l'industrie par les droits de douane (« America First »).</li>
+        <li>Fermeté sur l'immigration illégale et la sécurité des frontières.</li>
+        <li>Baisses d'impôts et déréglementation.</li>
+        <li>Diplomatie de rapport de force (accords d'Abraham, pression sur l'Iran).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Ce que lui reprochent ses critiques</h3>
+      <ul class="plain">
+        <li>Contestation de l'élection de 2020 et rôle dans l'assaut du 6 janvier.</li>
+        <li>Pressions sur la justice, les médias et les contre‑pouvoirs.</li>
+        <li>Hausse des prix liée aux droits de douane et à la guerre avec l'Iran.</li>
+        <li>Conflits d'intérêts et enrichissement de sa famille pendant ses mandats.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sources" class="sources">
+  <h2>Sources</h2>
+  <ol>
+    <li><a href="https://www.newstribune.com/news/2026/nov/04/democrats-seize-congress-in-sweeping-midterm-repudiation-of-trump/">Reuters / News Tribune — Les démocrates prennent le Congrès</a></li>
+    <li><a href="https://www.washingtonexaminer.com/news/campaigns/4791815/takeaways-2026-midterm-elections/">Washington Examiner — Les leçons des élections de mi‑mandat 2026</a></li>
+    <li><a href="https://americanbazaaronline.com/2026/11/04/has-america-seen-a-midterm-upset-like-this-before-491503/">American Bazaar — Bilan chiffré des élections</a></li>
+    <li><a href="https://www.ajc.com/news/2026/11/the-latest-trump-says-his-deportation-policy-might-have-been-too-tough-for-voters/">AP / AJC — Les dernières nouvelles (8‑10 novembre 2026)</a></li>
+    <li><a href="https://www.presidency.ucsb.edu/node/377094">American Presidency Project — Bilan médical officiel d'avril 2025 (taille)</a></li>
+    <li><a href="https://www.goodmorningamerica.com/news/story/us-iran-ceasefire-mou-broke-timeline-134622392">ABC News — Chronologie de la guerre avec l'Iran</a></li>
+  </ol>
+</section>
+
+<footer>Page informative et neutre, établie le 11 novembre 2026. La situation politique américaine évolue rapidement.</footer>
+
+</div>
+<script>
+  const el = document.getElementById('age');
+  const p = n => String(n).padStart(2, '0');
+  // Naissance : 14 juin 1946, 10 h 54, heure de New York (UTC-4, heure d'été)
+  function tick(){
+    const now = new Date(Date.now() - 4 * 3600 * 1000);
+    let y = now.getUTCFullYear() - 1946;
+    let last = Date.UTC(1946 + y, 5, 14, 10, 54);
+    if (now.getTime() < last){ y--; last = Date.UTC(1946 + y, 5, 14, 10, 54); }
+    let s = Math.floor((now.getTime() - last) / 1000);
+    const d = Math.floor(s / 86400); s %= 86400;
+    const h = Math.floor(s / 3600); s %= 3600;
+    const m = Math.floor(s / 60); s %= 60;
+    el.textContent = `${y} ans, ${d} j, ${p(h)} h ${p(m)} min ${p(s)} s`;
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+<!-- Sélecteur de personne : la liste se trouve dans personnes.js -->
+<script src="personnes.js"></script>
+<script>
+  (function(){
+    const list = window.PERSONNES;
+    if (!Array.isArray(list) || !list.length) return; // pas de liste : le bouton reste caché
+    const sw = document.getElementById('switch');
+    const box = document.getElementById('people');
+    const here = (location.pathname.split('/').pop() || 'index.html');
+    list.forEach(p => {
+      const a = document.createElement('a');
+      a.href = p.page;
+      a.textContent = p.nom;
+      if (p.description){ const s = document.createElement('small'); s.textContent = p.description; a.appendChild(s); }
+      if (p.page === here) a.className = 'current';
+      box.appendChild(a);
+    });
+    sw.hidden = false;
+    const btn = sw.querySelector('button');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const open = sw.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', () => { sw.classList.remove('open'); btn.setAttribute('aria-expanded', false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') sw.classList.remove('open'); });
+  })();
+</script>
+</body>
+</html>
