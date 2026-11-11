@@ -33,6 +33,10 @@ window.PERSONNES = [
     noms: { de: "Fußball", it: "Calcio", es: "Fútbol" },
     description: { fr: "Ligue des champions, Premier League, LaLiga, Serie A… : matchs et classements", en: "Champions League, Premier League, LaLiga, Serie A…: matches and standings", de: "Champions League, Premier League, LaLiga, Serie A …: Spiele und Tabellen", it: "Champions League, Premier League, LaLiga, Serie A…: partite e classifiche", es: "Liga de Campeones, Premier League, LaLiga, Serie A…: partidos y clasificaciones" }
   },
+  {
+    nom: "Rugby", categorie: "sport", page: "rugby.html", sigle: "🏉", recherche: "rugby Top 14 OR Premiership OR \"Champions Cup\" OR \"Six Nations\" OR URC",
+    description: { fr: "Top 14, Premiership, URC, Champions Cup, Six Nations : matchs et classements", en: "Top 14, Premiership, URC, Champions Cup, Six Nations: matches and standings", de: "Top 14, Premiership, URC, Champions Cup, Six Nations: Spiele und Tabellen", it: "Top 14, Premiership, URC, Champions Cup, Sei Nazioni: partite e classifiche", es: "Top 14, Premiership, URC, Champions Cup, Seis Naciones: partidos y clasificaciones" }
+  },
 ];
 
 // Catégories affichées sur la page d'accueil (dans cet ordre).

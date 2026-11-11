@@ -26,6 +26,10 @@ jobs:
         run: python scripts/foot.py
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+      - name: Récupérer les matchs de rugby (toutes les 3 h)
+        run: python scripts/rugby.py
+        env:
+          RUGBY_API_KEY: ${{ secrets.RUGBY_API_KEY }}
       - name: Publier si quelque chose a changé
         run: |
           if git diff --quiet; then echo "Rien de nouveau."; exit 0; fi
