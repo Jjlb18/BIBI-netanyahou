@@ -2,118 +2,103 @@
 des grandes compétitions européennes de football.
 
 Lancé automatiquement par GitHub Actions (.github/workflows/actualites.yml).
-Source : l'API publique de scores d'ESPN. Si une compétition ne répond pas,
-ses anciennes données sont gardées.
+Source : football-data.org (gratuit, nécessite une clé).
+La clé doit être enregistrée dans le dépôt GitHub comme secret nommé FOOTBALL_DATA_TOKEN
+(Settings → Secrets and variables → Actions → New repository secret).
+Si la clé manque ou qu'une compétition ne répond pas, les anciennes données sont gardées.
 """
-import json, os, sys, urllib.request
+import json, os, sys, time, urllib.request
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FICHIER = os.path.join(ROOT, 'data', 'foot.json')
+API = 'https://api.football-data.org/v4'
+TOKEN = os.environ.get('FOOTBALL_DATA_TOKEN', '').strip()
 
-# id sur le site : code ESPN
+# id sur le site : code football-data.org (offre gratuite)
 COMPETITIONS = {
-    'ucl': 'uefa.champions',
-    'uel': 'uefa.europa',
-    'uecl': 'uefa.europa.conf',
-    'eng': 'eng.1',
-    'esp': 'esp.1',
-    'ita': 'ita.1',
-    'ger': 'ger.1',
-    'fra': 'fra.1',
+    'ucl': 'CL',
+    'eng': 'PL',
+    'esp': 'PD',
+    'ita': 'SA',
+    'ger': 'BL1',
+    'fra': 'FL1',
 }
 JOURS_AVANT, JOURS_APRES = 10, 21
+PAUSE = 6.5  # l'offre gratuite autorise 10 requêtes par minute
+
+ETATS = {'SCHEDULED': 'pre', 'TIMED': 'pre', 'IN_PLAY': 'in', 'PAUSED': 'in', 'LIVE': 'in',
+         'FINISHED': 'post', 'AWARDED': 'post', 'POSTPONED': 'annule', 'CANCELLED': 'annule', 'SUSPENDED': 'annule'}
 
 
-def get(url):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (foot-bot)'})
+def get(path):
+    req = urllib.request.Request(API + path, headers={'X-Auth-Token': TOKEN})
     with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)
+        data = json.load(r)
+    time.sleep(PAUSE)
+    return data
+
+
+def nom(team):
+    return (team or {}).get('shortName') or (team or {}).get('name') or '?'
 
 
 def matchs(code):
     now = datetime.now(timezone.utc)
-    debut = (now - timedelta(days=JOURS_AVANT)).strftime('%Y%m%d')
-    fin = (now + timedelta(days=JOURS_APRES)).strftime('%Y%m%d')
-    data = get(f'https://site.api.espn.com/apis/site/v2/sports/soccer/{code}/scoreboard?dates={debut}-{fin}&limit=300')
+    debut = (now - timedelta(days=JOURS_AVANT)).strftime('%Y-%m-%d')
+    fin = (now + timedelta(days=JOURS_APRES)).strftime('%Y-%m-%d')
+    data = get(f'/competitions/{code}/matches?dateFrom={debut}&dateTo={fin}')
     out = []
-    for ev in data.get('events', []):
-        comp = (ev.get('competitions') or [{}])[0]
-        teams = {c.get('homeAway'): c for c in comp.get('competitors', [])}
-        if 'home' not in teams or 'away' not in teams:
-            continue
-        st = ((comp.get('status') or ev.get('status') or {}).get('type') or {})
-        state = st.get('state', 'pre')  # pre / in / post
-        m = {
-            'd': ev.get('date') or comp.get('date'),
-            'dom': teams['home']['team'].get('displayName', '?'),
-            'ext': teams['away']['team'].get('displayName', '?'),
-            'st': state,
-        }
-        if st.get('name') in ('STATUS_POSTPONED', 'STATUS_CANCELED'):
-            m['st'] = 'annule'
-        if state in ('in', 'post'):
-            try:
-                m['sd'] = int(float(teams['home'].get('score', 0)))
-                m['se'] = int(float(teams['away'].get('score', 0)))
-            except (TypeError, ValueError):
-                pass
-        if state == 'in':
-            m['min'] = (comp.get('status') or {}).get('displayClock') or st.get('shortDetail', '')
-        out.append(m)
+    for m in data.get('matches', []):
+        st = ETATS.get(m.get('status'), 'pre')
+        x = {'d': m.get('utcDate'), 'dom': nom(m.get('homeTeam')), 'ext': nom(m.get('awayTeam')), 'st': st}
+        ft = ((m.get('score') or {}).get('fullTime') or {})
+        if st in ('in', 'post') and ft.get('home') is not None:
+            x['sd'], x['se'] = ft.get('home'), ft.get('away')
+        if st == 'in' and m.get('minute'):
+            x['min'] = f"{m['minute']}'"
+        out.append(x)
     out.sort(key=lambda x: x['d'] or '')
     return out
 
 
 def classement(code):
-    data = get(f'https://site.api.espn.com/apis/v2/sports/soccer/{code}/standings')
-    groupes = data.get('children') or [data]
-    entries = []
-    for g in groupes:
-        entries += (g.get('standings') or {}).get('entries', [])
+    data = get(f'/competitions/{code}/standings')
+    tables = [s for s in data.get('standings', []) if s.get('type') == 'TOTAL'] or data.get('standings', [])
     out = []
-    for e in entries:
-        s = {x.get('name'): x.get('value') for x in e.get('stats', [])}
-        def v(k):
-            try:
-                return int(float(s.get(k) or 0))
-            except (TypeError, ValueError):
-                return 0
-        out.append({'r': v('rank'), 'eq': (e.get('team') or {}).get('displayName', '?'),
-                    'j': v('gamesPlayed'), 'g': v('wins'), 'n': v('ties'), 'p': v('losses'), 'pts': v('points')})
-    out.sort(key=lambda x: (x['r'] or 999, -x['pts']))
+    for t in tables[:1]:
+        for e in t.get('table', []):
+            out.append({'r': e.get('position'), 'eq': nom(e.get('team')), 'j': e.get('playedGames', 0),
+                        'g': e.get('won', 0), 'n': e.get('draw', 0), 'p': e.get('lost', 0), 'pts': e.get('points', 0)})
     return out
 
 
 def main():
+    if not TOKEN:
+        print('Pas de clé FOOTBALL_DATA_TOKEN : les données foot ne sont pas mises à jour.')
+        return
     try:
         ancien = json.load(open(FICHIER, encoding='utf8'))
     except Exception:
         ancien = {'competitions': {}}
-    nouveau = {'maj': ancien.get('maj'), 'competitions': {}}
+    nouveau = {'maj': ancien.get('maj'), 'competitions': dict(ancien.get('competitions', {}))}
     change = False
     for cid, code in COMPETITIONS.items():
         avant = ancien.get('competitions', {}).get(cid, {'matchs': [], 'classement': []})
         apres = dict(avant)
-        try:
-            ms = matchs(code)
-            if ms:
-                apres['matchs'] = ms
-        except Exception as ex:
-            print(f'! {cid} matchs : {ex}', file=sys.stderr)
-        try:
-            cl = classement(code)
-            if cl:
-                apres['classement'] = cl
-        except Exception as ex:
-            print(f'! {cid} classement : {ex}', file=sys.stderr)
+        for cle, f in (('matchs', matchs), ('classement', classement)):
+            try:
+                v = f(code)
+                if v:
+                    apres[cle] = v
+            except Exception as ex:
+                print(f'! {cid} {cle} : {ex}', file=sys.stderr)
         if apres != avant:
             change = True
             print(f'✓ {cid} : {len(apres.get("matchs", []))} matchs, {len(apres.get("classement", []))} équipes')
         nouveau['competitions'][cid] = apres
     if change:
         nouveau['maj'] = datetime.now(timezone.utc).isoformat(timespec='seconds')
-        os.makedirs(os.path.dirname(FICHIER), exist_ok=True)
         json.dump(nouveau, open(FICHIER, 'w', encoding='utf8'), ensure_ascii=False, indent=1)
     print('foot.json', 'mis à jour' if change else 'inchangé')
 

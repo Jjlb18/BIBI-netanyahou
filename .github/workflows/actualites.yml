@@ -24,6 +24,8 @@ jobs:
         run: python scripts/actualites.py
       - name: Récupérer les matchs de foot
         run: python scripts/foot.py
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
       - name: Publier si quelque chose a changé
         run: |
           if git diff --quiet; then echo "Rien de nouveau."; exit 0; fi
