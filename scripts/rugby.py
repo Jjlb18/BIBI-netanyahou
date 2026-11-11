@@ -1,107 +1,101 @@
-"""Met à jour data/rugby.json : matchs et classements des grandes compétitions de rugby.
+"""Met à jour data/rugby.json : derniers résultats et prochains matchs des grandes compétitions de rugby.
 
 Lancé par GitHub Actions (.github/workflows/actualites.yml), mais ne contacte la source
-qu'une fois toutes les 3 heures (l'offre gratuite autorise 100 requêtes par jour).
-Source : api-sports.io (API Rugby). La clé doit être enregistrée dans le dépôt GitHub
-comme secret nommé RUGBY_API_KEY (Settings → Secrets and variables → Actions).
-Si la clé manque ou qu'une compétition ne répond pas, les anciennes données sont gardées.
+qu'une fois par heure (la clé gratuite est partagée entre tous ses utilisateurs).
+Source : TheSportsDB (clé publique gratuite « 123 », ou une clé personnelle dans le
+secret THESPORTSDB_KEY). Avec la clé gratuite, les classements de rugby ne sont pas fournis :
+seuls les matchs sont mis à jour. Les anciennes données sont gardées en cas d'erreur.
 """
-import json, os, sys, time, urllib.parse, urllib.request
+import json, os, sys, time, urllib.request
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FICHIER = os.path.join(ROOT, 'data', 'rugby.json')
-API = 'https://v1.rugby.api-sports.io'
-KEY = os.environ.get('RUGBY_API_KEY', '').strip()
-INTERVALLE = timedelta(hours=3)
-JOURS_AVANT, JOURS_APRES = 14, 28
+KEY = os.environ.get('THESPORTSDB_KEY', '').strip() or '123'
+API = f'https://www.thesportsdb.com/api/v1/json/{KEY}'
+INTERVALLE = timedelta(minutes=55)
 
-# id sur le site : (mots cherchés, pays attendu ou None)
+# id sur le site : identifiant de la compétition chez TheSportsDB
 COMPETITIONS = {
-    'top14': ('Top 14', 'France'),
-    'prem': ('Premiership Rugby', 'England'),
-    'urc': ('United Rugby Championship', None),
-    'ercc': ('Champions Cup', None),
-    'six': ('Six Nations', None),
+    'top14': 4430,   # French Top 14
+    'prem': 4414,    # English Premiership Rugby
+    'urc': 4446,     # United Rugby Championship
+    'ercc': 4550,    # European Rugby Champions Cup
+    'six': 4714,     # Six Nations Championship
 }
 
-ETATS_FIN = {'FT', 'AET', 'AW', 'AOT'}
-ETATS_LIVE = {'1H', '2H', 'HT', 'ET', 'BT', 'PT', 'LIVE'}
-ETATS_ANNULE = {'PST', 'CANC', 'ABD', 'INTR', 'SUSP'}
 
-
-def get(path, **params):
-    url = API + path + ('?' + urllib.parse.urlencode(params) if params else '')
-    req = urllib.request.Request(url, headers={'x-apisports-key': KEY})
+def get(path):
+    req = urllib.request.Request(API + path, headers={'User-Agent': 'BIBI-netanyahou-site/1.0 (github.com/Jjlb18/BIBI-netanyahou)'})
     with urllib.request.urlopen(req, timeout=30) as r:
         data = json.load(r)
-    if data.get('errors'):
-        raise RuntimeError(data['errors'])
-    time.sleep(2)
-    return data.get('response', [])
+    time.sleep(2.5)  # reste sous 30 requêtes par minute
+    return data or {}
 
 
-def trouver(nom, pays):
-    """Trouve l'identifiant de la compétition et sa saison en cours."""
-    res = get('/leagues', search=nom)
-    def score(l):
-        n = (l.get('name') or '').lower()
-        c = ((l.get('country') or {}).get('name') or '')
-        return (n == nom.lower(), nom.lower() in n, pays is None or c == pays)
-    res.sort(key=score, reverse=True)
-    if not res:
-        raise RuntimeError(f'compétition introuvable : {nom}')
-    l = res[0]
-    saisons = l.get('seasons') or []
-    cur = [s for s in saisons if s.get('current')] or saisons[-1:]
-    return {'id': l.get('id'), 'saison': (cur[0] if cur else {}).get('season')}
-
-
-def matchs(info):
-    now = datetime.now(timezone.utc)
-    out = []
-    for g in get('/games', league=info['id'], season=info['saison']):
+def quand(e):
+    ts = e.get('strTimestamp')
+    if ts:
         try:
-            d = datetime.fromisoformat((g.get('date') or '').replace('Z', '+00:00'))
+            d = datetime.fromisoformat(ts.replace('Z', '+00:00'))
+            return d if d.tzinfo else d.replace(tzinfo=timezone.utc)
         except ValueError:
-            continue
-        if not (now - timedelta(days=JOURS_AVANT) <= d <= now + timedelta(days=JOURS_APRES)):
-            continue
-        st = ((g.get('status') or {}).get('short') or 'NS').upper()
-        etat = 'post' if st in ETATS_FIN else 'in' if st in ETATS_LIVE else 'annule' if st in ETATS_ANNULE else 'pre'
-        t = g.get('teams') or {}
-        sc = g.get('scores') or {}
-        m = {'d': d.astimezone(timezone.utc).isoformat().replace('+00:00', 'Z'),
-             'dom': (t.get('home') or {}).get('name', '?'), 'ext': (t.get('away') or {}).get('name', '?'), 'st': etat}
-        if etat in ('in', 'post') and sc.get('home') is not None:
-            m['sd'], m['se'] = sc.get('home'), sc.get('away')
-        if etat == 'in':
-            m['min'] = st
-        out.append(m)
-    out.sort(key=lambda x: x['d'])
-    return out
+            pass
+    try:
+        return datetime.fromisoformat(f"{e.get('dateEvent')}T{(e.get('strTime') or '00:00:00')[:8]}").replace(tzinfo=timezone.utc)
+    except (TypeError, ValueError):
+        return None
 
 
-def classement(info):
-    res = get('/standings', league=info['id'], season=info['saison'])
-    groupes = res if (res and isinstance(res[0], list)) else [res]
+def conv(e, passe):
+    d = quand(e)
+    if not d:
+        return None
+    sd, se = e.get('intHomeScore'), e.get('intAwayScore')
+    statut = (e.get('strStatus') or '').lower()
+    if 'postpon' in statut or 'cancel' in statut:
+        st = 'annule'
+    elif passe and sd not in (None, '') and se not in (None, ''):
+        st = 'post'
+    elif passe:
+        return None
+    else:
+        st = 'pre'
+    m = {'d': d.astimezone(timezone.utc).isoformat().replace('+00:00', 'Z'),
+         'dom': e.get('strHomeTeam') or '?', 'ext': e.get('strAwayTeam') or '?', 'st': st}
+    if st == 'post':
+        m['sd'], m['se'] = int(sd), int(se)
+    return m
+
+
+def matchs(lid):
     out = []
-    for grp in groupes:
-        for e in grp:
-            g = e.get('games') or {}
-            v = lambda k: ((g.get(k) or {}).get('total') or 0)
-            x = {'r': e.get('position'), 'eq': (e.get('team') or {}).get('name', '?'), 'j': g.get('played', 0),
-                 'g': v('win'), 'n': v('draw'), 'p': v('lose'), 'pts': e.get('points', 0)}
-            if len(groupes) > 1:
-                x['grp'] = e.get('group', {}).get('name') if isinstance(e.get('group'), dict) else e.get('group')
-            out.append(x)
+    for path, passe in ((f'/eventspastleague.php?id={lid}', True), (f'/eventsnextleague.php?id={lid}', False)):
+        for e in (get(path).get('events') or []):
+            m = conv(e, passe)
+            if m:
+                out.append(m)
+    seen, uniq = set(), []
+    for m in sorted(out, key=lambda x: x['d']):
+        k = (m['d'], m['dom'], m['ext'])
+        if k not in seen:
+            seen.add(k); uniq.append(m)
+    return uniq
+
+
+def classement(lid):
+    out = []
+    for e in (get(f'/lookuptable.php?l={lid}').get('table') or []):
+        try:
+            out.append({'r': int(e.get('intRank') or 0), 'eq': e.get('strTeam') or '?', 'j': int(e.get('intPlayed') or 0),
+                        'g': int(e.get('intWin') or 0), 'n': int(e.get('intDraw') or 0), 'p': int(e.get('intLoss') or 0),
+                        'pts': int(e.get('intPoints') or 0)})
+        except (TypeError, ValueError):
+            continue
     return out
 
 
 def main():
-    if not KEY:
-        print('Pas de clé RUGBY_API_KEY : les données rugby ne sont pas mises à jour.')
-        return
     try:
         ancien = json.load(open(FICHIER, encoding='utf8'))
     except Exception:
@@ -109,31 +103,24 @@ def main():
     now = datetime.now(timezone.utc)
     dernier = ancien.get('essai')
     if dernier and now - datetime.fromisoformat(dernier) < INTERVALLE and os.environ.get('FORCER') != '1':
-        print('Rugby : dernière mise à jour il y a moins de 3 h, rien à faire.')
+        print('Rugby : mis à jour il y a moins d\'une heure, rien à faire.')
         return
-    nouveau = {'maj': ancien.get('maj'), 'essai': now.isoformat(timespec='seconds'),
-               'ids': ancien.get('ids', {}), 'competitions': dict(ancien.get('competitions', {}))}
+    nouveau = {'maj': ancien.get('maj'), 'essai': now.isoformat(timespec='seconds'), 'source': 'thesportsdb',
+               'competitions': dict(ancien.get('competitions', {}))}
     change = False
-    for cid, (nom, pays) in COMPETITIONS.items():
+    for cid, lid in COMPETITIONS.items():
         avant = ancien.get('competitions', {}).get(cid, {'matchs': [], 'classement': []})
         apres = dict(avant)
-        try:
-            info = nouveau['ids'].get(cid)
-            if not info or not info.get('saison') or now.weekday() == 0 and now.hour < 3:
-                info = trouver(nom, pays)  # recherché au début et chaque lundi (changement de saison)
-                nouveau['ids'][cid] = info
-            for cle, f in (('matchs', matchs), ('classement', classement)):
-                try:
-                    v = f(info)
-                    if v or cle == 'matchs':
-                        apres[cle] = v
-                except Exception as ex:
-                    print(f'! {cid} {cle} : {ex}', file=sys.stderr)
-        except Exception as ex:
-            print(f'! {cid} : {ex}', file=sys.stderr)
+        for cle, f in (('matchs', matchs), ('classement', classement)):
+            try:
+                v = f(lid)
+                if v:
+                    apres[cle] = v
+            except Exception as ex:
+                print(f'! {cid} {cle} : {ex}', file=sys.stderr)
         if apres != avant:
             change = True
-            print(f'✓ {cid} : {len(apres.get("matchs", []))} matchs, {len(apres.get("classement", []))} équipes')
+        print(f'{cid} : {len(apres.get("matchs", []))} matchs, {len(apres.get("classement", []))} équipes')
         nouveau['competitions'][cid] = apres
     if change:
         nouveau['maj'] = now.isoformat(timespec='seconds')
