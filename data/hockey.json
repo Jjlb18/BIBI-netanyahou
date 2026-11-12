@@ -1,21 +1,21 @@
 {
- "maj": "2026-11-12T19:12:35+00:00",
+ "maj": "2026-11-12T20:06:34+00:00",
  "recents": [
   {
    "id": 2026020309,
    "date": "2026-11-12T17:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Seattle Kraken",
     "abrev": "SEA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "Caroline Hurricanes",
     "abrev": "CAR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-    "score": 3
+    "score": 4
    },
    "fin": ""
   },
@@ -366,6 +366,20 @@
  ],
  "classement": [
   {
+   "nom": "Hurricanes de la Caroline",
+   "abrev": "CAR",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+   "conf": "Eastern",
+   "div": "Metropolitan",
+   "mj": 20,
+   "v": 15,
+   "d": 3,
+   "dp": 2,
+   "pts": 32,
+   "bp": 82,
+   "bc": 46
+  },
+  {
    "nom": "Oilers d'Edmonton",
    "abrev": "EDM",
    "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
@@ -378,20 +392,6 @@
    "pts": 31,
    "bp": 81,
    "bc": 58
-  },
-  {
-   "nom": "Hurricanes de la Caroline",
-   "abrev": "CAR",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-   "conf": "Eastern",
-   "div": "Metropolitan",
-   "mj": 19,
-   "v": 14,
-   "d": 3,
-   "dp": 2,
-   "pts": 30,
-   "bp": 78,
-   "bc": 45
   },
   {
    "nom": "Wild du Minnesota",
@@ -609,13 +609,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 16,
+   "mj": 17,
    "v": 9,
-   "d": 6,
+   "d": 7,
    "dp": 1,
    "pts": 19,
-   "bp": 57,
-   "bc": 57
+   "bp": 58,
+   "bc": 61
   },
   {
    "nom": "Sabres de Buffalo",
