@@ -105,6 +105,14 @@
   .cat.open .cat-body{display:block}
   .cat-sub{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:10px 10px 2px}
   .cat-empty{display:block;font-size:13px;color:var(--muted);padding:6px 10px}
+  .person .menu a{font-size:12.5px;padding:6px 10px}
+  .person .menu a small{font-size:11px}
+  .person .menu a[hidden],.cat[hidden],.cat-nores[hidden]{display:none}
+  .cat-search{position:sticky;top:-6px;z-index:2;background:var(--card);padding:2px 2px 8px}
+  .cat-search input{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:9px;padding:8px 10px;font:13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);outline:none}
+  .cat-search input:focus{border-color:var(--accent)}
+  #people.searching .cat-body{display:block}
+  #people.searching .cat-sub,#people.searching .cat-body .cat-empty{display:none}
 </style>
 </head>
 <body>
@@ -309,6 +317,11 @@
     const catOf = p => p.categorie || 'personnalites';
     const box = document.getElementById('people');
     const here = list.find(p => p.page === HERE);
+    const norm = t => String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const sWrap = document.createElement('div'); sWrap.className = 'cat-search';
+    const inp = document.createElement('input'); inp.type = 'search'; inp.placeholder = '🔍 Search…'; inp.setAttribute('aria-label', '🔍 Search…');
+    inp.addEventListener('click', e => e.stopPropagation());
+    sWrap.appendChild(inp); box.appendChild(sWrap);
     cats.forEach(c => {
       const items = list.filter(p => catOf(p) === c.id);
       const grp = document.createElement('div'); grp.className = 'cat';
@@ -322,6 +335,7 @@
       const add = pers => {
         const a = document.createElement('a');
         a.href = pers.page;
+        a.dataset.q = norm([pers.nom, ...Object.values(pers.noms || {}), ...(typeof pers.description === 'object' ? Object.values(pers.description) : [pers.description])].join(' '));
         a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
         const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
         if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
@@ -344,6 +358,19 @@
       if (here && catOf(here) === c.id) grp.classList.add('open');
       grp.append(head, body);
       box.appendChild(grp);
+    });
+    const nores = document.createElement('span'); nores.className = 'cat-empty cat-nores'; nores.textContent = 'No results'; nores.hidden = true;
+    box.appendChild(nores);
+    inp.addEventListener('input', () => {
+      const q = norm(inp.value.trim());
+      box.classList.toggle('searching', !!q);
+      let total = 0;
+      box.querySelectorAll('.cat').forEach(g => {
+        let n = 0;
+        g.querySelectorAll('.cat-body a').forEach(a => { const ok = !q || a.dataset.q.includes(q); a.hidden = !ok; if (ok) n++; });
+        g.hidden = !!q && !n; total += n;
+      });
+      nores.hidden = !q || total > 0;
     });
     document.getElementById('switch').hidden = false;
   })();
