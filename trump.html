@@ -113,6 +113,9 @@
   .cat-search input:focus{border-color:var(--accent)}
   #people.searching .cat-body{display:block}
   #people.searching .cat-sub,#people.searching .cat-body .cat-empty{display:none}
+  .back-btn{display:inline-flex;align-items:center;gap:6px;margin-top:22px;padding:6px 14px 6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font:600 13px Inter,system-ui,sans-serif}
+  .back-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .back-btn ~ header{padding-top:28px}
 </style>
 </head>
 <body>
@@ -142,6 +145,7 @@
 </div></nav>
 
 <div class="wrap">
+<a class="back-btn" href="index.html" onclick="if(document.referrer.indexOf(location.host)>-1&&history.length>1){history.back();return false}">← Retour</a>
 <header>
   <div class="eyebrow">Portrait politique · États-Unis</div>
   <h1>Donald Trump</h1>
