@@ -62,6 +62,11 @@ window.PERSONNES = [
     nom: "MMA", categorie: "sport", page: "mma.html", sigle: "🥊", recherche: "UFC OR MMA",
     description: { fr: "UFC et arts martiaux mixtes : prochains combats, résultats et actualité", en: "UFC and mixed martial arts: upcoming fights, results and news", de: "UFC und Mixed Martial Arts: kommende Kämpfe, Ergebnisse und News", it: "UFC e arti marziali miste: prossimi incontri, risultati e notizie", es: "UFC y artes marciales mixtas: próximos combates, resultados y actualidad" }
   },
+  {
+    nom: "Hockey sur glace", categorie: "sport", page: "hockey.html", sigle: "🏒", recherche: "hockey OR NHL OR Eishockey",
+    noms: { en: "Ice hockey", de: "Eishockey", it: "Hockey su ghiaccio", es: "Hockey sobre hielo" },
+    description: { fr: "NHL et National League : matchs, classement et actualité", en: "NHL and National League: games, standings and news", de: "NHL und National League: Spiele, Tabelle und News", it: "NHL e National League: partite, classifica e notizie", es: "NHL y National League: partidos, clasificación y actualidad" }
+  },
 ];
 
 // Catégories affichées sur la page d'accueil (dans cet ordre).

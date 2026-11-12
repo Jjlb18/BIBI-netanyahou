@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr" data-root="" data-lang="fr" data-page="hockey.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hockey sur glace — Matchs et classement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --ink:#14181f; --muted:#5b6270; --line:#d9d5cb;
+    --accent:#1d4e89; --accent-soft:#e3ebf5; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#11141a; --ink:#ecebe7; --muted:#9aa1ad; --line:#2a2f39;
+      --accent:#7fb0ea; --accent-soft:#1b2636; --card:#171b22; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px}
+  nav .links{display:flex;gap:18px;overflow-x:auto;flex:1;min-width:0;padding:12px 0;font-size:14px;font-weight:500;white-space:nowrap;scrollbar-width:none}
+  nav .links a{color:var(--muted);text-decoration:none}
+  nav .links a:hover{color:var(--ink)}
+  .switch{position:relative;flex:none}
+  .switch[hidden]{display:none}
+  .switch button{font:600 13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .switch button:hover{border-color:var(--accent)}
+  .switch button .chev{transition:transform .2s}
+  .switch.open button .chev{transform:rotate(180deg)}
+  .menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:6px;display:none}
+  .switch.open .menu{display:block}
+  .menu .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;padding:8px 10px 4px}
+  .menu a{display:flex;flex-direction:column;padding:9px 10px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+  .menu a small{font-weight:400;color:var(--muted);font-size:12px}
+  .menu a:hover{background:var(--accent-soft)}
+  .menu a.current{background:var(--accent-soft);color:var(--accent)}
+  .menu a.current:after{content:attr(data-cur);font-size:11px;font-weight:500;color:var(--muted)}
+  header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+  .lede{font-size:19px;color:var(--muted);max-width:680px;margin:0}
+  .fact em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:4px}
+  .fact.wide{grid-column:span 2}
+  .fact span.age{font-variant-numeric:tabular-nums;font-size:17px}
+  @media (max-width:720px){ .facts{grid-template-columns:1fr 1fr !important} }
+  .live-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .live-head h2{margin:0}
+  .dot{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#c0392b}
+  .dot:before{content:"";width:9px;height:9px;border-radius:50%;background:#e74c3c;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(231,76,60,.6)}70%{box-shadow:0 0 0 9px rgba(231,76,60,0)}100%{box-shadow:0 0 0 0 rgba(231,76,60,0)}}
+  .updated{font-size:13px;color:var(--muted)}
+  .news{display:grid;gap:12px}
+  .news .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:96px 1fr;gap:16px}
+  .news .d{font-size:13px;font-weight:600;color:var(--accent)}
+  .news p{margin:0;font-size:15px}
+  .news a{font-size:13px}
+  @media (max-width:600px){ .news .item{grid-template-columns:1fr;gap:4px} }
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:40px}
+  .fact{background:var(--card);padding:18px 20px}
+  .fact b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .fact span{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:600;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:720px}
+  .status{background:var(--accent-soft);border-left:4px solid var(--accent);padding:22px 24px;border-radius:0 12px 12px 0;max-width:760px}
+  .status small{display:block;color:var(--muted);margin-top:10px}
+  .timeline{list-style:none;margin:0;padding:0;position:relative}
+  .timeline:before{content:"";position:absolute;left:84px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .timeline li{display:grid;grid-template-columns:70px 1fr;gap:34px;padding:10px 0;position:relative}
+  .timeline li:before{content:"";position:absolute;left:79px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .timeline .y{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;text-align:right}
+  .timeline .t{color:var(--ink)}
+  .terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .when{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted);margin:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){ .two{grid-template-columns:1fr} .timeline:before{left:64px} .timeline li{grid-template-columns:52px 1fr;gap:28px} .timeline li:before{left:59px} }
+  ul.plain{margin:0;padding-left:18px} ul.plain li{margin-bottom:8px}
+  .sources ol{padding-left:20px;font-size:14px;color:var(--muted)}
+  .sources li{margin-bottom:6px}
+  footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+  .home-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:15px}
+  .home-btn:hover{border-color:var(--accent)}
+  .switches{display:flex;gap:8px;flex:none}
+  .lang .menu{min-width:170px}
+  .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
+  .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
+  @media (max-width:640px){ .switch button .txt{display:none} }
+  .person .menu{min-width:270px;max-height:75vh;overflow:auto}
+  .switch .menu .cat-head{border:0;border-radius:9px;padding:9px 10px;background:none}
+  .switch .menu .cat-head:hover{background:var(--accent-soft)}
+  .cat-head{display:flex;align-items:center;gap:8px;width:100%;background:none;border:0;padding:9px 10px;border-radius:9px;font:600 14px Inter,system-ui,sans-serif;color:var(--ink);cursor:pointer;text-align:left}
+  .cat-head:hover{background:var(--accent-soft)}
+  .cat-head .cn{flex:1}
+  .cat-head .cc{font-size:11px;font-weight:600;color:var(--muted);background:rgba(127,127,127,.15);border-radius:999px;padding:0 7px}
+  .cat-head .ca{color:var(--muted);transition:transform .2s}
+  .cat.open .cat-head .ca{transform:rotate(90deg)}
+  .cat-body{display:none;padding:2px 0 6px 16px;border-left:2px solid var(--line);margin-left:18px}
+  .cat.open .cat-body{display:block}
+  .cat-sub{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:10px 10px 2px}
+  .cat-empty{display:block;font-size:13px;color:var(--muted);padding:6px 10px}
+  .person .menu a{font-size:12.5px;padding:6px 10px}
+  .person .menu a small{font-size:11px}
+  .person .menu a[hidden],.cat[hidden],.cat-nores[hidden]{display:none}
+  .cat-search{position:sticky;top:-6px;z-index:2;background:var(--card);padding:2px 2px 8px}
+  .cat-search input{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:9px;padding:8px 10px;font:13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);outline:none}
+  .cat-search input:focus{border-color:var(--accent)}
+  #people.searching .cat-body{display:block}
+  #people.searching .cat-sub,#people.searching .cat-body .cat-empty{display:none}
+  .back-btn{display:inline-flex;align-items:center;gap:6px;margin-top:22px;padding:6px 14px 6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font:600 13px Inter,system-ui,sans-serif}
+  .back-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .back-btn ~ header{padding-top:28px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="links">
+  <a href="#actualite">Matchs</a>
+  <a href="#direct">En direct</a>
+  <a href="#biographie">C'est quoi ?</a>
+  <a href="#mandats">Ligues</a>
+  <a href="#chronologie">Chronologie</a>
+  <a href="#perspectives">Légendes</a>
+  <a href="#sources">Sources</a>
+  </div>
+  <div class="switches">
+  <a class="home-btn" href="index.html" title="Accueil" aria-label="Accueil">🏠</a>
+  <div class="switch lang">
+    <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Langue</span> <b>FR</b> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Langue</div><a href="hockey.html" class="current">Français <small>FR</small></a><a href="en/hockey.html">English <small>EN</small></a><a href="de/hockey.html">Deutsch <small>DE</small></a><a href="it/hockey.html">Italiano <small>IT</small></a><a href="es/hockey.html">Español <small>ES</small></a></div>
+  </div>
+  <div class="switch person" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">☰ <span class="txt">Catégories</span> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div id="people"></div></div>
+  </div>
+  </div>
+</div></nav>
+
+<div class="wrap">
+<a class="back-btn" href="index.html" onclick="if(document.referrer.indexOf(location.host)>-1&&history.length>1){history.back();return false}">← Retour</a>
+<style>
+  .ctabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+  .ctab{font:600 14px Inter,system-ui,sans-serif;display:flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+  .ctab:hover{border-color:var(--accent)}
+  .ctab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:820px){ .fgrid{grid-template-columns:1fr} }
+  .fbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .fbox h3{font-family:Fraunces,Georgia,serif;font-size:20px;margin:0 0 12px}
+  .mrow{display:grid;grid-template-columns:86px 1fr auto 1fr;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:14px}
+  .mrow:first-of-type{border-top:0}
+  .mrow .when{font-size:12px;color:var(--muted);line-height:1.3}
+  .mrow .h{text-align:right;font-weight:600}
+  .mrow .a{font-weight:600}
+  .mrow .sc{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:16px;background:var(--accent-soft);border-radius:8px;padding:2px 10px;min-width:56px;text-align:center;white-space:nowrap}
+  .mrow .sc.vs{background:none;color:var(--muted);font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:600}
+  .mrow.live .sc{background:#e74c3c;color:#fff}
+  .mrow .lv{color:#c0392b;font-weight:700}
+  .ftable{width:100%;border-collapse:collapse;font-size:14px}
+  .ftable th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;text-align:center;padding:6px 4px;border-bottom:1px solid var(--line)}
+  .ftable th:nth-child(2),.ftable td:nth-child(2){text-align:left}
+  .ftable td{text-align:center;padding:7px 4px;border-bottom:1px solid var(--line)}
+  .ftable td:last-child{font-weight:700}
+  .ftable tr:last-child td{border-bottom:0}
+  .ftable .rk{color:var(--muted);width:28px}
+  .fwide{grid-column:1/-1}
+  .fnote{color:var(--muted);font-size:14px;margin:0}
+  .fmore{display:block;margin:14px auto 0;font:600 14px Inter,system-ui,sans-serif;color:var(--accent);background:var(--accent-soft);border:1px solid transparent;border-radius:999px;padding:8px 18px;cursor:pointer}
+  .fmore:hover{border-color:var(--accent)}
+  .fmaj{font-size:13px;color:var(--muted);margin-top:14px}
+  .tlogo{width:20px;height:20px;vertical-align:-5px;margin:0 6px}
+  .mrow .h .tlogo{margin:0 0 0 6px}.mrow .a .tlogo{margin:0 6px 0 0}
+  .ftable .tlogo{margin:0 8px 0 0}
+  .ext{font-size:11px;color:var(--muted);font-weight:600;margin-left:4px}
+</style>
+<header>
+  <div class="eyebrow">Sport · Hockey sur glace</div>
+  <h1>Hockey sur glace</h1>
+  <p class="lede">Résultats, prochains matchs et classement de la NHL, mis à jour automatiquement, plus toute l'actualité du hockey, dont la National League suisse.</p>
+</header>
+
+<section id="actualite">
+  <h2>Matchs et classement NHL</h2>
+  <div class="fgrid">
+    <div class="fbox"><h3>Derniers résultats</h3><div id="hk-recent"></div></div>
+    <div class="fbox"><h3>Prochains matchs</h3><div id="hk-next"></div></div>
+    <div class="fbox fwide"><h3>Classement</h3><div class="ctabs" id="hk-tabs" role="tablist"></div><div id="hk-table"></div></div>
+  </div>
+  <p class="fmaj" id="hk-maj"></p>
+  <p class="fmaj">DP = défaites en prolongation ou aux tirs au but (1 point). Heures affichées dans ton fuseau horaire.</p>
+</section>
+
+<section id="direct">
+  <div class="live-head"><h2>En ce moment</h2><span class="dot">En direct</span></div>
+  <!--NEWS-START-->
+  <p class="updated">Dernière mise à jour : 12 novembre 2026, 9 h 15 (heure de Zurich)</p>
+  <div class="news">
+    <div class="item"><span class="d">—</span><div><p>Les titres de presse sur le hockey s'affichent ici automatiquement (mise à jour toutes les 20 minutes).</p></div></div>
+  </div>
+  <!--NEWS-END-->
+</section>
+
+<section id="biographie">
+  <h2>Le hockey sur glace, c'est quoi ?</h2>
+  <div class="two">
+    <div>
+      <h3>Les règles</h3>
+      <p>Deux équipes de six joueurs (dont un gardien) s'affrontent sur la glace pendant trois périodes de 20 minutes. Le but : envoyer le palet dans la cage adverse avec la crosse.</p>
+      <h3>En cas d'égalité</h3>
+      <p>En NHL, une prolongation de 5 minutes à 3 contre 3 est jouée, puis des tirs au but si besoin. Une victoire vaut 2 points, une défaite en prolongation 1 point.</p>
+    </div>
+    <div>
+      <h3>Un sport rapide et physique</h3>
+      <p>Les joueurs dépassent les 30 km/h et le palet peut voler à plus de 150 km/h. Les mises en échec (charges) sont autorisées chez les hommes.</p>
+      <h3>Les pénalités</h3>
+      <p>Un joueur fautif va en prison (banc des pénalités) pendant 2 minutes ou plus : son équipe joue alors en infériorité numérique.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mandats">
+  <h2>Les ligues</h2>
+  <div class="terms">
+    <div class="card"><div class="when">Amérique du Nord</div><h3>NHL</h3><p>La meilleure ligue du monde : 32 équipes aux États‑Unis et au Canada. Le champion soulève la coupe Stanley.</p></div>
+    <div class="card"><div class="when">Suisse</div><h3>National League</h3><p>Le championnat suisse, l'un des plus forts d'Europe, avec des clubs comme Zurich (ZSC Lions), Berne, Fribourg‑Gottéron, Genève‑Servette ou Lausanne.</p></div>
+    <div class="card"><div class="when">Monde</div><h3>Mondiaux et JO</h3><p>Chaque printemps, les Championnats du monde réunissent les nations. La Suisse a remporté l'argent en 2024 et en 2025 ; les Mondiaux 2026 ont eu lieu en Suisse.</p></div>
+  </div>
+</section>
+
+<section id="chronologie">
+  <h2>Chronologie</h2>
+  <ul class="timeline">
+    <li><span class="y">1875</span><span class="t">Premier match de hockey sur glace organisé, à Montréal.</span></li>
+    <li><span class="y">1917</span><span class="t">Création de la NHL.</span></li>
+    <li><span class="y">1920</span><span class="t">Le hockey sur glace fait son entrée aux Jeux olympiques.</span></li>
+    <li><span class="y">1979</span><span class="t">Wayne Gretzky débute en NHL ; il deviendra « The Great One ».</span></li>
+    <li><span class="y">2013</span><span class="t">La Suisse décroche l'argent aux Mondiaux, une première depuis 1953.</span></li>
+    <li><span class="y">2017</span><span class="t">Nico Hischier est le premier Suisse choisi en n° 1 de la draft NHL.</span></li>
+    <li><span class="y">2025</span><span class="t">Alexander Ovechkin dépasse le record de buts de Gretzky (894).</span></li>
+    <li><span class="y">2026</span><span class="t">Mondiaux organisés en Suisse, à Zurich et Fribourg.</span></li>
+  </ul>
+</section>
+
+<section id="perspectives">
+  <h2>Les légendes</h2>
+  <div class="two">
+    <div class="card"><ul class="plain">
+        <li><strong>Wayne Gretzky</strong> — « The Great One », recordman de points.</li>
+        <li><strong>Mario Lemieux</strong> et <strong>Sidney Crosby</strong> — les légendes des Penguins.</li>
+        <li><strong>Alexander Ovechkin</strong> — meilleur buteur de l'histoire de la NHL.</li>
+        <li><strong>Connor McDavid</strong> — considéré comme le meilleur joueur de sa génération.</li>
+    </ul></div>
+    <div class="card"><h3>Les Suisses en NHL</h3><ul class="plain">
+        <li><strong>Roman Josi</strong> — défenseur, trophée Norris 2020 (meilleur défenseur).</li>
+        <li><strong>Nico Hischier</strong> — capitaine des New Jersey Devils.</li>
+        <li><strong>Timo Meier</strong>, <strong>Kevin Fiala</strong> et <strong>Nino Niederreiter</strong> — attaquants suisses parmi les plus connus.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="sources" class="sources">
+  <h2>Sources</h2>
+  <ol>
+    <li><a href="https://www.nhl.com/standings">NHL — Classement officiel / Official standings</a></li>
+    <li><a href="https://github.com/Zmalski/NHL-API-Reference">NHL API Reference (données automatiques / automatic data)</a></li>
+    <li><a href="https://www.nationalleague.ch/">National League (Suisse)</a></li>
+    <li><a href="https://www.iihf.com/">IIHF — Fédération internationale de hockey sur glace</a></li>
+  </ol>
+</section>
+
+<footer>Page informative, établie le 12 novembre 2026. Les matchs et le classement NHL se mettent à jour tout seuls.</footer>
+<script>
+(function(){
+  const T = {"east": "Conférence Est", "west": "Conférence Ouest", "cols": ["#", "Équipe", "MJ", "V", "D", "DP", "Pts"], "more": "Voir tout le classement", "less": "Réduire", "none": "Aucun match pour le moment.", "live_lbl": "En direct", "ot": "prol.", "so": "t.a.b.", "maj": "Données de la NHL mises à jour le"};
+  const LG = 'fr';
+  const ROOT = document.documentElement.dataset.root || '';
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
+  const logo = t => t.logo ? `<img class="tlogo" src="${esc(t.logo)}" alt="" loading="lazy" onerror="this.remove()">` : '';
+  const when = iso => { const d = new Date(iso); return d.toLocaleDateString(LG, {weekday:'short', day:'numeric', month:'short'}) + '<br>' + d.toLocaleTimeString(LG, {hour:'2-digit', minute:'2-digit'}); };
+  function row(m){
+    const live = m.etat === 'in';
+    const sc = (m.etat === 'pre' || m.etat === 'annule') ? '<span class="sc vs">–</span>'
+      : `<span class="sc">${m.dom.score ?? '?'} : ${m.ext.score ?? '?'}${m.fin ? `<span class="ext">${m.fin === 'SO' ? T.so : T.ot}</span>` : ''}</span>`;
+    return `<div class="mrow${live ? ' live' : ''}"><span class="when">${live ? `<span class="lv">${T.live_lbl}</span>` : when(m.date)}</span>`
+      + `<span class="h">${esc(m.dom.nom)}${logo(m.dom)}</span>${sc}<span class="a">${logo(m.ext)}${esc(m.ext.nom)}</span></div>`;
+  }
+  function liste(id, ms){ document.getElementById(id).innerHTML = ms && ms.length ? ms.map(row).join('') : `<p class="fnote">${T.none}</p>`; }
+  let conf = 'Eastern', open = false, data = null;
+  function table(){
+    const cl = (data.classement || []).filter(t => t.conf === conf);
+    if (cl.some(t => t.pts != null)) cl.sort((a, b) => (b.pts ?? -1) - (a.pts ?? -1) || (a.mj ?? 0) - (b.mj ?? 0));
+    const v = n => n == null ? '–' : n;
+    const rows = (open ? cl : cl.slice(0, 10)).map((t, i) => `<tr><td class="rk">${i + 1}</td><td>${logo(t)}${esc(t.nom)}</td><td>${v(t.mj)}</td><td>${v(t.v)}</td><td>${v(t.d)}</td><td>${v(t.dp)}</td><td>${v(t.pts)}</td></tr>`).join('');
+    document.getElementById('hk-table').innerHTML = `<table class="ftable"><thead><tr>${T.cols.map(c => `<th>${c}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table>`
+      + (cl.length > 10 ? `<button type="button" class="fmore" id="hk-more">${open ? T.less : T.more + ' (' + cl.length + ')'}</button>` : '');
+    const b = document.getElementById('hk-more'); if (b) b.onclick = () => { open = !open; table(); };
+  }
+  function tabs(){
+    const box = document.getElementById('hk-tabs'); box.innerHTML = '';
+    [['Eastern', T.east], ['Western', T.west]].forEach(([id, nom]) => {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'ctab'; b.textContent = nom;
+      b.setAttribute('aria-selected', id === conf);
+      b.onclick = () => { conf = id; open = false; tabs(); table(); };
+      box.appendChild(b);
+    });
+  }
+  fetch(ROOT + 'data/hockey.json?' + Date.now()).then(r => r.json()).then(d => {
+    data = d; liste('hk-recent', d.recents); liste('hk-next', d.avenir); tabs(); table();
+    if (d.maj) document.getElementById('hk-maj').textContent = T.maj + ' ' + new Date(d.maj).toLocaleString(LG, {dateStyle:'long', timeStyle:'short'});
+  }).catch(() => { liste('hk-recent', []); liste('hk-next', []); });
+})();
+</script>
+
+</div>
+<script>
+  const el = document.getElementById('age');
+  const p = n => String(n).padStart(2, '0');
+  function tick(){}
+  tick(); setInterval(tick, 1000);
+</script>
+<script src="personnes.js"></script>
+<script>
+  (function(){
+    const LANG = document.documentElement.dataset.lang;
+    const HERE = document.documentElement.dataset.page;
+    // menus déroulants
+    const all = [...document.querySelectorAll('.switch')];
+    all.forEach(sw => {
+      const btn = sw.querySelector('button');
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        all.forEach(o => { if (o !== sw) o.classList.remove('open'); });
+        btn.setAttribute('aria-expanded', sw.classList.toggle('open'));
+      });
+    });
+    document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
+    // menu Catégories
+    const list = window.PERSONNES;
+    if (!Array.isArray(list) || !list.length) return;
+    const cats = window.CATEGORIES || [{ id: 'personnalites', icone: '👤', noms: {} }];
+    const catOf = p => p.categorie || 'personnalites';
+    const box = document.getElementById('people');
+    const here = list.find(p => p.page === HERE);
+    const norm = t => String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const sWrap = document.createElement('div'); sWrap.className = 'cat-search';
+    const inp = document.createElement('input'); inp.type = 'search'; inp.placeholder = '🔍 Rechercher…'; inp.setAttribute('aria-label', '🔍 Rechercher…');
+    inp.addEventListener('click', e => e.stopPropagation());
+    sWrap.appendChild(inp); box.appendChild(sWrap);
+    cats.forEach(c => {
+      const items = list.filter(p => catOf(p) === c.id);
+      const grp = document.createElement('div'); grp.className = 'cat';
+      const head = document.createElement('button'); head.type = 'button'; head.className = 'cat-head';
+      head.innerHTML = '<span class="ci"></span><span class="cn"></span><span class="cc"></span><span class="ca">▸</span>';
+      head.children[0].textContent = c.icone || '';
+      head.children[1].textContent = (c.noms && (c.noms[LANG] || c.noms.fr)) || c.id;
+      head.children[2].textContent = items.length;
+      head.addEventListener('click', e => { e.stopPropagation(); grp.classList.toggle('open'); });
+      const body = document.createElement('div'); body.className = 'cat-body';
+      const add = pers => {
+        const a = document.createElement('a');
+        a.href = pers.page;
+        a.dataset.q = norm([pers.nom, ...Object.values(pers.noms || {}), ...(typeof pers.description === 'object' ? Object.values(pers.description) : [pers.description])].join(' '));
+        a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
+        const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
+        if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
+        if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Page actuelle'; }
+        body.appendChild(a);
+      };
+      const types = window.TYPES || [];
+      if (c.id === 'personnalites' && types.length){
+        types.forEach(t => {
+          const st = document.createElement('div'); st.className = 'cat-sub';
+          st.textContent = (t.icone || '') + ' ' + ((t.noms && (t.noms[LANG] || t.noms.fr)) || t.id);
+          body.appendChild(st);
+          const ti = items.filter(p => p.type === t.id);
+          ti.forEach(add);
+          if (!ti.length){ const e = document.createElement('span'); e.className = 'cat-empty'; e.textContent = 'Bientôt…'; body.appendChild(e); }
+        });
+        items.filter(p => !types.some(t => t.id === p.type)).forEach(add);
+      } else items.forEach(add);
+      if (!items.length){ const e = document.createElement('span'); e.className = 'cat-empty'; e.textContent = 'Bientôt…'; body.appendChild(e); }
+      if (here && catOf(here) === c.id) grp.classList.add('open');
+      grp.append(head, body);
+      box.appendChild(grp);
+    });
+    const nores = document.createElement('span'); nores.className = 'cat-empty cat-nores'; nores.textContent = 'Aucun résultat'; nores.hidden = true;
+    box.appendChild(nores);
+    inp.addEventListener('input', () => {
+      const q = norm(inp.value.trim());
+      box.classList.toggle('searching', !!q);
+      let total = 0;
+      box.querySelectorAll('.cat').forEach(g => {
+        let n = 0;
+        g.querySelectorAll('.cat-body a').forEach(a => { const ok = !q || a.dataset.q.includes(q); a.hidden = !ok; if (ok) n++; });
+        g.hidden = !!q && !n; total += n;
+      });
+      nores.hidden = !q || total > 0;
+    });
+    document.getElementById('switch').hidden = false;
+  })();
+</script>
+<script>/* scroll-top-fix */
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  const goTop = () => { if (!location.hash) window.scrollTo(0, 0); };
+  goTop(); window.addEventListener('load', goTop); window.addEventListener('pageshow', goTop);
+</script>
+</body>
+</html>
