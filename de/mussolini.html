@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="de" data-root="../" data-lang="de" data-page="mussolini.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benito Mussolini — Porträt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --ink:#14181f; --muted:#5b6270; --line:#d9d5cb;
+    --accent:#1d4e89; --accent-soft:#e3ebf5; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#11141a; --ink:#ecebe7; --muted:#9aa1ad; --line:#2a2f39;
+      --accent:#7fb0ea; --accent-soft:#1b2636; --card:#171b22; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px}
+  nav .links{display:flex;gap:18px;overflow-x:auto;flex:1;min-width:0;padding:12px 0;font-size:14px;font-weight:500;white-space:nowrap;scrollbar-width:none}
+  nav .links a{color:var(--muted);text-decoration:none}
+  nav .links a:hover{color:var(--ink)}
+  .switch{position:relative;flex:none}
+  .switch[hidden]{display:none}
+  .switch button{font:600 13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .switch button:hover{border-color:var(--accent)}
+  .switch button .chev{transition:transform .2s}
+  .switch.open button .chev{transform:rotate(180deg)}
+  .menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:6px;display:none}
+  .switch.open .menu{display:block}
+  .menu .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;padding:8px 10px 4px}
+  .menu a{display:flex;flex-direction:column;padding:9px 10px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+  .menu a small{font-weight:400;color:var(--muted);font-size:12px}
+  .menu a:hover{background:var(--accent-soft)}
+  .menu a.current{background:var(--accent-soft);color:var(--accent)}
+  .menu a.current:after{content:attr(data-cur);font-size:11px;font-weight:500;color:var(--muted)}
+  header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+  .lede{font-size:19px;color:var(--muted);max-width:680px;margin:0}
+  .fact em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:4px}
+  .fact.wide{grid-column:span 2}
+  .fact span.age{font-variant-numeric:tabular-nums;font-size:17px}
+  @media (max-width:720px){ .facts{grid-template-columns:1fr 1fr !important} }
+  .live-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .live-head h2{margin:0}
+  .dot{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#c0392b}
+  .dot:before{content:"";width:9px;height:9px;border-radius:50%;background:#e74c3c;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(231,76,60,.6)}70%{box-shadow:0 0 0 9px rgba(231,76,60,0)}100%{box-shadow:0 0 0 0 rgba(231,76,60,0)}}
+  .updated{font-size:13px;color:var(--muted)}
+  .news{display:grid;gap:12px}
+  .news .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:96px 1fr;gap:16px}
+  .news .d{font-size:13px;font-weight:600;color:var(--accent)}
+  .news p{margin:0;font-size:15px}
+  .news a{font-size:13px}
+  @media (max-width:600px){ .news .item{grid-template-columns:1fr;gap:4px} }
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:40px}
+  .fact{background:var(--card);padding:18px 20px}
+  .fact b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .fact span{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:600;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:720px}
+  .status{background:var(--accent-soft);border-left:4px solid var(--accent);padding:22px 24px;border-radius:0 12px 12px 0;max-width:760px}
+  .status small{display:block;color:var(--muted);margin-top:10px}
+  .timeline{list-style:none;margin:0;padding:0;position:relative}
+  .timeline:before{content:"";position:absolute;left:84px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .timeline li{display:grid;grid-template-columns:70px 1fr;gap:34px;padding:10px 0;position:relative}
+  .timeline li:before{content:"";position:absolute;left:79px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .timeline .y{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;text-align:right}
+  .timeline .t{color:var(--ink)}
+  .terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .when{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted);margin:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){ .two{grid-template-columns:1fr} .timeline:before{left:64px} .timeline li{grid-template-columns:52px 1fr;gap:28px} .timeline li:before{left:59px} }
+  ul.plain{margin:0;padding-left:18px} ul.plain li{margin-bottom:8px}
+  .sources ol{padding-left:20px;font-size:14px;color:var(--muted)}
+  .sources li{margin-bottom:6px}
+  footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+  .home-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:15px}
+  .home-btn:hover{border-color:var(--accent)}
+  .switches{display:flex;gap:8px;flex:none}
+  .lang .menu{min-width:170px}
+  .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
+  .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
+  @media (max-width:640px){ .switch button .txt{display:none} }
+  .person .menu{min-width:270px;max-height:75vh;overflow:auto}
+  .switch .menu .cat-head{border:0;border-radius:9px;padding:9px 10px;background:none}
+  .switch .menu .cat-head:hover{background:var(--accent-soft)}
+  .cat-head{display:flex;align-items:center;gap:8px;width:100%;background:none;border:0;padding:9px 10px;border-radius:9px;font:600 14px Inter,system-ui,sans-serif;color:var(--ink);cursor:pointer;text-align:left}
+  .cat-head:hover{background:var(--accent-soft)}
+  .cat-head .cn{flex:1}
+  .cat-head .cc{font-size:11px;font-weight:600;color:var(--muted);background:rgba(127,127,127,.15);border-radius:999px;padding:0 7px}
+  .cat-head .ca{color:var(--muted);transition:transform .2s}
+  .cat.open .cat-head .ca{transform:rotate(90deg)}
+  .cat-body{display:none;padding:2px 0 6px 16px;border-left:2px solid var(--line);margin-left:18px}
+  .cat.open .cat-body{display:block}
+  .cat-sub{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:10px 10px 2px}
+  .cat-empty{display:block;font-size:13px;color:var(--muted);padding:6px 10px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="links">
+  <a href="#direct">Live</a>
+  <a href="#actualite">Ideologie</a>
+  <a href="#biographie">Biografie</a>
+  <a href="#mandats">An der Macht</a>
+  <a href="#chronologie">Chronik</a>
+  <a href="#proces">Verbrechen</a>
+  <a href="#perspectives">Erinnerung</a>
+  <a href="#sources">Quellen</a>
+  </div>
+  <div class="switches">
+  <a class="home-btn" href="index.html" title="Startseite" aria-label="Startseite">🏠</a>
+  <div class="switch lang">
+    <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Sprache</span> <b>DE</b> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Sprache</div><a href="../mussolini.html">Français <small>FR</small></a><a href="../en/mussolini.html">English <small>EN</small></a><a href="../de/mussolini.html" class="current">Deutsch <small>DE</small></a><a href="../it/mussolini.html">Italiano <small>IT</small></a><a href="../es/mussolini.html">Español <small>ES</small></a></div>
+  </div>
+  <div class="switch person" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">☰ <span class="txt">Kategorien</span> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div id="people"></div></div>
+  </div>
+  </div>
+</div></nav>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Porträt · Geschichte · Italien</div>
+  <h1>Benito Mussolini</h1>
+  <p class="lede">Begründer des Faschismus und Diktator Italiens von 1922 bis 1943, genannt „Il Duce“. Als Verbündeter Hitlers führte er sein Land in den Zweiten Weltkrieg und wurde von italienischen Partisanen erschossen.</p>
+
+  <div class="facts">
+    <div class="fact"><b>Gestorben vor</b><span class="age" id="age">—</span><em>Jahren · Tagen · Stunden · Minuten · Sekunden, live</em></div>
+    <div class="fact"><b>Alter beim Tod</b><span>61 Jahre</span></div>
+    <div class="fact"><b>Amt</b><span>Ministerpräsident (Regierungschef)</span></div>
+    <div class="fact"><b>An der Macht</b><span>1922 – 1943</span><em>dann Republik von Salò, 1943 – 1945</em></div>
+    <div class="fact"><b>Partei</b><span>Nationale Faschistische Partei</span></div>
+    <div class="fact"><b>Beiname</b><span>„Il Duce“ (der Führer)</span></div>
+    <div class="fact wide"><b>Geburt – Tod</b><span>29. Juli 1883, Predappio (Italien) – 28. April 1945, Giulino di Mezzegra (bei Dongo)</span></div>
+  </div>
+</header>
+
+<section id="direct">
+  <div class="live-head"><h2>Aktuell</h2><span class="dot">Live</span></div>
+  <!--NEWS-START-->
+  <p class="updated">Zuletzt aktualisiert: 12. November 2026, 08:45 Uhr (Zürcher Zeit)</p>
+  <div class="news">
+    <div class="item"><span class="d">—</span><div><p>Schlagzeilen, die ihn erwähnen, erscheinen hier automatisch (Aktualisierung alle 20 Minuten).</p></div></div>
+  </div>
+  <!--NEWS-END-->
+</section>
+
+<section id="actualite">
+  <h2>Der Faschismus</h2>
+  <div class="status">
+    <p><strong>Eine neue Ideologie.</strong> Mussolini erfand nach 1918 den Faschismus: extremer Nationalismus, Führerkult, Ablehnung von Demokratie und Kommunismus, Gewalt seiner Milizen, der „Schwarzhemden“.</p>
+    <p><strong>Vorbild für andere.</strong> Der italienische Faschismus inspirierte andere Diktatoren, darunter Hitler und Franco.</p>
+  </div>
+</section>
+
+<section id="biographie">
+  <h2>Biografie</h2>
+  <div class="two">
+    <div>
+      <h3>Jugend</h3>
+      <p>Sohn eines sozialistischen Schmieds und einer Lehrerin, wurde er selbst Lehrer, dann Journalist und sozialistischer Aktivist, unter anderem in der Schweiz.</p>
+      <h3>Bruch</h3>
+      <p>1914 aus der Sozialistischen Partei ausgeschlossen, weil er den Kriegseintritt Italiens wollte, gründete er eine eigene Zeitung und kämpfte an der Front.</p>
+    </div>
+    <div>
+      <h3>Aufstieg</h3>
+      <p>1919 gründete er die Fasci di Combattimento. Nach dem „Marsch auf Rom“ im Oktober 1922 ernannte ihn der König zum Regierungschef.</p>
+      <h3>Ende</h3>
+      <p>1943 gestürzt, führte er danach einen von Deutschland geschützten Marionettenstaat. Im April 1945 wurde er auf der Flucht gefasst und von Partisanen erschossen; sein Leichnam wurde in Mailand ausgestellt.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mandats">
+  <h2>An der Macht</h2>
+  <div class="terms">
+    <div class="card"><div class="when">1922 – 1925</div><h3>Errichtung der Diktatur</h3><p>Nach dem Mord am sozialistischen Abgeordneten Matteotti (1924) schaffte er Parteien, freie Presse und Wahlen ab.</p></div>
+    <div class="card"><div class="when">1935 – 1938</div><h3>Krieg und Rassengesetze</h3><p>Überfall auf Äthiopien (1935/36) mit Giftgas, dann antisemitische Gesetze 1938.</p></div>
+    <div class="card"><div class="when">1939 – 1945</div><h3>An Hitlers Seite</h3><p>Stahlpakt (1939), Kriegseintritt 1940, Niederlagen, Verhaftung im Juli 1943, danach Republik von Salò bis zu seinem Tod.</p></div>
+  </div>
+</section>
+
+<section id="chronologie">
+  <h2>Chronik</h2>
+  <ul class="timeline">
+    <li><span class="y">1883</span><span class="t">Geburt in Predappio am 29. Juli.</span></li>
+    <li><span class="y">1914</span><span class="t">Ausschluss aus der Sozialistischen Partei.</span></li>
+    <li><span class="y">1919</span><span class="t">Gründet die Fasci di Combattimento.</span></li>
+    <li><span class="y">1922</span><span class="t">Marsch auf Rom; Ernennung zum Regierungschef.</span></li>
+    <li><span class="y">1925</span><span class="t">Errichtet offen die Diktatur.</span></li>
+    <li><span class="y">1935</span><span class="t">Überfall auf Äthiopien.</span></li>
+    <li><span class="y">1938</span><span class="t">Rassengesetze gegen Juden.</span></li>
+    <li><span class="y">1940</span><span class="t">Kriegseintritt an der Seite Deutschlands (10. Juni).</span></li>
+    <li><span class="y">1943</span><span class="t">Abgesetzt und verhaftet (25. Juli); von Deutschen befreit.</span></li>
+    <li><span class="y">1945</span><span class="t">Am 28. April von Partisanen gefasst und erschossen.</span></li>
+  </ul>
+</section>
+
+<section id="proces">
+  <h2>Verbrechen</h2>
+  <p>Das faschistische Regime setzte Gewalt in Italien wie im Ausland ein.</p>
+  <ul class="plain">
+    <li><strong>Politische Gewalt</strong> — Milizen, Morde an Gegnern (darunter Giacomo Matteotti), Gefängnis und Verbannung für Widersacher.</li>
+    <li><strong>Kolonialkriege</strong> — Blutige Unterdrückung in Libyen und Einsatz von Chemiewaffen in Äthiopien.</li>
+    <li><strong>Rassengesetze</strong> — Ab 1938 wurden italienische Juden von Schulen, Armee und vielen Berufen ausgeschlossen; unter Salò wurden Tausende in NS-Lager deportiert.</li>
+    <li><strong>Der Krieg</strong> — Das Bündnis mit Hitler führte Italien in die militärische Katastrophe, Besatzung und Bürgerkrieg.</li>
+  </ul>
+</section>
+
+<section id="perspectives">
+  <h2>Bilanz und Erinnerung</h2>
+  <div class="two">
+    <div class="card">
+      <h3>Menschliche Bilanz</h3>
+      <ul class="plain">
+        <li>Gegner ermordet, eingesperrt oder verbannt.</li>
+        <li>Zehntausende Tote in Kolonialkriegen.</li>
+        <li>Tausende italienische Juden deportiert.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Erinnerung heute</h3>
+      <ul class="plain">
+        <li>Die Verherrlichung des Faschismus ist in Italien gesetzlich verboten.</li>
+        <li>Sein Grab in Predappio zieht noch Nostalgiker an, was umstritten ist.</li>
+        <li>Am 25. April feiert Italien die Befreiung von Faschismus und NS-Besatzung.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sources" class="sources">
+  <h2>Quellen</h2>
+  <ol>
+    <li><a href="https://www.britannica.com/biography/Benito-Mussolini">Encyclopaedia Britannica — Benito Mussolini</a></li>
+    <li><a href="https://www.britannica.com:443/summary/Benito-Mussolini">Britannica — Benito Mussolini summary</a></li>
+    <li><a href="https://www.alloprof.qc.ca/en/students/vl/history/benito-mussolini-1883-1945-d1057">Alloprof — Benito Mussolini</a></li>
+  </ol>
+</section>
+
+<footer>Informationsseite, erstellt am 12. November 2026 auf Grundlage von Enzyklopädien und Geschichtsmuseen.</footer>
+
+</div>
+<script>
+  const el = document.getElementById('age');
+  const p = n => String(n).padStart(2, '0');
+  // Date de référence (heure locale du lieu, UTC+2)
+  function tick(){
+    const now = new Date(Date.now() + (2) * 3600 * 1000);
+    let y = now.getUTCFullYear() - 1945;
+    let last = Date.UTC(1945 + y, 3, 28, 16, 10);
+    if (now.getTime() < last){ y--; last = Date.UTC(1945 + y, 3, 28, 16, 10); }
+    let s = Math.floor((now.getTime() - last) / 1000);
+    const d = Math.floor(s / 86400); s %= 86400;
+    const h = Math.floor(s / 3600); s %= 3600;
+    const m = Math.floor(s / 60); s %= 60;
+    el.textContent = `${y} J., ${d} T., ${p(h)} Std. ${p(m)} Min. ${p(s)} Sek.`;
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+<script src="../personnes.js"></script>
+<script>
+  (function(){
+    const LANG = document.documentElement.dataset.lang;
+    const HERE = document.documentElement.dataset.page;
+    // menus déroulants
+    const all = [...document.querySelectorAll('.switch')];
+    all.forEach(sw => {
+      const btn = sw.querySelector('button');
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        all.forEach(o => { if (o !== sw) o.classList.remove('open'); });
+        btn.setAttribute('aria-expanded', sw.classList.toggle('open'));
+      });
+    });
+    document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
+    // menu Catégories
+    const list = window.PERSONNES;
+    if (!Array.isArray(list) || !list.length) return;
+    const cats = window.CATEGORIES || [{ id: 'personnalites', icone: '👤', noms: {} }];
+    const catOf = p => p.categorie || 'personnalites';
+    const box = document.getElementById('people');
+    const here = list.find(p => p.page === HERE);
+    cats.forEach(c => {
+      const items = list.filter(p => catOf(p) === c.id);
+      const grp = document.createElement('div'); grp.className = 'cat';
+      const head = document.createElement('button'); head.type = 'button'; head.className = 'cat-head';
+      head.innerHTML = '<span class="ci"></span><span class="cn"></span><span class="cc"></span><span class="ca">▸</span>';
+      head.children[0].textContent = c.icone || '';
+      head.children[1].textContent = (c.noms && (c.noms[LANG] || c.noms.fr)) || c.id;
+      head.children[2].textContent = items.length;
+      head.addEventListener('click', e => { e.stopPropagation(); grp.classList.toggle('open'); });
+      const body = document.createElement('div'); body.className = 'cat-body';
+      const add = pers => {
+        const a = document.createElement('a');
+        a.href = pers.page;
+        a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
+        const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
+        if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
+        if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Aktuelle Seite'; }
+        body.appendChild(a);
+      };
+      const types = window.TYPES || [];
+      if (c.id === 'personnalites' && types.length){
+        types.forEach(t => {
+          const st = document.createElement('div'); st.className = 'cat-sub';
+          st.textContent = (t.icone || '') + ' ' + ((t.noms && (t.noms[LANG] || t.noms.fr)) || t.id);
+          body.appendChild(st);
+          const ti = items.filter(p => p.type === t.id);
+          ti.forEach(add);
+          if (!ti.length){ const e = document.createElement('span'); e.className = 'cat-empty'; e.textContent = 'Bald…'; body.appendChild(e); }
+        });
+        items.filter(p => !types.some(t => t.id === p.type)).forEach(add);
+      } else items.forEach(add);
+      if (!items.length){ const e = document.createElement('span'); e.className = 'cat-empty'; e.textContent = 'Bald…'; body.appendChild(e); }
+      if (here && catOf(here) === c.id) grp.classList.add('open');
+      grp.append(head, body);
+      box.appendChild(grp);
+    });
+    document.getElementById('switch').hidden = false;
+  })();
+</script>
+</body>
+</html>

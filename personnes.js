@@ -33,6 +33,19 @@ window.PERSONNES = [
     description: { fr: "PDG de LVMH, numéro un mondial du luxe", en: "CEO of LVMH, the world's largest luxury group", de: "Chef von LVMH, größter Luxuskonzern der Welt", it: "AD di LVMH, primo gruppo del lusso al mondo", es: "Director general de LVMH, líder mundial del lujo" }
   },
   {
+    nom: "Adolf Hitler", categorie: "personnalites", type: "historique", page: "hitler.html", recherche: "Hitler",
+    description: { fr: "Dictateur de l'Allemagne nazie (1933-1945)", en: "Dictator of Nazi Germany (1933-1945)", de: "Diktator des nationalsozialistischen Deutschlands (1933-1945)", it: "Dittatore della Germania nazista (1933-1945)", es: "Dictador de la Alemania nazi (1933-1945)" }
+  },
+  {
+    nom: "Joseph Staline", categorie: "personnalites", type: "historique", page: "staline.html", recherche: "Staline OR Stalin OR Stalín",
+    noms: { en: "Joseph Stalin", de: "Josef Stalin", it: "Iosif Stalin", es: "Iósif Stalin" },
+    description: { fr: "Dictateur de l'Union soviétique (1924-1953)", en: "Dictator of the Soviet Union (1924-1953)", de: "Diktator der Sowjetunion (1924-1953)", it: "Dittatore dell'Unione Sovietica (1924-1953)", es: "Dictador de la Unión Soviética (1924-1953)" }
+  },
+  {
+    nom: "Benito Mussolini", categorie: "personnalites", type: "historique", page: "mussolini.html", recherche: "Mussolini",
+    description: { fr: "Dictateur fasciste de l'Italie (1922-1943)", en: "Fascist dictator of Italy (1922-1943)", de: "Faschistischer Diktator Italiens (1922-1943)", it: "Dittatore fascista dell'Italia (1922-1943)", es: "Dictador fascista de Italia (1922-1943)" }
+  },
+  {
     nom: "GTA", categorie: "jeux", page: "gta.html", sigle: "GTA", recherche: "\"GTA 6\" OR \"GTA VI\"",
     description: { fr: "Dernière version : GTA V · prochaine : GTA VI (19 novembre 2026)", en: "Latest: GTA V · next: GTA VI (19 November 2026)", de: "Neueste: GTA V · nächste: GTA VI (19. November 2026)", it: "Ultima: GTA V · prossima: GTA VI (19 novembre 2026)", es: "Última: GTA V · próxima: GTA VI (19 de noviembre de 2026)" }
   },

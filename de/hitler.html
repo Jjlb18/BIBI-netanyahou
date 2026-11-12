@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="de" data-root="../" data-lang="de" data-page="hitler.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adolf Hitler — Porträt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --ink:#14181f; --muted:#5b6270; --line:#d9d5cb;
+    --accent:#1d4e89; --accent-soft:#e3ebf5; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#11141a; --ink:#ecebe7; --muted:#9aa1ad; --line:#2a2f39;
+      --accent:#7fb0ea; --accent-soft:#1b2636; --card:#171b22; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px}
+  nav .links{display:flex;gap:18px;overflow-x:auto;flex:1;min-width:0;padding:12px 0;font-size:14px;font-weight:500;white-space:nowrap;scrollbar-width:none}
+  nav .links a{color:var(--muted);text-decoration:none}
+  nav .links a:hover{color:var(--ink)}
+  .switch{position:relative;flex:none}
+  .switch[hidden]{display:none}
+  .switch button{font:600 13px Inter,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .switch button:hover{border-color:var(--accent)}
+  .switch button .chev{transition:transform .2s}
+  .switch.open button .chev{transform:rotate(180deg)}
+  .menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:6px;display:none}
+  .switch.open .menu{display:block}
+  .menu .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;padding:8px 10px 4px}
+  .menu a{display:flex;flex-direction:column;padding:9px 10px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+  .menu a small{font-weight:400;color:var(--muted);font-size:12px}
+  .menu a:hover{background:var(--accent-soft)}
+  .menu a.current{background:var(--accent-soft);color:var(--accent)}
+  .menu a.current:after{content:attr(data-cur);font-size:11px;font-weight:500;color:var(--muted)}
+  header{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+  .lede{font-size:19px;color:var(--muted);max-width:680px;margin:0}
+  .fact em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:4px}
+  .fact.wide{grid-column:span 2}
+  .fact span.age{font-variant-numeric:tabular-nums;font-size:17px}
+  @media (max-width:720px){ .facts{grid-template-columns:1fr 1fr !important} }
+  .live-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .live-head h2{margin:0}
+  .dot{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#c0392b}
+  .dot:before{content:"";width:9px;height:9px;border-radius:50%;background:#e74c3c;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(231,76,60,.6)}70%{box-shadow:0 0 0 9px rgba(231,76,60,0)}100%{box-shadow:0 0 0 0 rgba(231,76,60,0)}}
+  .updated{font-size:13px;color:var(--muted)}
+  .news{display:grid;gap:12px}
+  .news .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:96px 1fr;gap:16px}
+  .news .d{font-size:13px;font-weight:600;color:var(--accent)}
+  .news p{margin:0;font-size:15px}
+  .news a{font-size:13px}
+  @media (max-width:600px){ .news .item{grid-template-columns:1fr;gap:4px} }
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:40px}
+  .fact{background:var(--card);padding:18px 20px}
+  .fact b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .fact span{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:600;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:720px}
+  .status{background:var(--accent-soft);border-left:4px solid var(--accent);padding:22px 24px;border-radius:0 12px 12px 0;max-width:760px}
+  .status small{display:block;color:var(--muted);margin-top:10px}
+  .timeline{list-style:none;margin:0;padding:0;position:relative}
+  .timeline:before{content:"";position:absolute;left:84px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .timeline li{display:grid;grid-template-columns:70px 1fr;gap:34px;padding:10px 0;position:relative}
+  .timeline li:before{content:"";position:absolute;left:79px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .timeline .y{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;text-align:right}
+  .timeline .t{color:var(--ink)}
+  .terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .when{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted);margin:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){ .two{grid-template-columns:1fr} .timeline:before{left:64px} .timeline li{grid-template-columns:52px 1fr;gap:28px} .timeline li:before{left:59px} }
+  ul.plain{margin:0;padding-left:18px} ul.plain li{margin-bottom:8px}
+  .sources ol{padding-left:20px;font-size:14px;color:var(--muted)}
+  .sources li{margin-bottom:6px}
+  footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+  .home-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:15px}
+  .home-btn:hover{border-color:var(--accent)}
+  .switches{display:flex;gap:8px;flex:none}
+  .lang .menu{min-width:170px}
+  .lang .menu a{flex-direction:row;justify-content:space-between;align-items:center;font-weight:500}
+  .lang .menu a.current:after{content:"✓";font-size:13px;color:var(--accent)}
+  @media (max-width:640px){ .switch button .txt{display:none} }
+  .person .menu{min-width:270px;max-height:75vh;overflow:auto}
+  .switch .menu .cat-head{border:0;border-radius:9px;padding:9px 10px;background:none}
+  .switch .menu .cat-head:hover{background:var(--accent-soft)}
+  .cat-head{display:flex;align-items:center;gap:8px;width:100%;background:none;border:0;padding:9px 10px;border-radius:9px;font:600 14px Inter,system-ui,sans-serif;color:var(--ink);cursor:pointer;text-align:left}
+  .cat-head:hover{background:var(--accent-soft)}
+  .cat-head .cn{flex:1}
+  .cat-head .cc{font-size:11px;font-weight:600;color:var(--muted);background:rgba(127,127,127,.15);border-radius:999px;padding:0 7px}
+  .cat-head .ca{color:var(--muted);transition:transform .2s}
+  .cat.open .cat-head .ca{transform:rotate(90deg)}
+  .cat-body{display:none;padding:2px 0 6px 16px;border-left:2px solid var(--line);margin-left:18px}
+  .cat.open .cat-body{display:block}
+  .cat-sub{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:10px 10px 2px}
+  .cat-empty{display:block;font-size:13px;color:var(--muted);padding:6px 10px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="links">
+  <a href="#direct">Live</a>
+  <a href="#actualite">Ideologie</a>
+  <a href="#biographie">Biografie</a>
+  <a href="#mandats">An der Macht</a>
+  <a href="#chronologie">Chronik</a>
+  <a href="#proces">Verbrechen</a>
+  <a href="#perspectives">Erinnerung</a>
+  <a href="#sources">Quellen</a>
+  </div>
+  <div class="switches">
+  <a class="home-btn" href="index.html" title="Startseite" aria-label="Startseite">🏠</a>
+  <div class="switch lang">
+    <button type="button" aria-haspopup="true" aria-expanded="false">🌐 <span class="txt">Sprache</span> <b>DE</b> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div class="label">Sprache</div><a href="../hitler.html">Français <small>FR</small></a><a href="../en/hitler.html">English <small>EN</small></a><a href="../de/hitler.html" class="current">Deutsch <small>DE</small></a><a href="../it/hitler.html">Italiano <small>IT</small></a><a href="../es/hitler.html">Español <small>ES</small></a></div>
+  </div>
+  <div class="switch person" id="switch" hidden>
+    <button type="button" aria-haspopup="true" aria-expanded="false">☰ <span class="txt">Kategorien</span> <span class="chev">▾</span></button>
+    <div class="menu" role="menu"><div id="people"></div></div>
+  </div>
+  </div>
+</div></nav>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Porträt · Geschichte · Deutschland</div>
+  <h1>Adolf Hitler</h1>
+  <p class="lede">Führer der NSDAP und Diktator Deutschlands von 1933 bis 1945. Verantwortlich für den Zweiten Weltkrieg in Europa und den Holocaust, die Ermordung von sechs Millionen Juden.</p>
+
+  <div class="facts">
+    <div class="fact"><b>Gestorben vor</b><span class="age" id="age">—</span><em>Jahren · Tagen · Stunden · Minuten · Sekunden, live</em></div>
+    <div class="fact"><b>Alter beim Tod</b><span>56 Jahre</span></div>
+    <div class="fact"><b>Amt</b><span>Reichskanzler, dann „Führer“</span></div>
+    <div class="fact"><b>An der Macht</b><span>1933 – 1945</span></div>
+    <div class="fact"><b>Partei</b><span>NSDAP</span></div>
+    <div class="fact"><b>Ideologie</b><span>Nationalsozialismus</span></div>
+    <div class="fact wide"><b>Geburt – Tod</b><span>20. April 1889, Braunau am Inn (Österreich) – 30. April 1945, Berlin</span></div>
+  </div>
+</header>
+
+<section id="direct">
+  <div class="live-head"><h2>Aktuell</h2><span class="dot">Live</span></div>
+  <!--NEWS-START-->
+  <p class="updated">Zuletzt aktualisiert: 12. November 2026, 08:45 Uhr (Zürcher Zeit)</p>
+  <div class="news">
+    <div class="item"><span class="d">—</span><div><p>Schlagzeilen, die ihn erwähnen, erscheinen hier automatisch (Aktualisierung alle 20 Minuten).</p></div></div>
+  </div>
+  <!--NEWS-END-->
+</section>
+
+<section id="actualite">
+  <h2>Die NS-Ideologie</h2>
+  <div class="status">
+    <p><strong>Rassismus und Antisemitismus.</strong> Der Nationalsozialismus beruhte auf der Idee einer überlegenen „Rasse“ und erklärte Juden zu Feinden, die vernichtet werden sollten. Auch Sinti und Roma, Menschen mit Behinderung, Homosexuelle und Gegner wurden verfolgt.</p>
+    <p><strong>Diktatur und Eroberung.</strong> Einheitspartei, Propaganda, Polizeiterror (Gestapo, SS) und das Ziel, „Lebensraum im Osten“ zu erobern.</p>
+  </div>
+</section>
+
+<section id="biographie">
+  <h2>Biografie</h2>
+  <div class="two">
+    <div>
+      <h3>Jugend</h3>
+      <p>Geboren in Österreich als Sohn eines Zollbeamten, scheiterte er an der Wiener Kunstakademie und lebte am Rand der Gesellschaft. 1913 zog er nach München.</p>
+      <h3>Erster Weltkrieg</h3>
+      <p>Als Soldat der bayerischen Armee erlebte er die Niederlage 1918 als Demütigung und trat danach einer kleinen rechtsextremen Partei bei.</p>
+    </div>
+    <div>
+      <h3>Aufstieg</h3>
+      <p>Seit 1921 Parteichef, scheiterte er 1923 mit einem Putsch in München und schrieb in Haft <em>Mein Kampf</em>. Die Weltwirtschaftskrise ließ seine Partei bei Wahlen stark wachsen.</p>
+      <h3>Ende</h3>
+      <p>Am 30. April 1945 nahm er sich mit Eva Braun im Berliner Bunker das Leben, als die Rote Armee die Stadt eroberte.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mandats">
+  <h2>An der Macht</h2>
+  <div class="terms">
+    <div class="card"><div class="when">Jan. 1933</div><h3>Machtergreifung</h3><p>Zum Kanzler ernannt, schaffte er binnen Monaten Freiheiten, Parteien und Gewerkschaften ab. 1934 vereinte er alle Macht auf sich.</p></div>
+    <div class="card"><div class="when">1935 – 1939</div><h3>Verfolgung und Aufrüstung</h3><p>Nürnberger Gesetze gegen Juden (1935), Novemberpogrome (1938), Anschluss Österreichs und Zerschlagung der Tschechoslowakei.</p></div>
+    <div class="card"><div class="when">1939 – 1945</div><h3>Krieg und Völkermord</h3><p>Überfall auf Polen, Westeuropa und dann die UdSSR. Ermordung der Juden Europas in Ghettos und Lagern wie Auschwitz.</p></div>
+  </div>
+</section>
+
+<section id="chronologie">
+  <h2>Chronik</h2>
+  <ul class="timeline">
+    <li><span class="y">1889</span><span class="t">Geburt in Braunau am Inn am 20. April.</span></li>
+    <li><span class="y">1914</span><span class="t">Meldet sich zur bayerischen Armee.</span></li>
+    <li><span class="y">1921</span><span class="t">Wird Vorsitzender der NSDAP.</span></li>
+    <li><span class="y">1923</span><span class="t">Gescheiterter Hitlerputsch in München; Haft.</span></li>
+    <li><span class="y">1933</span><span class="t">Am 30. Januar zum Reichskanzler ernannt.</span></li>
+    <li><span class="y">1938</span><span class="t">Anschluss Österreichs; Novemberpogrome.</span></li>
+    <li><span class="y">1939</span><span class="t">Überfall auf Polen: Beginn des Zweiten Weltkriegs.</span></li>
+    <li><span class="y">1941</span><span class="t">Angriff auf die UdSSR; Entscheidung zur Ermordung der europäischen Juden.</span></li>
+    <li><span class="y">1945</span><span class="t">Suizid in Berlin am 30. April; Kapitulation Deutschlands am 8. Mai.</span></li>
+  </ul>
+</section>
+
+<section id="proces">
+  <h2>Verbrechen</h2>
+  <p>Hitlers Regime beging Massenverbrechen in nie dagewesenem Ausmaß.</p>
+  <ul class="plain">
+    <li><strong>Der Holocaust</strong> — Rund sechs Millionen ermordete Juden – zwei Drittel der Juden Europas.</li>
+    <li><strong>Weitere Opfer</strong> — Hunderttausende Sinti und Roma, Menschen mit Behinderung (sogenannte „Euthanasie“), Gegner und sowjetische Kriegsgefangene.</li>
+    <li><strong>Der Krieg</strong> — Der von ihm begonnene Zweite Weltkrieg kostete in Europa Dutzende Millionen Menschen das Leben.</li>
+    <li><strong>Nürnberger Prozesse</strong> — Da er vor Kriegsende starb, wurde er nie verurteilt; seine wichtigsten Komplizen 1945/46 schon.</li>
+  </ul>
+</section>
+
+<section id="perspectives">
+  <h2>Bilanz und Erinnerung</h2>
+  <div class="two">
+    <div class="card">
+      <h3>Menschliche Bilanz</h3>
+      <ul class="plain">
+        <li>Sechs Millionen ermordete Juden.</li>
+        <li>Dutzende Millionen Kriegstote in Europa.</li>
+        <li>Ganze Städte und Länder zerstört.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Erinnerung heute</h3>
+      <ul class="plain">
+        <li>NS-Symbole und Holocaustleugnung sind in mehreren Ländern verboten, darunter Deutschland und Frankreich.</li>
+        <li>Ehemalige Lager wie Auschwitz sind heute Gedenkstätten.</li>
+        <li>Er bleibt das am meisten erforschte Beispiel für Diktatur und Völkermord.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sources" class="sources">
+  <h2>Quellen</h2>
+  <ol>
+    <li><a href="https://encyclopedia.ushmm.org/content/en/article/adolf-hitler-key-dates">United States Holocaust Memorial Museum — Adolf Hitler: Key Dates</a></li>
+    <li><a href="https://encyclopedia.ushmm.org/content/en/article/adolf-hitler-early-years-1889-1921">USHMM — Adolf Hitler: Early Years, 1889–1921</a></li>
+    <li><a href="https://encyclopedia.ushmm.org/content/en/series/adolf-hitler">USHMM — Series: Adolf Hitler</a></li>
+  </ol>
+</section>
+
+<footer>Informationsseite, erstellt am 12. November 2026 auf Grundlage von Enzyklopädien und Geschichtsmuseen.</footer>
+
+</div>
+<script>
+  const el = document.getElementById('age');
+  const p = n => String(n).padStart(2, '0');
+  // Date de référence (heure locale du lieu, UTC+2)
+  function tick(){
+    const now = new Date(Date.now() + (2) * 3600 * 1000);
+    let y = now.getUTCFullYear() - 1945;
+    let last = Date.UTC(1945 + y, 3, 30, 15, 30);
+    if (now.getTime() < last){ y--; last = Date.UTC(1945 + y, 3, 30, 15, 30); }
+    let s = Math.floor((now.getTime() - last) / 1000);
+    const d = Math.floor(s / 86400); s %= 86400;
+    const h = Math.floor(s / 3600); s %= 3600;
+    const m = Math.floor(s / 60); s %= 60;
+    el.textContent = `${y} J., ${d} T., ${p(h)} Std. ${p(m)} Min. ${p(s)} Sek.`;
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+<script src="../personnes.js"></script>
+<script>
+  (function(){
+    const LANG = document.documentElement.dataset.lang;
+    const HERE = document.documentElement.dataset.page;
+    // menus déroulants
+    const all = [...document.querySelectorAll('.switch')];
+    all.forEach(sw => {
+      const btn = sw.querySelector('button');
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        all.forEach(o => { if (o !== sw) o.classList.remove('open'); });
+        btn.setAttribute('aria-expanded', sw.classList.toggle('open'));
+      });
+    });
+    document.addEventListener('click', () => all.forEach(o => o.classList.remove('open')));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') all.forEach(o => o.classList.remove('open')); });
+    // menu Catégories
+    const list = window.PERSONNES;
+    if (!Array.isArray(list) || !list.length) return;
+    const cats = window.CATEGORIES || [{ id: 'personnalites', icone: '👤', noms: {} }];
+    const catOf = p => p.categorie || 'personnalites';
+    const box = document.getElementById('people');
+    const here = list.find(p => p.page === HERE);
+    cats.forEach(c => {
+      const items = list.filter(p => catOf(p) === c.id);
+      const grp = document.createElement('div'); grp.className = 'cat';
+      const head = document.createElement('button'); head.type = 'button'; head.className = 'cat-head';
+      head.innerHTML = '<span class="ci"></span><span class="cn"></span><span class="cc"></span><span class="ca">▸</span>';
+      head.children[0].textContent = c.icone || '';
+      head.children[1].textContent = (c.noms && (c.noms[LANG] || c.noms.fr)) || c.id;
+      head.children[2].textContent = items.length;
+      head.addEventListener('click', e => { e.stopPropagation(); grp.classList.toggle('open'); });
+      const body = document.createElement('div'); body.className = 'cat-body';
+      const add = pers => {
+        const a = document.createElement('a');
+        a.href = pers.page;
+        a.textContent = (pers.noms && pers.noms[LANG]) || pers.nom;
+        const desc = typeof pers.description === 'object' ? (pers.description[LANG] || pers.description.fr) : pers.description;
+        if (desc){ const s = document.createElement('small'); s.textContent = desc; a.appendChild(s); }
+        if (pers.page === HERE){ a.className = 'current'; a.dataset.cur = 'Aktuelle Seite'; }
+        body.appendChild(a);
+      };
+      const types = window.TYPES || [];
+      if (c.id === 'personnalites' && types.length){
+        types.forEach(t => {
+          const st = document.createElement('div'); st.className = 'cat-sub';
+          st.textContent = (t.icone || '') + ' ' + ((t.noms && (t.noms[LANG] || t.noms.fr)) || t.id);
+          body.appendChild(st);
+          const ti = items.filter(p => p.type === t.id);
+          ti.forEach(add);
+          if (!ti.length){ const e = document.createElement('span'); e.className = 'cat-empty'; e.textContent = 'Bald…'; body.appendChild(e); }
+        });
+        items.filter(p => !types.some(t => t.id === p.type)).forEach(add);
+      } else items.forEach(add);
+      if (!items.length){ const e = document.createElement('span'); e.className = 'cat-empty'; e.textContent = 'Bald…'; body.appendChild(e); }
+      if (here && catOf(here) === c.id) grp.classList.add('open');
+      grp.append(head, body);
+      box.appendChild(grp);
+    });
+    document.getElementById('switch').hidden = false;
+  })();
+</script>
+</body>
+</html>
