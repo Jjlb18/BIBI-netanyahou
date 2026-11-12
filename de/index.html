@@ -197,7 +197,7 @@
       subtabs.replaceChildren();
       subtabs.hidden = !(id === 'personnalites' && types.length);
       if (!subtabs.hidden){
-        if (!types.some(t => t.id === sub)) sub = types.some(t => t.id === 'richesse') ? 'richesse' : types[0].id;
+        if (!types.some(t => t.id === sub)) sub = types[0].id;
         const chip = (tid, icone, label, n) => {
           const b = document.createElement('button'); b.type = 'button'; b.className = 'stab';
           b.setAttribute('aria-pressed', (tid || '') === sub);
