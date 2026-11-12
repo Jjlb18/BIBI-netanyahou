@@ -116,6 +116,9 @@
   .back-btn{display:inline-flex;align-items:center;gap:6px;margin-top:22px;padding:6px 14px 6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font:600 13px Inter,system-ui,sans-serif}
   .back-btn:hover{border-color:var(--accent);color:var(--accent)}
   .back-btn ~ header{padding-top:28px}
+  .rts-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .rts-links a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--accent-soft);color:var(--accent);font:600 14px Inter,system-ui,sans-serif;text-decoration:none}
+  .rts-links a:hover{border-color:var(--accent)}
 </style>
 </head>
 <body>
@@ -192,6 +195,7 @@
     <div class="fbox"><h3>Últimos resultados</h3><div id="hk-recent"></div></div>
     <div class="fbox"><h3>Próximos partidos</h3><div id="hk-next"></div></div>
     <div class="fbox fwide"><h3>Clasificación</h3><div class="ctabs" id="hk-tabs" role="tablist"></div><div id="hk-table"></div></div>
+    <div class="fbox fwide"><h3>🇨🇭 National League (Suiza)</h3><p class="fnote">Resultados, clasificación y vídeos de la liga suiza, gratis en RTS Sport. (en francés)</p><div class="rts-links"><a href="https://www.rts.ch/sport/resultats/#/results/hockey/nla" target="_blank" rel="noopener">📊 Resultados y clasificación</a><a href="https://www.rts.ch/sport/hockey/" target="_blank" rel="noopener">📰 Actualidad del hockey</a><a href="https://www.rts.ch/play/tv/detail/hockey-sur-glace-national-league?id=82f30838-71b3-44f2-a9d3-8b01368cfb6d" target="_blank" rel="noopener">▶️ Vídeos en Play RTS</a></div></div>
   </div>
   <p class="fmaj" id="hk-maj"></p>
   <p class="fmaj">PP = derrotas en prórroga o penaltis (1 punto). Horas en tu zona horaria.</p>
