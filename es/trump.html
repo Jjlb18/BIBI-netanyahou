@@ -382,5 +382,10 @@
     document.getElementById('switch').hidden = false;
   })();
 </script>
+<script>/* scroll-top-fix */
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  const goTop = () => { if (!location.hash) window.scrollTo(0, 0); };
+  goTop(); window.addEventListener('load', goTop); window.addEventListener('pageshow', goTop);
+</script>
 </body>
 </html>
