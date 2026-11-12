@@ -58,6 +58,10 @@ window.PERSONNES = [
     noms: { de: "Fußball", it: "Calcio", es: "Fútbol" },
     description: { fr: "Ligue des champions, Premier League, LaLiga, Serie A… : matchs et classements", en: "Champions League, Premier League, LaLiga, Serie A…: matches and standings", de: "Champions League, Premier League, LaLiga, Serie A …: Spiele und Tabellen", it: "Champions League, Premier League, LaLiga, Serie A…: partite e classifiche", es: "Liga de Campeones, Premier League, LaLiga, Serie A…: partidos y clasificaciones" }
   },
+  {
+    nom: "MMA", categorie: "sport", page: "mma.html", sigle: "🥊", recherche: "UFC OR MMA",
+    description: { fr: "UFC et arts martiaux mixtes : prochains combats, résultats et actualité", en: "UFC and mixed martial arts: upcoming fights, results and news", de: "UFC und Mixed Martial Arts: kommende Kämpfe, Ergebnisse und News", it: "UFC e arti marziali miste: prossimi incontri, risultati e notizie", es: "UFC y artes marciales mixtas: próximos combates, resultados y actualidad" }
+  },
 ];
 
 // Catégories affichées sur la page d'accueil (dans cet ordre).
