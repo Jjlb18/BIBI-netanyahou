@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-13T03:28:16+00:00",
+ "maj": "2026-11-13T04:35:03+00:00",
  "recents": [
   {
    "id": 2026020308,
@@ -9,13 +9,13 @@
     "nom": "Los Angeles Kings",
     "abrev": "LAK",
     "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
-    "score": 1
+    "score": 2
    },
    "ext": {
     "nom": "New York Islanders",
     "abrev": "NYI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-    "score": 1
+    "score": 3
    },
    "fin": ""
   },
@@ -40,7 +40,7 @@
   {
    "id": 2026020306,
    "date": "2026-11-13T01:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Dallas Stars",
     "abrev": "DAL",
@@ -51,19 +51,19 @@
     "nom": "Winnipeg Jets",
     "abrev": "WPG",
     "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
-    "score": 6
+    "score": 8
    },
    "fin": ""
   },
   {
    "id": 2026020305,
    "date": "2026-11-13T01:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Chicago Blackhawks",
     "abrev": "CHI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-    "score": 2
+    "score": 3
    },
    "ext": {
     "nom": "Buffalo Sabres",
@@ -71,7 +71,7 @@
     "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
     "score": 2
    },
-   "fin": ""
+   "fin": "OT"
   },
   {
    "id": 2026020302,
@@ -553,13 +553,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
    "conf": "Western",
    "div": "Central",
-   "mj": 17,
+   "mj": 18,
    "v": 10,
-   "d": 5,
+   "d": 6,
    "dp": 2,
    "pts": 22,
-   "bp": 49,
-   "bc": 41
+   "bp": 52,
+   "bc": 49
   },
   {
    "nom": "Ducks d'Anaheim",
@@ -590,6 +590,20 @@
    "bc": 68
   },
   {
+   "nom": "Jets de Winnipeg",
+   "abrev": "WPG",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 20,
+   "v": 9,
+   "d": 8,
+   "dp": 3,
+   "pts": 21,
+   "bp": 61,
+   "bc": 68
+  },
+  {
    "nom": "Capitals de Washington",
    "abrev": "WSH",
    "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
@@ -604,6 +618,20 @@
    "bc": 58
   },
   {
+   "nom": "Sabres de Buffalo",
+   "abrev": "BUF",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+   "conf": "Eastern",
+   "div": "Atlantic",
+   "mj": 19,
+   "v": 8,
+   "d": 7,
+   "dp": 4,
+   "pts": 20,
+   "bp": 55,
+   "bc": 68
+  },
+  {
    "nom": "Kraken de Seattle",
    "abrev": "SEA",
    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
@@ -616,34 +644,6 @@
    "pts": 19,
    "bp": 58,
    "bc": 61
-  },
-  {
-   "nom": "Sabres de Buffalo",
-   "abrev": "BUF",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
-   "conf": "Eastern",
-   "div": "Atlantic",
-   "mj": 18,
-   "v": 8,
-   "d": 7,
-   "dp": 3,
-   "pts": 19,
-   "bp": 53,
-   "bc": 65
-  },
-  {
-   "nom": "Jets de Winnipeg",
-   "abrev": "WPG",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 19,
-   "v": 8,
-   "d": 8,
-   "dp": 3,
-   "pts": 19,
-   "bp": 53,
-   "bc": 65
   },
   {
    "nom": "Islanders de New York",
@@ -791,13 +791,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
    "conf": "Western",
    "div": "Central",
-   "mj": 18,
-   "v": 4,
+   "mj": 19,
+   "v": 5,
    "d": 13,
    "dp": 1,
-   "pts": 9,
-   "bp": 39,
-   "bc": 76
+   "pts": 11,
+   "bp": 42,
+   "bc": 78
   },
   {
    "nom": "Canucks de Vancouver",
