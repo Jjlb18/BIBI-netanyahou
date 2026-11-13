@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-13T04:35:03+00:00",
+ "maj": "2026-11-13T05:34:19+00:00",
  "recents": [
   {
    "id": 2026020308,
@@ -15,14 +15,14 @@
     "nom": "New York Islanders",
     "abrev": "NYI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-    "score": 3
+    "score": 4
    },
    "fin": ""
   },
   {
    "id": 2026020307,
    "date": "2026-11-13T02:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Utah Mammoth",
     "abrev": "UTA",
@@ -33,9 +33,9 @@
     "nom": "St. Louis Blues",
     "abrev": "STL",
     "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
-    "score": 0
+    "score": 1
    },
-   "fin": ""
+   "fin": "SO"
   },
   {
    "id": 2026020306,
@@ -562,6 +562,20 @@
    "bc": 49
   },
   {
+   "nom": "Mammoth de l'Utah",
+   "abrev": "UTA",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 20,
+   "v": 10,
+   "d": 8,
+   "dp": 2,
+   "pts": 22,
+   "bp": 66,
+   "bc": 69
+  },
+  {
    "nom": "Ducks d'Anaheim",
    "abrev": "ANA",
    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
@@ -574,20 +588,6 @@
    "pts": 21,
    "bp": 71,
    "bc": 70
-  },
-  {
-   "nom": "Mammoth de l'Utah",
-   "abrev": "UTA",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 19,
-   "v": 10,
-   "d": 8,
-   "dp": 1,
-   "pts": 21,
-   "bp": 66,
-   "bc": 68
   },
   {
    "nom": "Jets de Winnipeg",
@@ -616,6 +616,20 @@
    "pts": 20,
    "bp": 58,
    "bc": 58
+  },
+  {
+   "nom": "Blues de St. Louis",
+   "abrev": "STL",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 19,
+   "v": 9,
+   "d": 8,
+   "dp": 2,
+   "pts": 20,
+   "bp": 54,
+   "bc": 55
   },
   {
    "nom": "Sabres de Buffalo",
@@ -658,20 +672,6 @@
    "pts": 18,
    "bp": 49,
    "bc": 52
-  },
-  {
-   "nom": "Blues de St. Louis",
-   "abrev": "STL",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 18,
-   "v": 8,
-   "d": 8,
-   "dp": 2,
-   "pts": 18,
-   "bp": 53,
-   "bc": 55
   },
   {
    "nom": "Maple Leafs de Toronto",
