@@ -1,10 +1,10 @@
 {
- "maj": "2026-11-13T05:34:19+00:00",
+ "maj": "2026-11-13T06:34:54+00:00",
  "recents": [
   {
    "id": 2026020308,
    "date": "2026-11-13T03:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Los Angeles Kings",
     "abrev": "LAK",
@@ -15,7 +15,7 @@
     "nom": "New York Islanders",
     "abrev": "NYI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-    "score": 4
+    "score": 5
    },
    "fin": ""
   },
@@ -618,6 +618,20 @@
    "bc": 58
   },
   {
+   "nom": "Islanders de New York",
+   "abrev": "NYI",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+   "conf": "Eastern",
+   "div": "Metropolitan",
+   "mj": 18,
+   "v": 8,
+   "d": 6,
+   "dp": 4,
+   "pts": 20,
+   "bp": 54,
+   "bc": 54
+  },
+  {
    "nom": "Blues de St. Louis",
    "abrev": "STL",
    "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
@@ -658,20 +672,6 @@
    "pts": 19,
    "bp": 58,
    "bc": 61
-  },
-  {
-   "nom": "Islanders de New York",
-   "abrev": "NYI",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-   "conf": "Eastern",
-   "div": "Metropolitan",
-   "mj": 17,
-   "v": 7,
-   "d": 6,
-   "dp": 4,
-   "pts": 18,
-   "bp": 49,
-   "bc": 52
   },
   {
    "nom": "Maple Leafs de Toronto",
@@ -777,13 +777,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 16,
+   "mj": 17,
    "v": 5,
-   "d": 9,
+   "d": 10,
    "dp": 2,
    "pts": 12,
-   "bp": 45,
-   "bc": 55
+   "bp": 47,
+   "bc": 60
   },
   {
    "nom": "Blackhawks de Chicago",
