@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-14T21:26:44+00:00",
+ "maj": "2026-11-14T22:14:22+00:00",
  "recents": [
   {
    "id": 2026020312,
@@ -9,13 +9,13 @@
     "nom": "Chicago Blackhawks",
     "abrev": "CHI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-    "score": 3
+    "score": 4
    },
    "ext": {
     "nom": "Winnipeg Jets",
     "abrev": "WPG",
     "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
-    "score": 0
+    "score": 2
    },
    "fin": ""
   },
