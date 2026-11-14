@@ -1,6 +1,24 @@
 {
- "maj": "2026-11-14T06:27:12+00:00",
+ "maj": "2026-11-14T18:27:00+00:00",
  "recents": [
+  {
+   "id": 2026020321,
+   "date": "2026-11-14T18:00:00Z",
+   "etat": "in",
+   "dom": {
+    "nom": "Caroline Hurricanes",
+    "abrev": "CAR",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+    "score": 0
+   },
+   "ext": {
+    "nom": "Seattle Kraken",
+    "abrev": "SEA",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+    "score": 0
+   },
+   "fin": ""
+  },
   {
    "id": 2026020311,
    "date": "2026-11-14T03:00:00Z",
@@ -162,45 +180,9 @@
     "score": 2
    },
    "fin": ""
-  },
-  {
-   "id": 2026020301,
-   "date": "2026-11-13T00:00:00Z",
-   "etat": "post",
-   "dom": {
-    "nom": "Ottawa Sénateurs",
-    "abrev": "OTT",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
-    "score": 4
-   },
-   "ext": {
-    "nom": "Colorado Avalanche",
-    "abrev": "COL",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
-    "score": 3
-   },
-   "fin": "OT"
   }
  ],
  "avenir": [
-  {
-   "id": 2026020321,
-   "date": "2026-11-14T18:00:00Z",
-   "etat": "pre",
-   "dom": {
-    "nom": "Caroline Hurricanes",
-    "abrev": "CAR",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-    "score": null
-   },
-   "ext": {
-    "nom": "Seattle Kraken",
-    "abrev": "SEA",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-    "score": null
-   },
-   "fin": ""
-  },
   {
    "id": 2026020312,
    "date": "2026-11-14T20:30:00Z",
@@ -359,6 +341,24 @@
     "nom": "Floride Panthers",
     "abrev": "FLA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+    "score": null
+   },
+   "fin": ""
+  },
+  {
+   "id": 2026020322,
+   "date": "2026-11-15T01:00:00Z",
+   "etat": "pre",
+   "dom": {
+    "nom": "Dallas Stars",
+    "abrev": "DAL",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+    "score": null
+   },
+   "ext": {
+    "nom": "Buffalo Sabres",
+    "abrev": "BUF",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
     "score": null
    },
    "fin": ""
