@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-14T18:27:00+00:00",
+ "maj": "2026-11-14T19:24:09+00:00",
  "recents": [
   {
    "id": 2026020321,
@@ -9,13 +9,13 @@
     "nom": "Caroline Hurricanes",
     "abrev": "CAR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-    "score": 0
+    "score": 3
    },
    "ext": {
     "nom": "Seattle Kraken",
     "abrev": "SEA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-    "score": 0
+    "score": 1
    },
    "fin": ""
   },
