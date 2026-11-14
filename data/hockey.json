@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-14T03:28:51+00:00",
+ "maj": "2026-11-14T04:30:20+00:00",
  "recents": [
   {
    "id": 2026020311,
@@ -9,7 +9,7 @@
     "nom": "Vegas Golden Knights",
     "abrev": "VGK",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-    "score": 0
+    "score": 2
    },
    "ext": {
     "nom": "Nashville Predators",
@@ -33,7 +33,7 @@
     "nom": "New York Rangers",
     "abrev": "NYR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-    "score": 2
+    "score": 5
    },
    "fin": ""
   },
