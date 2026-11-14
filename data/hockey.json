@@ -1,10 +1,10 @@
 {
- "maj": "2026-11-14T22:51:52+00:00",
+ "maj": "2026-11-14T23:25:30+00:00",
  "recents": [
   {
    "id": 2026020312,
    "date": "2026-11-14T20:30:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Chicago Blackhawks",
     "abrev": "CHI",
@@ -15,9 +15,9 @@
     "nom": "Winnipeg Jets",
     "abrev": "WPG",
     "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
-    "score": 3
+    "score": 5
    },
-   "fin": ""
+   "fin": "SO"
   },
   {
    "id": 2026020321,
