@@ -1,10 +1,10 @@
 {
- "maj": "2026-11-14T05:27:35+00:00",
+ "maj": "2026-11-14T06:27:12+00:00",
  "recents": [
   {
    "id": 2026020311,
    "date": "2026-11-14T03:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Vegas Golden Knights",
     "abrev": "VGK",
@@ -15,9 +15,9 @@
     "nom": "Nashville Predators",
     "abrev": "NSH",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-    "score": 2
+    "score": 3
    },
-   "fin": ""
+   "fin": "SO"
   },
   {
    "id": 2026020310,
@@ -408,6 +408,20 @@
    "bc": 58
   },
   {
+   "nom": "Golden Knights de Vegas",
+   "abrev": "VGK",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+   "conf": "Western",
+   "div": "Pacific",
+   "mj": 21,
+   "v": 13,
+   "d": 5,
+   "dp": 3,
+   "pts": 29,
+   "bp": 71,
+   "bc": 57
+  },
+  {
    "nom": "Lightning de Tampa Bay",
    "abrev": "TBL",
    "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
@@ -434,20 +448,6 @@
    "pts": 28,
    "bp": 67,
    "bc": 57
-  },
-  {
-   "nom": "Golden Knights de Vegas",
-   "abrev": "VGK",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-   "conf": "Western",
-   "div": "Pacific",
-   "mj": 20,
-   "v": 13,
-   "d": 5,
-   "dp": 2,
-   "pts": 28,
-   "bp": 69,
-   "bc": 54
   },
   {
    "nom": "Devils du New Jersey",
@@ -478,6 +478,20 @@
    "bc": 46
   },
   {
+   "nom": "Predators de Nashville",
+   "abrev": "NSH",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 20,
+   "v": 11,
+   "d": 4,
+   "dp": 5,
+   "pts": 27,
+   "bp": 62,
+   "bc": 55
+  },
+  {
    "nom": "Sénateurs d'Ottawa",
    "abrev": "OTT",
    "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
@@ -490,20 +504,6 @@
    "pts": 26,
    "bp": 64,
    "bc": 60
-  },
-  {
-   "nom": "Predators de Nashville",
-   "abrev": "NSH",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 19,
-   "v": 10,
-   "d": 4,
-   "dp": 5,
-   "pts": 25,
-   "bp": 59,
-   "bc": 53
   },
   {
    "nom": "Avalanche du Colorado",
