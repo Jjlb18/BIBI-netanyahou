@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-15T00:10:35+00:00",
+ "maj": "2026-11-15T20:15:47+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -1168,9 +1168,33 @@
      "st": "pre"
     },
     {
-     "d": "2026-12-06T00:00:00Z",
-     "dom": "Osasuna",
-     "ext": "Elche",
+     "d": "2026-12-04T20:00:00Z",
+     "dom": "Alavés",
+     "ext": "Espanyol",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-05T13:00:00Z",
+     "dom": "Santander",
+     "ext": "Deportivo",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-05T15:15:00Z",
+     "dom": "Rayo Vallecano",
+     "ext": "Levante",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-05T17:30:00Z",
+     "dom": "Villarreal",
+     "ext": "Real Sociedad",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-05T20:00:00Z",
+     "dom": "Barça",
+     "ext": "Celta",
      "st": "pre"
     },
     {
@@ -1181,26 +1205,8 @@
     },
     {
      "d": "2026-12-06T00:00:00Z",
-     "dom": "Alavés",
-     "ext": "Espanyol",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-06T00:00:00Z",
      "dom": "Atleti",
      "ext": "Real Betis",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-06T00:00:00Z",
-     "dom": "Santander",
-     "ext": "Deportivo",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-06T00:00:00Z",
-     "dom": "Barça",
-     "ext": "Celta",
      "st": "pre"
     },
     {
@@ -1210,21 +1216,15 @@
      "st": "pre"
     },
     {
-     "d": "2026-12-06T00:00:00Z",
+     "d": "2026-12-06T13:00:00Z",
+     "dom": "Osasuna",
+     "ext": "Elche",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-06T15:15:00Z",
      "dom": "Athletic",
      "ext": "Real Madrid",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-06T00:00:00Z",
-     "dom": "Villarreal",
-     "ext": "Real Sociedad",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-06T00:00:00Z",
-     "dom": "Rayo Vallecano",
-     "ext": "Levante",
      "st": "pre"
     }
    ],
