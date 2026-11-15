@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-15T03:25:42+00:00",
+ "maj": "2026-11-15T04:31:27+00:00",
  "recents": [
   {
    "id": 2026020325,
@@ -15,7 +15,7 @@
     "nom": "Calgary Flames",
     "abrev": "CGY",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-    "score": 0
+    "score": 1
    },
    "fin": ""
   },
@@ -27,13 +27,13 @@
     "nom": "Anaheim Ducks",
     "abrev": "ANA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "New York Islanders",
     "abrev": "NYI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-    "score": 1
+    "score": 5
    },
    "fin": ""
   },
@@ -45,25 +45,25 @@
     "nom": "Utah Mammoth",
     "abrev": "UTA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-    "score": 3
+    "score": 4
    },
    "ext": {
     "nom": "San Jose Sharks",
     "abrev": "SJS",
     "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-    "score": 3
+    "score": 4
    },
    "fin": ""
   },
   {
    "id": 2026020322,
    "date": "2026-11-15T01:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Dallas Stars",
     "abrev": "DAL",
     "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-    "score": 1
+    "score": 2
    },
    "ext": {
     "nom": "Buffalo Sabres",
@@ -548,6 +548,20 @@
    "bc": 57
   },
   {
+   "nom": "Stars de Dallas",
+   "abrev": "DAL",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 19,
+   "v": 11,
+   "d": 6,
+   "dp": 2,
+   "pts": 24,
+   "bp": 54,
+   "bc": 49
+  },
+  {
    "nom": "Jets de Winnipeg",
    "abrev": "WPG",
    "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
@@ -560,20 +574,6 @@
    "pts": 23,
    "bp": 66,
    "bc": 72
-  },
-  {
-   "nom": "Stars de Dallas",
-   "abrev": "DAL",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 18,
-   "v": 10,
-   "d": 6,
-   "dp": 2,
-   "pts": 22,
-   "bp": 52,
-   "bc": 49
   },
   {
    "nom": "Mammoth de l'Utah",
@@ -632,20 +632,6 @@
    "bc": 54
   },
   {
-   "nom": "Sabres de Buffalo",
-   "abrev": "BUF",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
-   "conf": "Eastern",
-   "div": "Atlantic",
-   "mj": 19,
-   "v": 8,
-   "d": 7,
-   "dp": 4,
-   "pts": 20,
-   "bp": 55,
-   "bc": 68
-  },
-  {
    "nom": "Blues de St. Louis",
    "abrev": "STL",
    "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
@@ -658,6 +644,20 @@
    "pts": 20,
    "bp": 55,
    "bc": 59
+  },
+  {
+   "nom": "Sabres de Buffalo",
+   "abrev": "BUF",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+   "conf": "Eastern",
+   "div": "Atlantic",
+   "mj": 20,
+   "v": 8,
+   "d": 8,
+   "dp": 4,
+   "pts": 20,
+   "bp": 55,
+   "bc": 70
   },
   {
    "nom": "Kraken de Seattle",
