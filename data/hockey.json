@@ -1,21 +1,21 @@
 {
- "maj": "2026-11-15T05:37:37+00:00",
+ "maj": "2026-11-15T06:28:10+00:00",
  "recents": [
   {
    "id": 2026020325,
    "date": "2026-11-15T03:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Los Angeles Kings",
     "abrev": "LAK",
     "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
-    "score": 1
+    "score": 2
    },
    "ext": {
     "nom": "Calgary Flames",
     "abrev": "CGY",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-    "score": 2
+    "score": 3
    },
    "fin": ""
   },
@@ -590,18 +590,32 @@
    "bc": 72
   },
   {
+   "nom": "Islanders de New York",
+   "abrev": "NYI",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+   "conf": "Eastern",
+   "div": "Metropolitan",
+   "mj": 19,
+   "v": 9,
+   "d": 6,
+   "dp": 4,
+   "pts": 22,
+   "bp": 60,
+   "bc": 56
+  },
+  {
    "nom": "Ducks d'Anaheim",
    "abrev": "ANA",
    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 19,
+   "mj": 20,
    "v": 10,
-   "d": 8,
+   "d": 9,
    "dp": 1,
    "pts": 21,
-   "bp": 71,
-   "bc": 70
+   "bp": 73,
+   "bc": 76
   },
   {
    "nom": "Capitals de Washington",
@@ -616,20 +630,6 @@
    "pts": 20,
    "bp": 62,
    "bc": 65
-  },
-  {
-   "nom": "Islanders de New York",
-   "abrev": "NYI",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-   "conf": "Eastern",
-   "div": "Metropolitan",
-   "mj": 18,
-   "v": 8,
-   "d": 6,
-   "dp": 4,
-   "pts": 20,
-   "bp": 54,
-   "bc": 54
   },
   {
    "nom": "Blues de St. Louis",
@@ -688,6 +688,20 @@
    "bc": 66
   },
   {
+   "nom": "Flames de Calgary",
+   "abrev": "CGY",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+   "conf": "Western",
+   "div": "Pacific",
+   "mj": 20,
+   "v": 9,
+   "d": 10,
+   "dp": 1,
+   "pts": 19,
+   "bp": 50,
+   "bc": 68
+  },
+  {
    "nom": "Red Wings de Detroit",
    "abrev": "DET",
    "logo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
@@ -730,20 +744,6 @@
    "bc": 72
   },
   {
-   "nom": "Flames de Calgary",
-   "abrev": "CGY",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-   "conf": "Western",
-   "div": "Pacific",
-   "mj": 19,
-   "v": 8,
-   "d": 10,
-   "dp": 1,
-   "pts": 17,
-   "bp": 47,
-   "bc": 66
-  },
-  {
    "nom": "Penguins de Pittsburgh",
    "abrev": "PIT",
    "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
@@ -777,13 +777,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 17,
+   "mj": 18,
    "v": 5,
-   "d": 10,
+   "d": 11,
    "dp": 2,
    "pts": 12,
-   "bp": 47,
-   "bc": 60
+   "bp": 49,
+   "bc": 63
   },
   {
    "nom": "Blackhawks de Chicago",
