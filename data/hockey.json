@@ -1,39 +1,39 @@
 {
- "maj": "2026-11-16T03:55:05+00:00",
+ "maj": "2026-11-16T05:19:56+00:00",
  "recents": [
   {
    "id": 2026020330,
    "date": "2026-11-16T02:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "San Jose Sharks",
     "abrev": "SJS",
     "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-    "score": 3
+    "score": 4
    },
    "ext": {
     "nom": "Nashville Predators",
     "abrev": "NSH",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-    "score": 1
+    "score": 2
    },
    "fin": ""
   },
   {
    "id": 2026020329,
    "date": "2026-11-16T02:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Vegas Golden Knights",
     "abrev": "VGK",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-    "score": 2
+    "score": 3
    },
    "ext": {
     "nom": "Vancouver Canucks",
     "abrev": "VAN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-    "score": 4
+    "score": 6
    },
    "fin": ""
   },
@@ -427,13 +427,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 21,
+   "mj": 22,
    "v": 13,
-   "d": 5,
+   "d": 6,
    "dp": 3,
    "pts": 29,
-   "bp": 71,
-   "bc": 57
+   "bp": 74,
+   "bc": 63
   },
   {
    "nom": "Lightning de Tampa Bay",
@@ -492,20 +492,6 @@
    "bc": 52
   },
   {
-   "nom": "Predators de Nashville",
-   "abrev": "NSH",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 20,
-   "v": 11,
-   "d": 4,
-   "dp": 5,
-   "pts": 27,
-   "bp": 62,
-   "bc": 55
-  },
-  {
    "nom": "Avalanche du Colorado",
    "abrev": "COL",
    "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
@@ -518,6 +504,20 @@
    "pts": 27,
    "bp": 85,
    "bc": 64
+  },
+  {
+   "nom": "Predators de Nashville",
+   "abrev": "NSH",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 21,
+   "v": 11,
+   "d": 5,
+   "dp": 5,
+   "pts": 27,
+   "bp": 64,
+   "bc": 59
   },
   {
    "nom": "Panthers de la Floride",
@@ -618,6 +618,20 @@
    "bc": 56
   },
   {
+   "nom": "Sharks de San Jose",
+   "abrev": "SJS",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+   "conf": "Western",
+   "div": "Pacific",
+   "mj": 23,
+   "v": 10,
+   "d": 11,
+   "dp": 2,
+   "pts": 22,
+   "bp": 63,
+   "bc": 81
+  },
+  {
    "nom": "Capitals de Washington",
    "abrev": "WSH",
    "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
@@ -658,20 +672,6 @@
    "pts": 20,
    "bp": 55,
    "bc": 70
-  },
-  {
-   "nom": "Sharks de San Jose",
-   "abrev": "SJS",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-   "conf": "Western",
-   "div": "Pacific",
-   "mj": 22,
-   "v": 9,
-   "d": 11,
-   "dp": 2,
-   "pts": 20,
-   "bp": 59,
-   "bc": 79
   },
   {
    "nom": "Kraken de Seattle",
@@ -805,13 +805,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 21,
-   "v": 3,
+   "mj": 22,
+   "v": 4,
    "d": 17,
    "dp": 1,
-   "pts": 7,
-   "bp": 57,
-   "bc": 95
+   "pts": 9,
+   "bp": 63,
+   "bc": 98
   }
  ]
 }
