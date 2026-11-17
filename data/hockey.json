@@ -1,21 +1,21 @@
 {
- "maj": "2026-11-17T04:47:30+00:00",
+ "maj": "2026-11-17T05:50:07+00:00",
  "recents": [
   {
    "id": 2026020332,
    "date": "2026-11-17T02:30:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Utah Mammoth",
     "abrev": "UTA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-    "score": 1
+    "score": 2
    },
    "ext": {
     "nom": "Vancouver Canucks",
     "abrev": "VAN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-    "score": 2
+    "score": 3
    },
    "fin": ""
   },
@@ -576,20 +576,6 @@
    "bc": 77
   },
   {
-   "nom": "Mammoth de l'Utah",
-   "abrev": "UTA",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 21,
-   "v": 10,
-   "d": 8,
-   "dp": 3,
-   "pts": 23,
-   "bp": 71,
-   "bc": 75
-  },
-  {
    "nom": "Jets de Winnipeg",
    "abrev": "WPG",
    "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
@@ -602,6 +588,20 @@
    "pts": 23,
    "bp": 66,
    "bc": 72
+  },
+  {
+   "nom": "Mammoth de l'Utah",
+   "abrev": "UTA",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 22,
+   "v": 10,
+   "d": 9,
+   "dp": 3,
+   "pts": 23,
+   "bp": 73,
+   "bc": 78
   },
   {
    "nom": "Islanders de New York",
@@ -805,13 +805,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 22,
-   "v": 4,
+   "mj": 23,
+   "v": 5,
    "d": 17,
    "dp": 1,
-   "pts": 9,
-   "bp": 63,
-   "bc": 98
+   "pts": 11,
+   "bp": 66,
+   "bc": 100
   }
  ]
 }
