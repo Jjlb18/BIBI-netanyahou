@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-17T03:43:15+00:00",
+ "maj": "2026-11-17T04:47:30+00:00",
  "recents": [
   {
    "id": 2026020332,
@@ -9,13 +9,13 @@
     "nom": "Utah Mammoth",
     "abrev": "UTA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "Vancouver Canucks",
     "abrev": "VAN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-    "score": 0
+    "score": 2
    },
    "fin": ""
   },
