@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-17T02:48:44+00:00",
+ "maj": "2026-11-17T03:43:15+00:00",
  "recents": [
   {
    "id": 2026020332,
@@ -22,12 +22,12 @@
   {
    "id": 2026020331,
    "date": "2026-11-17T00:30:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "New York Rangers",
     "abrev": "NYR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-    "score": 2
+    "score": 3
    },
    "ext": {
     "nom": "Montréal Canadiens",
@@ -450,20 +450,6 @@
    "bc": 59
   },
   {
-   "nom": "Canadiens de Montréal",
-   "abrev": "MTL",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
-   "conf": "Eastern",
-   "div": "Atlantic",
-   "mj": 20,
-   "v": 12,
-   "d": 4,
-   "dp": 4,
-   "pts": 28,
-   "bp": 68,
-   "bc": 61
-  },
-  {
    "nom": "Sénateurs d'Ottawa",
    "abrev": "OTT",
    "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
@@ -476,6 +462,20 @@
    "pts": 28,
    "bp": 68,
    "bc": 61
+  },
+  {
+   "nom": "Canadiens de Montréal",
+   "abrev": "MTL",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
+   "conf": "Eastern",
+   "div": "Atlantic",
+   "mj": 21,
+   "v": 12,
+   "d": 5,
+   "dp": 4,
+   "pts": 28,
+   "bp": 69,
+   "bc": 64
   },
   {
    "nom": "Bruins de Boston",
@@ -520,6 +520,20 @@
    "bc": 59
   },
   {
+   "nom": "Rangers de New York",
+   "abrev": "NYR",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+   "conf": "Eastern",
+   "div": "Metropolitan",
+   "mj": 22,
+   "v": 13,
+   "d": 8,
+   "dp": 1,
+   "pts": 27,
+   "bp": 67,
+   "bc": 58
+  },
+  {
    "nom": "Panthers de la Floride",
    "abrev": "FLA",
    "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
@@ -546,20 +560,6 @@
    "pts": 26,
    "bp": 56,
    "bc": 50
-  },
-  {
-   "nom": "Rangers de New York",
-   "abrev": "NYR",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-   "conf": "Eastern",
-   "div": "Metropolitan",
-   "mj": 21,
-   "v": 12,
-   "d": 8,
-   "dp": 1,
-   "pts": 25,
-   "bp": 64,
-   "bc": 57
   },
   {
    "nom": "Ducks d'Anaheim",
