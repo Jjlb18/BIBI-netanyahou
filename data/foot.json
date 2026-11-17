@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-16T14:51:45+00:00",
+ "maj": "2026-11-17T00:00:54+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -1414,14 +1414,6 @@
   "ita": {
    "matchs": [
     {
-     "d": "2026-11-06T19:45:00Z",
-     "dom": "Venezia FC",
-     "ext": "Udinese",
-     "st": "post",
-     "sd": 2,
-     "se": 1
-    },
-    {
      "d": "2026-11-07T14:00:00Z",
      "dom": "Torino",
      "ext": "Lecce",
@@ -1860,14 +1852,6 @@
   "ger": {
    "matchs": [
     {
-     "d": "2026-11-06T19:30:00Z",
-     "dom": "HSV",
-     "ext": "M'gladbach",
-     "st": "post",
-     "sd": 3,
-     "se": 1
-    },
-    {
      "d": "2026-11-07T14:30:00Z",
      "dom": "RB Leipzig",
      "ext": "Augsburg",
@@ -2261,14 +2245,6 @@
   },
   "fra": {
    "matchs": [
-    {
-     "d": "2026-11-06T19:45:00Z",
-     "dom": "Toulouse",
-     "ext": "Strasbourg",
-     "st": "post",
-     "sd": 3,
-     "se": 1
-    },
     {
      "d": "2026-11-07T18:00:00Z",
      "dom": "Auxerre",
