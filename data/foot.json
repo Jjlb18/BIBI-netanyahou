@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-17T00:52:09+00:00",
+ "maj": "2026-11-17T02:01:11+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -1236,18 +1236,6 @@
      "st": "pre"
     },
     {
-     "d": "2026-12-06T00:00:00Z",
-     "dom": "Sevilla FC",
-     "ext": "Málaga",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-06T00:00:00Z",
-     "dom": "Atleti",
-     "ext": "Real Betis",
-     "st": "pre"
-    },
-    {
      "d": "2026-12-06T13:00:00Z",
      "dom": "Osasuna",
      "ext": "Elche",
@@ -1263,6 +1251,18 @@
      "d": "2026-12-06T17:30:00Z",
      "dom": "Getafe",
      "ext": "Valencia",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-06T20:00:00Z",
+     "dom": "Atleti",
+     "ext": "Real Betis",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-07T20:00:00Z",
+     "dom": "Sevilla FC",
+     "ext": "Málaga",
      "st": "pre"
     }
    ],
