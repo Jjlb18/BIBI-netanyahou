@@ -1,21 +1,21 @@
 {
- "maj": "2026-11-18T04:50:34+00:00",
+ "maj": "2026-11-18T05:53:30+00:00",
  "recents": [
   {
    "id": 2026020343,
    "date": "2026-11-18T03:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "San Jose Sharks",
     "abrev": "SJS",
     "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-    "score": 1
+    "score": 2
    },
    "ext": {
     "nom": "Calgary Flames",
     "abrev": "CGY",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-    "score": 3
+    "score": 5
    },
    "fin": ""
   },
@@ -27,15 +27,15 @@
     "nom": "Vegas Golden Knights",
     "abrev": "VGK",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-    "score": 1
+    "score": 3
    },
    "ext": {
     "nom": "Dallas Stars",
     "abrev": "DAL",
     "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-    "score": 0
+    "score": 4
    },
-   "fin": ""
+   "fin": "OT"
   },
   {
    "id": 2026020340,
@@ -637,13 +637,27 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 23,
+   "mj": 24,
    "v": 10,
-   "d": 11,
+   "d": 12,
    "dp": 2,
    "pts": 22,
-   "bp": 63,
-   "bc": 81
+   "bp": 65,
+   "bc": 86
+  },
+  {
+   "nom": "Flames de Calgary",
+   "abrev": "CGY",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+   "conf": "Western",
+   "div": "Pacific",
+   "mj": 22,
+   "v": 10,
+   "d": 11,
+   "dp": 1,
+   "pts": 21,
+   "bp": 56,
+   "bc": 76
   },
   {
    "nom": "Capitals de Washington",
@@ -700,20 +714,6 @@
    "pts": 19,
    "bp": 59,
    "bc": 66
-  },
-  {
-   "nom": "Flames de Calgary",
-   "abrev": "CGY",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-   "conf": "Western",
-   "div": "Pacific",
-   "mj": 21,
-   "v": 9,
-   "d": 11,
-   "dp": 1,
-   "pts": 19,
-   "bp": 51,
-   "bc": 74
   },
   {
    "nom": "Red Wings de Detroit",
