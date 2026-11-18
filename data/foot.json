@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-17T02:01:11+00:00",
+ "maj": "2026-11-18T00:26:17+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -163,6 +163,60 @@
      "d": "2026-12-08T20:00:00Z",
      "dom": "PAE AEK",
      "ext": "Galatasaray",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-09T17:45:00Z",
+     "dom": "Real Betis",
+     "ext": "Como 1907",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-09T17:45:00Z",
+     "dom": "Sl. Bratislava",
+     "ext": "Shaktar",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-09T20:00:00Z",
+     "dom": "Arsenal",
+     "ext": "Real Madrid",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-09T20:00:00Z",
+     "dom": "Dortmund",
+     "ext": "Inter",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-09T20:00:00Z",
+     "dom": "PSV",
+     "ext": "Atleti",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-09T20:00:00Z",
+     "dom": "Liverpool",
+     "ext": "Porto",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-09T20:00:00Z",
+     "dom": "RC Lens",
+     "ext": "Bodø/Glimt",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-09T20:00:00Z",
+     "dom": "LASK",
+     "ext": "Fenerbahçe",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-09T20:00:00Z",
+     "dom": "Stuttgart",
+     "ext": "Lille",
      "st": "pre"
     }
    ],
@@ -503,38 +557,6 @@
   },
   "eng": {
    "matchs": [
-    {
-     "d": "2026-11-07T12:30:00Z",
-     "dom": "Leeds United",
-     "ext": "Tottenham",
-     "st": "post",
-     "sd": 1,
-     "se": 0
-    },
-    {
-     "d": "2026-11-07T15:00:00Z",
-     "dom": "Arsenal",
-     "ext": "Hull City",
-     "st": "post",
-     "sd": 1,
-     "se": 0
-    },
-    {
-     "d": "2026-11-07T15:00:00Z",
-     "dom": "Fulham",
-     "ext": "Newcastle",
-     "st": "post",
-     "sd": 1,
-     "se": 1
-    },
-    {
-     "d": "2026-11-07T17:30:00Z",
-     "dom": "Nottingham",
-     "ext": "Man City",
-     "st": "post",
-     "sd": 3,
-     "se": 1
-    },
     {
      "d": "2026-11-08T14:00:00Z",
      "dom": "Crystal Palace",
@@ -1002,38 +1024,6 @@
   "esp": {
    "matchs": [
     {
-     "d": "2026-11-07T13:00:00Z",
-     "dom": "Málaga",
-     "ext": "Santander",
-     "st": "post",
-     "sd": 1,
-     "se": 2
-    },
-    {
-     "d": "2026-11-07T15:15:00Z",
-     "dom": "Espanyol",
-     "ext": "Deportivo",
-     "st": "post",
-     "sd": 0,
-     "se": 0
-    },
-    {
-     "d": "2026-11-07T17:30:00Z",
-     "dom": "Osasuna",
-     "ext": "Athletic",
-     "st": "post",
-     "sd": 1,
-     "se": 1
-    },
-    {
-     "d": "2026-11-07T20:00:00Z",
-     "dom": "Valencia",
-     "ext": "Real Madrid",
-     "st": "post",
-     "sd": 0,
-     "se": 3
-    },
-    {
      "d": "2026-11-08T13:00:00Z",
      "dom": "Elche",
      "ext": "Real Betis",
@@ -1264,6 +1254,12 @@
      "dom": "Sevilla FC",
      "ext": "Málaga",
      "st": "pre"
+    },
+    {
+     "d": "2026-12-09T19:00:00Z",
+     "dom": "Rayo Vallecano",
+     "ext": "Athletic",
+     "st": "annule"
     }
    ],
    "classement": [
@@ -1451,38 +1447,6 @@
   },
   "ita": {
    "matchs": [
-    {
-     "d": "2026-11-07T14:00:00Z",
-     "dom": "Torino",
-     "ext": "Lecce",
-     "st": "post",
-     "sd": 1,
-     "se": 1
-    },
-    {
-     "d": "2026-11-07T14:00:00Z",
-     "dom": "Cagliari",
-     "ext": "Frosinone",
-     "st": "post",
-     "sd": 1,
-     "se": 0
-    },
-    {
-     "d": "2026-11-07T17:00:00Z",
-     "dom": "Parma",
-     "ext": "Bologna",
-     "st": "post",
-     "sd": 1,
-     "se": 2
-    },
-    {
-     "d": "2026-11-07T19:45:00Z",
-     "dom": "Roma",
-     "ext": "Sassuolo",
-     "st": "post",
-     "sd": 3,
-     "se": 0
-    },
     {
      "d": "2026-11-08T11:30:00Z",
      "dom": "Napoli",
@@ -1890,46 +1854,6 @@
   "ger": {
    "matchs": [
     {
-     "d": "2026-11-07T14:30:00Z",
-     "dom": "RB Leipzig",
-     "ext": "Augsburg",
-     "st": "post",
-     "sd": 5,
-     "se": 2
-    },
-    {
-     "d": "2026-11-07T14:30:00Z",
-     "dom": "Dortmund",
-     "ext": "Elversberg",
-     "st": "post",
-     "sd": 2,
-     "se": 1
-    },
-    {
-     "d": "2026-11-07T14:30:00Z",
-     "dom": "Mainz",
-     "ext": "Bayern",
-     "st": "post",
-     "sd": 1,
-     "se": 2
-    },
-    {
-     "d": "2026-11-07T14:30:00Z",
-     "dom": "SC Paderborn",
-     "ext": "Frankfurt",
-     "st": "post",
-     "sd": 2,
-     "se": 2
-    },
-    {
-     "d": "2026-11-07T17:30:00Z",
-     "dom": "Stuttgart",
-     "ext": "Bremen",
-     "st": "post",
-     "sd": 1,
-     "se": 0
-    },
-    {
      "d": "2026-11-08T14:30:00Z",
      "dom": "1. FC Köln",
      "ext": "Leverkusen",
@@ -2283,22 +2207,6 @@
   },
   "fra": {
    "matchs": [
-    {
-     "d": "2026-11-07T18:00:00Z",
-     "dom": "Auxerre",
-     "ext": "Paris FC",
-     "st": "post",
-     "sd": 0,
-     "se": 1
-    },
-    {
-     "d": "2026-11-07T20:05:00Z",
-     "dom": "PSG",
-     "ext": "Troyes",
-     "st": "post",
-     "sd": 1,
-     "se": 0
-    },
     {
      "d": "2026-11-08T14:00:00Z",
      "dom": "Stade Rennais",
