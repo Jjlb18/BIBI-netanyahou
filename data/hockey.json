@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-18T05:53:30+00:00",
+ "maj": "2026-11-18T06:55:41+00:00",
  "recents": [
   {
    "id": 2026020343,
@@ -22,7 +22,7 @@
   {
    "id": 2026020342,
    "date": "2026-11-18T03:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Vegas Golden Knights",
     "abrev": "VGK",
@@ -455,13 +455,27 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 22,
+   "mj": 23,
    "v": 13,
    "d": 6,
-   "dp": 3,
-   "pts": 29,
-   "bp": 74,
-   "bc": 63
+   "dp": 4,
+   "pts": 30,
+   "bp": 77,
+   "bc": 67
+  },
+  {
+   "nom": "Stars de Dallas",
+   "abrev": "DAL",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 21,
+   "v": 13,
+   "d": 6,
+   "dp": 2,
+   "pts": 28,
+   "bp": 60,
+   "bc": 53
   },
   {
    "nom": "Canadiens de Montréal",
@@ -546,20 +560,6 @@
    "pts": 27,
    "bp": 72,
    "bc": 68
-  },
-  {
-   "nom": "Stars de Dallas",
-   "abrev": "DAL",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 20,
-   "v": 12,
-   "d": 6,
-   "dp": 2,
-   "pts": 26,
-   "bp": 56,
-   "bc": 50
   },
   {
    "nom": "Islanders de New York",
