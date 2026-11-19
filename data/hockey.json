@@ -1,15 +1,15 @@
 {
- "maj": "2026-11-19T05:52:08+00:00",
+ "maj": "2026-11-19T06:55:02+00:00",
  "recents": [
   {
    "id": 2026020346,
    "date": "2026-11-19T03:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Utah Mammoth",
     "abrev": "UTA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-    "score": 3
+    "score": 4
    },
    "ext": {
     "nom": "Colorado Avalanche",
@@ -506,20 +506,6 @@
    "bc": 53
   },
   {
-   "nom": "Avalanche du Colorado",
-   "abrev": "COL",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 21,
-   "v": 12,
-   "d": 6,
-   "dp": 3,
-   "pts": 27,
-   "bp": 85,
-   "bc": 64
-  },
-  {
    "nom": "Rangers de New York",
    "abrev": "NYR",
    "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
@@ -532,6 +518,20 @@
    "pts": 27,
    "bp": 67,
    "bc": 58
+  },
+  {
+   "nom": "Avalanche du Colorado",
+   "abrev": "COL",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 22,
+   "v": 12,
+   "d": 7,
+   "dp": 3,
+   "pts": 27,
+   "bp": 86,
+   "bc": 68
   },
   {
    "nom": "Predators de Nashville",
@@ -562,6 +562,20 @@
    "bc": 68
   },
   {
+   "nom": "Mammoth de l'Utah",
+   "abrev": "UTA",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 23,
+   "v": 11,
+   "d": 9,
+   "dp": 3,
+   "pts": 25,
+   "bp": 77,
+   "bc": 79
+  },
+  {
    "nom": "Islanders de New York",
    "abrev": "NYI",
    "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
@@ -588,20 +602,6 @@
    "pts": 23,
    "bp": 85,
    "bc": 85
-  },
-  {
-   "nom": "Mammoth de l'Utah",
-   "abrev": "UTA",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 22,
-   "v": 10,
-   "d": 9,
-   "dp": 3,
-   "pts": 23,
-   "bp": 73,
-   "bc": 78
   },
   {
    "nom": "Jets de Winnipeg",
