@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-20T05:52:51+00:00",
+ "maj": "2026-11-20T06:54:12+00:00",
  "recents": [
   {
    "id": 2026020358,
@@ -450,6 +450,20 @@
    "bc": 68
   },
   {
+   "nom": "Golden Knights de Vegas",
+   "abrev": "VGK",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+   "conf": "Western",
+   "div": "Pacific",
+   "mj": 24,
+   "v": 13,
+   "d": 6,
+   "dp": 5,
+   "pts": 31,
+   "bp": 80,
+   "bc": 71
+  },
+  {
    "nom": "Devils du New Jersey",
    "abrev": "NJD",
    "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
@@ -464,18 +478,18 @@
    "bc": 64
   },
   {
-   "nom": "Golden Knights de Vegas",
-   "abrev": "VGK",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+   "nom": "Stars de Dallas",
+   "abrev": "DAL",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
    "conf": "Western",
-   "div": "Pacific",
-   "mj": 23,
-   "v": 13,
+   "div": "Central",
+   "mj": 22,
+   "v": 14,
    "d": 6,
-   "dp": 4,
+   "dp": 2,
    "pts": 30,
-   "bp": 77,
-   "bc": 67
+   "bp": 64,
+   "bc": 56
   },
   {
    "nom": "Bruins de Boston",
@@ -504,20 +518,6 @@
    "pts": 29,
    "bp": 90,
    "bc": 68
-  },
-  {
-   "nom": "Stars de Dallas",
-   "abrev": "DAL",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 21,
-   "v": 13,
-   "d": 6,
-   "dp": 2,
-   "pts": 28,
-   "bp": 60,
-   "bc": 53
   },
   {
    "nom": "Rangers de New York",
