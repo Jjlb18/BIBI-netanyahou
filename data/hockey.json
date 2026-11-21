@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-21T23:17:13+00:00",
+ "maj": "2026-11-21T23:52:37+00:00",
  "recents": [
   {
    "id": 2026020362,
@@ -9,13 +9,13 @@
     "nom": "Nashville Predators",
     "abrev": "NSH",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "Pittsburgh Penguins",
     "abrev": "PIT",
     "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-    "score": 1
+    "score": 2
    },
    "fin": ""
   },
@@ -33,14 +33,14 @@
     "nom": "Buffalo Sabres",
     "abrev": "BUF",
     "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
-    "score": 0
+    "score": 1
    },
    "fin": ""
   },
   {
    "id": 2026020360,
    "date": "2026-11-21T20:30:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Calgary Flames",
     "abrev": "CGY",
@@ -51,7 +51,7 @@
     "nom": "Chicago Blackhawks",
     "abrev": "CHI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-    "score": 3
+    "score": 4
    },
    "fin": "OT"
   },
@@ -646,6 +646,20 @@
    "bc": 77
   },
   {
+   "nom": "Flames de Calgary",
+   "abrev": "CGY",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+   "conf": "Western",
+   "div": "Pacific",
+   "mj": 24,
+   "v": 10,
+   "d": 12,
+   "dp": 2,
+   "pts": 22,
+   "bp": 60,
+   "bc": 84
+  },
+  {
    "nom": "Sharks de San Jose",
    "abrev": "SJS",
    "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
@@ -686,20 +700,6 @@
    "pts": 21,
    "bp": 64,
    "bc": 67
-  },
-  {
-   "nom": "Flames de Calgary",
-   "abrev": "CGY",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-   "conf": "Western",
-   "div": "Pacific",
-   "mj": 23,
-   "v": 10,
-   "d": 12,
-   "dp": 1,
-   "pts": 21,
-   "bp": 57,
-   "bc": 80
   },
   {
    "nom": "Capitals de Washington",
@@ -791,13 +791,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
    "conf": "Western",
    "div": "Central",
-   "mj": 22,
-   "v": 6,
+   "mj": 23,
+   "v": 7,
    "d": 14,
    "dp": 2,
-   "pts": 14,
-   "bp": 54,
-   "bc": 90
+   "pts": 16,
+   "bp": 58,
+   "bc": 93
   },
   {
    "nom": "Canucks de Vancouver",

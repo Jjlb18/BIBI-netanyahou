@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-21T23:17:13+00:00",
+ "maj": "2026-11-21T23:52:37+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -2265,41 +2265,31 @@
      "d": "2026-11-21T16:15:00Z",
      "dom": "Nice",
      "ext": "PSG",
-     "st": "post",
-     "sd": 2,
-     "se": 3
+     "st": "pre"
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Monaco",
      "ext": "Auxerre",
-     "st": "post",
-     "sd": 1,
-     "se": 1
+     "st": "pre"
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "RC Lens",
      "ext": "Toulouse",
-     "st": "post",
-     "sd": 1,
-     "se": 1
+     "st": "pre"
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Lille",
      "ext": "Olympique Lyon",
-     "st": "post",
-     "sd": 0,
-     "se": 1
+     "st": "pre"
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Strasbourg",
      "ext": "Brest",
-     "st": "post",
-     "sd": 0,
-     "se": 1
+     "st": "pre"
     },
     {
      "d": "2026-11-22T14:00:00Z",
