@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-20T22:25:46+00:00",
+ "maj": "2026-11-21T00:25:58+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -796,6 +796,30 @@
      "dom": "Tottenham",
      "ext": "Arsenal",
      "st": "pre"
+    },
+    {
+     "d": "2026-12-12T15:00:00Z",
+     "dom": "Ipswich Town",
+     "ext": "Newcastle",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T15:00:00Z",
+     "dom": "Liverpool",
+     "ext": "Leeds United",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T15:00:00Z",
+     "dom": "Fulham",
+     "ext": "Brentford",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T17:30:00Z",
+     "dom": "Man City",
+     "ext": "Chelsea",
+     "st": "pre"
     }
    ],
    "classement": [
@@ -1182,6 +1206,66 @@
      "dom": "Rayo Vallecano",
      "ext": "Athletic",
      "st": "annule"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Espanyol",
+     "ext": "Celta",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Málaga",
+     "ext": "Barça",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Real Madrid",
+     "ext": "Osasuna",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Deportivo",
+     "ext": "Athletic",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Levante",
+     "ext": "Alavés",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Elche",
+     "ext": "Sevilla FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Villarreal",
+     "ext": "Rayo Vallecano",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Real Betis",
+     "ext": "Santander",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Real Sociedad",
+     "ext": "Getafe",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Atleti",
+     "ext": "Valencia",
+     "st": "pre"
     }
    ],
    "classement": [
@@ -1554,6 +1638,24 @@
      "dom": "Udinese",
      "ext": "Frosinone",
      "st": "pre"
+    },
+    {
+     "d": "2026-12-12T14:00:00Z",
+     "dom": "Cagliari",
+     "ext": "Venezia FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T17:00:00Z",
+     "dom": "Lecce",
+     "ext": "Sassuolo",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T19:45:00Z",
+     "dom": "Como 1907",
+     "ext": "Bologna",
+     "st": "pre"
     }
    ],
    "classement": [
@@ -1910,6 +2012,36 @@
      "dom": "HSV",
      "ext": "Schalke",
      "st": "pre"
+    },
+    {
+     "d": "2026-12-12T14:30:00Z",
+     "dom": "SC Paderborn",
+     "ext": "Elversberg",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T14:30:00Z",
+     "dom": "Stuttgart",
+     "ext": "Union Berlin",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T14:30:00Z",
+     "dom": "Dortmund",
+     "ext": "Augsburg",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T14:30:00Z",
+     "dom": "1. FC Köln",
+     "ext": "RB Leipzig",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T17:30:00Z",
+     "dom": "M'gladbach",
+     "ext": "Frankfurt",
+     "st": "pre"
     }
    ],
    "classement": [
@@ -2083,9 +2215,7 @@
      "d": "2026-11-20T19:45:00Z",
      "dom": "Troyes",
      "ext": "Le Havre",
-     "st": "post",
-     "sd": 3,
-     "se": 1
+     "st": "pre"
     },
     {
      "d": "2026-11-21T16:15:00Z",
@@ -2247,6 +2377,36 @@
      "d": "2026-12-11T19:45:00Z",
      "dom": "Auxerre",
      "ext": "Toulouse",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T16:15:00Z",
+     "dom": "PSG",
+     "ext": "Paris FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T19:45:00Z",
+     "dom": "Nice",
+     "ext": "RC Lens",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T19:45:00Z",
+     "dom": "Angers SCO",
+     "ext": "Strasbourg",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T19:45:00Z",
+     "dom": "Brest",
+     "ext": "Troyes",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-12T19:45:00Z",
+     "dom": "Le Havre",
+     "ext": "Le Mans",
      "st": "pre"
     }
    ],
