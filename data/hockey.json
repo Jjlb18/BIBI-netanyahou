@@ -1,15 +1,33 @@
 {
- "maj": "2026-11-21T20:31:31+00:00",
+ "maj": "2026-11-21T21:18:21+00:00",
  "recents": [
+  {
+   "id": 2026020360,
+   "date": "2026-11-21T20:30:00Z",
+   "etat": "in",
+   "dom": {
+    "nom": "Calgary Flames",
+    "abrev": "CGY",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+    "score": 1
+   },
+   "ext": {
+    "nom": "Chicago Blackhawks",
+    "abrev": "CHI",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+    "score": 0
+   },
+   "fin": ""
+  },
   {
    "id": 2026020359,
    "date": "2026-11-21T18:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Caroline Hurricanes",
     "abrev": "CAR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-    "score": 6
+    "score": 7
    },
    "ext": {
     "nom": "Edmonton Oilers",
@@ -162,45 +180,9 @@
     "score": 2
    },
    "fin": "OT"
-  },
-  {
-   "id": 2026020351,
-   "date": "2026-11-20T00:00:00Z",
-   "etat": "post",
-   "dom": {
-    "nom": "Washington Capitals",
-    "abrev": "WSH",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
-    "score": 3
-   },
-   "ext": {
-    "nom": "Buffalo Sabres",
-    "abrev": "BUF",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
-    "score": 6
-   },
-   "fin": ""
   }
  ],
  "avenir": [
-  {
-   "id": 2026020360,
-   "date": "2026-11-21T20:30:00Z",
-   "etat": "pre",
-   "dom": {
-    "nom": "Calgary Flames",
-    "abrev": "CGY",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-    "score": null
-   },
-   "ext": {
-    "nom": "Chicago Blackhawks",
-    "abrev": "CHI",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-    "score": null
-   },
-   "fin": ""
-  },
   {
    "id": 2026020361,
    "date": "2026-11-21T23:00:00Z",
@@ -362,6 +344,24 @@
     "score": null
    },
    "fin": ""
+  },
+  {
+   "id": 2026020370,
+   "date": "2026-11-22T02:00:00Z",
+   "etat": "pre",
+   "dom": {
+    "nom": "Utah Mammoth",
+    "abrev": "UTA",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+    "score": null
+   },
+   "ext": {
+    "nom": "Anaheim Ducks",
+    "abrev": "ANA",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+    "score": null
+   },
+   "fin": ""
   }
  ],
  "classement": [
@@ -380,32 +380,32 @@
    "bc": 52
   },
   {
-   "nom": "Oilers d'Edmonton",
-   "abrev": "EDM",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-   "conf": "Western",
-   "div": "Pacific",
-   "mj": 24,
-   "v": 17,
-   "d": 4,
-   "dp": 3,
-   "pts": 37,
-   "bp": 93,
-   "bc": 65
-  },
-  {
    "nom": "Hurricanes de la Caroline",
    "abrev": "CAR",
    "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
    "conf": "Eastern",
    "div": "Metropolitan",
-   "mj": 22,
-   "v": 16,
+   "mj": 23,
+   "v": 17,
    "d": 3,
    "dp": 3,
-   "pts": 35,
-   "bp": 88,
-   "bc": 49
+   "pts": 37,
+   "bp": 95,
+   "bc": 53
+  },
+  {
+   "nom": "Oilers d'Edmonton",
+   "abrev": "EDM",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+   "conf": "Western",
+   "div": "Pacific",
+   "mj": 25,
+   "v": 17,
+   "d": 5,
+   "dp": 3,
+   "pts": 37,
+   "bp": 97,
+   "bc": 72
   },
   {
    "nom": "Lightning de Tampa Bay",
