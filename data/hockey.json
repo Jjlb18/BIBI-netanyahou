@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-21T19:03:25+00:00",
+ "maj": "2026-11-21T19:58:03+00:00",
  "recents": [
   {
    "id": 2026020359,
@@ -9,13 +9,13 @@
     "nom": "Caroline Hurricanes",
     "abrev": "CAR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-    "score": 0
+    "score": 5
    },
    "ext": {
     "nom": "Edmonton Oilers",
     "abrev": "EDM",
     "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-    "score": 2
+    "score": 4
    },
    "fin": ""
   },
