@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-21T22:29:55+00:00",
+ "maj": "2026-11-21T23:17:13+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -1479,25 +1479,33 @@
      "d": "2026-11-21T14:00:00Z",
      "dom": "Como 1907",
      "ext": "Cagliari",
-     "st": "pre"
+     "st": "post",
+     "sd": 2,
+     "se": 0
     },
     {
      "d": "2026-11-21T14:00:00Z",
      "dom": "Lazio",
      "ext": "Lecce",
-     "st": "pre"
+     "st": "post",
+     "sd": 3,
+     "se": 0
     },
     {
      "d": "2026-11-21T17:00:00Z",
      "dom": "Parma",
      "ext": "Roma",
-     "st": "pre"
+     "st": "post",
+     "sd": 1,
+     "se": 5
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Napoli",
      "ext": "Torino",
-     "st": "pre"
+     "st": "post",
+     "sd": 1,
+     "se": 0
     },
     {
      "d": "2026-11-22T11:30:00Z",
@@ -2257,31 +2265,41 @@
      "d": "2026-11-21T16:15:00Z",
      "dom": "Nice",
      "ext": "PSG",
-     "st": "pre"
+     "st": "post",
+     "sd": 2,
+     "se": 3
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Monaco",
      "ext": "Auxerre",
-     "st": "pre"
+     "st": "post",
+     "sd": 1,
+     "se": 1
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "RC Lens",
      "ext": "Toulouse",
-     "st": "pre"
+     "st": "post",
+     "sd": 1,
+     "se": 1
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Lille",
      "ext": "Olympique Lyon",
-     "st": "pre"
+     "st": "post",
+     "sd": 0,
+     "se": 1
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Strasbourg",
      "ext": "Brest",
-     "st": "pre"
+     "st": "post",
+     "sd": 0,
+     "se": 1
     },
     {
      "d": "2026-11-22T14:00:00Z",

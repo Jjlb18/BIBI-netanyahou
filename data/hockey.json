@@ -1,6 +1,42 @@
 {
- "maj": "2026-11-21T22:29:55+00:00",
+ "maj": "2026-11-21T23:17:13+00:00",
  "recents": [
+  {
+   "id": 2026020362,
+   "date": "2026-11-21T23:00:00Z",
+   "etat": "in",
+   "dom": {
+    "nom": "Nashville Predators",
+    "abrev": "NSH",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+    "score": 0
+   },
+   "ext": {
+    "nom": "Pittsburgh Penguins",
+    "abrev": "PIT",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+    "score": 1
+   },
+   "fin": ""
+  },
+  {
+   "id": 2026020361,
+   "date": "2026-11-21T23:00:00Z",
+   "etat": "in",
+   "dom": {
+    "nom": "Floride Panthers",
+    "abrev": "FLA",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+    "score": 1
+   },
+   "ext": {
+    "nom": "Buffalo Sabres",
+    "abrev": "BUF",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+    "score": 0
+   },
+   "fin": ""
+  },
   {
    "id": 2026020360,
    "date": "2026-11-21T20:30:00Z",
@@ -9,7 +45,7 @@
     "nom": "Calgary Flames",
     "abrev": "CGY",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-    "score": 2
+    "score": 3
    },
    "ext": {
     "nom": "Chicago Blackhawks",
@@ -17,7 +53,7 @@
     "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
     "score": 3
    },
-   "fin": ""
+   "fin": "OT"
   },
   {
    "id": 2026020359,
@@ -144,81 +180,9 @@
     "score": 1
    },
    "fin": ""
-  },
-  {
-   "id": 2026020354,
-   "date": "2026-11-20T00:00:00Z",
-   "etat": "post",
-   "dom": {
-    "nom": "Winnipeg Jets",
-    "abrev": "WPG",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
-    "score": 4
-   },
-   "ext": {
-    "nom": "New York Islanders",
-    "abrev": "NYI",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-    "score": 3
-   },
-   "fin": "OT"
-  },
-  {
-   "id": 2026020352,
-   "date": "2026-11-20T00:00:00Z",
-   "etat": "post",
-   "dom": {
-    "nom": "Caroline Hurricanes",
-    "abrev": "CAR",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-    "score": 1
-   },
-   "ext": {
-    "nom": "Montréal Canadiens",
-    "abrev": "MTL",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
-    "score": 2
-   },
-   "fin": "OT"
   }
  ],
  "avenir": [
-  {
-   "id": 2026020361,
-   "date": "2026-11-21T23:00:00Z",
-   "etat": "pre",
-   "dom": {
-    "nom": "Floride Panthers",
-    "abrev": "FLA",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
-    "score": null
-   },
-   "ext": {
-    "nom": "Buffalo Sabres",
-    "abrev": "BUF",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
-    "score": null
-   },
-   "fin": ""
-  },
-  {
-   "id": 2026020362,
-   "date": "2026-11-21T23:00:00Z",
-   "etat": "pre",
-   "dom": {
-    "nom": "Nashville Predators",
-    "abrev": "NSH",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-    "score": null
-   },
-   "ext": {
-    "nom": "Pittsburgh Penguins",
-    "abrev": "PIT",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-    "score": null
-   },
-   "fin": ""
-  },
   {
    "id": 2026020363,
    "date": "2026-11-22T00:00:00Z",
@@ -359,6 +323,42 @@
     "nom": "Anaheim Ducks",
     "abrev": "ANA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+    "score": null
+   },
+   "fin": ""
+  },
+  {
+   "id": 2026020371,
+   "date": "2026-11-22T03:00:00Z",
+   "etat": "pre",
+   "dom": {
+    "nom": "Vancouver Canucks",
+    "abrev": "VAN",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+    "score": null
+   },
+   "ext": {
+    "nom": "Minnesota Wild",
+    "abrev": "MIN",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+    "score": null
+   },
+   "fin": ""
+  },
+  {
+   "id": 2026020372,
+   "date": "2026-11-22T03:00:00Z",
+   "etat": "pre",
+   "dom": {
+    "nom": "San Jose Sharks",
+    "abrev": "SJS",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "score": null
+   },
+   "ext": {
+    "nom": "Seattle Kraken",
+    "abrev": "SEA",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
     "score": null
    },
    "fin": ""
