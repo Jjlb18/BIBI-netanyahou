@@ -1,21 +1,21 @@
 {
- "maj": "2026-11-22T20:00:21+00:00",
+ "maj": "2026-11-22T20:39:17+00:00",
  "recents": [
   {
    "id": 2026020373,
    "date": "2026-11-22T17:30:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "New York Rangers",
     "abrev": "NYR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-    "score": 1
+    "score": 2
    },
    "ext": {
     "nom": "Caroline Hurricanes",
     "abrev": "CAR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-    "score": 4
+    "score": 5
    },
    "fin": ""
   },
@@ -366,6 +366,20 @@
  ],
  "classement": [
   {
+   "nom": "Hurricanes de la Caroline",
+   "abrev": "CAR",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+   "conf": "Eastern",
+   "div": "Metropolitan",
+   "mj": 24,
+   "v": 18,
+   "d": 3,
+   "dp": 3,
+   "pts": 39,
+   "bp": 100,
+   "bc": 55
+  },
+  {
    "nom": "Wild du Minnesota",
    "abrev": "MIN",
    "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
@@ -378,20 +392,6 @@
    "pts": 39,
    "bp": 90,
    "bc": 56
-  },
-  {
-   "nom": "Hurricanes de la Caroline",
-   "abrev": "CAR",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-   "conf": "Eastern",
-   "div": "Metropolitan",
-   "mj": 23,
-   "v": 17,
-   "d": 3,
-   "dp": 3,
-   "pts": 37,
-   "bp": 95,
-   "bc": 53
   },
   {
    "nom": "Oilers d'Edmonton",
@@ -548,20 +548,6 @@
    "bc": 71
   },
   {
-   "nom": "Rangers de New York",
-   "abrev": "NYR",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-   "conf": "Eastern",
-   "div": "Metropolitan",
-   "mj": 22,
-   "v": 13,
-   "d": 8,
-   "dp": 1,
-   "pts": 27,
-   "bp": 67,
-   "bc": 58
-  },
-  {
    "nom": "Islanders de New York",
    "abrev": "NYI",
    "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
@@ -573,6 +559,20 @@
    "dp": 5,
    "pts": 27,
    "bp": 71,
+   "bc": 63
+  },
+  {
+   "nom": "Rangers de New York",
+   "abrev": "NYR",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+   "conf": "Eastern",
+   "div": "Metropolitan",
+   "mj": 23,
+   "v": 13,
+   "d": 9,
+   "dp": 1,
+   "pts": 27,
+   "bp": 69,
    "bc": 63
   },
   {
