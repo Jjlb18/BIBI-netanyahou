@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-22T22:23:05+00:00",
+ "maj": "2026-11-22T23:21:48+00:00",
  "recents": [
   {
    "id": 2026020374,
@@ -9,13 +9,13 @@
     "nom": "Tampa Bay Lightning",
     "abrev": "TBL",
     "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "Buffalo Sabres",
     "abrev": "BUF",
     "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
-    "score": 1
+    "score": 2
    },
    "fin": ""
   },
