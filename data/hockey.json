@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-22T03:42:49+00:00",
+ "maj": "2026-11-22T04:47:16+00:00",
  "recents": [
   {
    "id": 2026020372,
@@ -9,13 +9,13 @@
     "nom": "San Jose Sharks",
     "abrev": "SJS",
     "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-    "score": 2
+    "score": 4
    },
    "ext": {
     "nom": "Seattle Kraken",
     "abrev": "SEA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-    "score": 1
+    "score": 3
    },
    "fin": ""
   },
@@ -27,31 +27,31 @@
     "nom": "Vancouver Canucks",
     "abrev": "VAN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "Minnesota Wild",
     "abrev": "MIN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
-    "score": 0
+    "score": 2
    },
    "fin": ""
   },
   {
    "id": 2026020370,
    "date": "2026-11-22T02:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Utah Mammoth",
     "abrev": "UTA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-    "score": 2
+    "score": 3
    },
    "ext": {
     "nom": "Anaheim Ducks",
     "abrev": "ANA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-    "score": 1
+    "score": 2
    },
    "fin": ""
   },
@@ -576,6 +576,20 @@
    "bc": 63
   },
   {
+   "nom": "Mammoth de l'Utah",
+   "abrev": "UTA",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 24,
+   "v": 12,
+   "d": 9,
+   "dp": 3,
+   "pts": 27,
+   "bp": 80,
+   "bc": 81
+  },
+  {
    "nom": "Blues de St. Louis",
    "abrev": "STL",
    "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
@@ -604,20 +618,6 @@
    "bc": 82
   },
   {
-   "nom": "Mammoth de l'Utah",
-   "abrev": "UTA",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 23,
-   "v": 11,
-   "d": 9,
-   "dp": 3,
-   "pts": 25,
-   "bp": 77,
-   "bc": 79
-  },
-  {
    "nom": "Flyers de Philadelphie",
    "abrev": "PHI",
    "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
@@ -637,13 +637,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 23,
+   "mj": 24,
    "v": 11,
-   "d": 11,
+   "d": 12,
    "dp": 1,
    "pts": 23,
-   "bp": 85,
-   "bc": 89
+   "bp": 87,
+   "bc": 92
   },
   {
    "nom": "Sabres de Buffalo",
