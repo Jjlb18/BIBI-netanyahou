@@ -1,10 +1,10 @@
 {
- "maj": "2026-11-22T04:47:16+00:00",
+ "maj": "2026-11-22T05:47:20+00:00",
  "recents": [
   {
    "id": 2026020372,
    "date": "2026-11-22T03:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "San Jose Sharks",
     "abrev": "SJS",
@@ -27,15 +27,15 @@
     "nom": "Vancouver Canucks",
     "abrev": "VAN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-    "score": 1
+    "score": 3
    },
    "ext": {
     "nom": "Minnesota Wild",
     "abrev": "MIN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
-    "score": 2
+    "score": 3
    },
-   "fin": ""
+   "fin": "OT"
   },
   {
    "id": 2026020370,
@@ -618,6 +618,20 @@
    "bc": 82
   },
   {
+   "nom": "Sharks de San Jose",
+   "abrev": "SJS",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+   "conf": "Western",
+   "div": "Pacific",
+   "mj": 25,
+   "v": 11,
+   "d": 12,
+   "dp": 2,
+   "pts": 24,
+   "bp": 69,
+   "bc": 89
+  },
+  {
    "nom": "Flyers de Philadelphie",
    "abrev": "PHI",
    "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
@@ -674,32 +688,18 @@
    "bc": 84
   },
   {
-   "nom": "Sharks de San Jose",
-   "abrev": "SJS",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-   "conf": "Western",
-   "div": "Pacific",
-   "mj": 24,
-   "v": 10,
-   "d": 12,
-   "dp": 2,
-   "pts": 22,
-   "bp": 65,
-   "bc": 86
-  },
-  {
    "nom": "Kraken de Seattle",
    "abrev": "SEA",
    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 19,
+   "mj": 20,
    "v": 10,
-   "d": 8,
+   "d": 9,
    "dp": 1,
    "pts": 21,
-   "bp": 64,
-   "bc": 67
+   "bp": 67,
+   "bc": 71
   },
   {
    "nom": "Capitals de Washington",
