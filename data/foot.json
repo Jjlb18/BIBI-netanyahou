@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-21T23:52:37+00:00",
+ "maj": "2026-11-22T00:33:40+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -561,57 +561,43 @@
      "d": "2026-11-21T12:30:00Z",
      "dom": "Man City",
      "ext": "Fulham",
-     "st": "post",
-     "sd": 1,
-     "se": 1
+     "st": "pre"
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Chelsea",
      "ext": "Leeds United",
-     "st": "post",
-     "sd": 1,
-     "se": 4
+     "st": "pre"
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Aston Villa",
      "ext": "Sunderland",
-     "st": "post",
-     "sd": 0,
-     "se": 0
+     "st": "pre"
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Bournemouth",
      "ext": "Nottingham",
-     "st": "post",
-     "sd": 2,
-     "se": 0
+     "st": "pre"
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Tottenham",
      "ext": "Ipswich Town",
-     "st": "post",
-     "sd": 2,
-     "se": 0
+     "st": "pre"
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Coventry City",
      "ext": "Crystal Palace",
-     "st": "post",
-     "sd": 3,
-     "se": 2
+     "st": "pre"
     },
     {
      "d": "2026-11-21T17:30:00Z",
      "dom": "Newcastle",
      "ext": "Arsenal",
-     "st": "post",
-     "sd": 2,
-     "se": 2
+     "st": "pre"
     },
     {
      "d": "2026-11-22T14:00:00Z",
@@ -833,6 +819,36 @@
      "d": "2026-12-12T17:30:00Z",
      "dom": "Man City",
      "ext": "Chelsea",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T14:00:00Z",
+     "dom": "Sunderland",
+     "ext": "Nottingham",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T14:00:00Z",
+     "dom": "Brighton Hove",
+     "ext": "Everton",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T14:00:00Z",
+     "dom": "Arsenal",
+     "ext": "Bournemouth",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T16:30:00Z",
+     "dom": "Coventry City",
+     "ext": "Aston Villa",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T19:00:00Z",
+     "dom": "Crystal Palace",
+     "ext": "Man United",
      "st": "pre"
     }
    ],
@@ -1686,6 +1702,30 @@
      "dom": "Como 1907",
      "ext": "Bologna",
      "st": "pre"
+    },
+    {
+     "d": "2026-12-13T11:30:00Z",
+     "dom": "Lazio",
+     "ext": "Roma",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T14:00:00Z",
+     "dom": "Inter",
+     "ext": "Torino",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T17:00:00Z",
+     "dom": "Parma",
+     "ext": "Fiorentina",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T19:45:00Z",
+     "dom": "Napoli",
+     "ext": "Milan",
+     "st": "pre"
     }
    ],
    "classement": [
@@ -2084,6 +2124,24 @@
      "dom": "M'gladbach",
      "ext": "Frankfurt",
      "st": "pre"
+    },
+    {
+     "d": "2026-12-13T14:30:00Z",
+     "dom": "Mainz",
+     "ext": "Freiburg",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T16:30:00Z",
+     "dom": "Hoffenheim",
+     "ext": "Bayern",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T18:30:00Z",
+     "dom": "Bremen",
+     "ext": "Leverkusen",
+     "st": "pre"
     }
    ],
    "classement": [
@@ -2265,31 +2323,41 @@
      "d": "2026-11-21T16:15:00Z",
      "dom": "Nice",
      "ext": "PSG",
-     "st": "pre"
+     "st": "post",
+     "sd": 2,
+     "se": 3
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Monaco",
      "ext": "Auxerre",
-     "st": "pre"
+     "st": "post",
+     "sd": 1,
+     "se": 1
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "RC Lens",
      "ext": "Toulouse",
-     "st": "pre"
+     "st": "post",
+     "sd": 1,
+     "se": 1
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Lille",
      "ext": "Olympique Lyon",
-     "st": "pre"
+     "st": "post",
+     "sd": 0,
+     "se": 1
     },
     {
      "d": "2026-11-21T19:45:00Z",
      "dom": "Strasbourg",
      "ext": "Brest",
-     "st": "pre"
+     "st": "post",
+     "sd": 0,
+     "se": 1
     },
     {
      "d": "2026-11-22T14:00:00Z",
@@ -2451,6 +2519,24 @@
      "d": "2026-12-12T19:45:00Z",
      "dom": "Le Havre",
      "ext": "Le Mans",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T14:00:00Z",
+     "dom": "Lorient",
+     "ext": "Lille",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T16:15:00Z",
+     "dom": "Stade Rennais",
+     "ext": "Monaco",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T19:45:00Z",
+     "dom": "Olympique Lyon",
+     "ext": "Marseille",
      "st": "pre"
     }
    ],
