@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-22T00:33:40+00:00",
+ "maj": "2026-11-22T01:50:16+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -561,43 +561,57 @@
      "d": "2026-11-21T12:30:00Z",
      "dom": "Man City",
      "ext": "Fulham",
-     "st": "pre"
+     "st": "post",
+     "sd": 1,
+     "se": 1
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Chelsea",
      "ext": "Leeds United",
-     "st": "pre"
+     "st": "post",
+     "sd": 1,
+     "se": 4
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Aston Villa",
      "ext": "Sunderland",
-     "st": "pre"
+     "st": "post",
+     "sd": 0,
+     "se": 0
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Bournemouth",
      "ext": "Nottingham",
-     "st": "pre"
+     "st": "post",
+     "sd": 2,
+     "se": 0
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Tottenham",
      "ext": "Ipswich Town",
-     "st": "pre"
+     "st": "post",
+     "sd": 2,
+     "se": 0
     },
     {
      "d": "2026-11-21T15:00:00Z",
      "dom": "Coventry City",
      "ext": "Crystal Palace",
-     "st": "pre"
+     "st": "post",
+     "sd": 3,
+     "se": 2
     },
     {
      "d": "2026-11-21T17:30:00Z",
      "dom": "Newcastle",
      "ext": "Arsenal",
-     "st": "pre"
+     "st": "post",
+     "sd": 2,
+     "se": 2
     },
     {
      "d": "2026-11-22T14:00:00Z",
