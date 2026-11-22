@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-22T05:47:20+00:00",
+ "maj": "2026-11-22T06:49:57+00:00",
  "recents": [
   {
    "id": 2026020372,
@@ -22,12 +22,12 @@
   {
    "id": 2026020371,
    "date": "2026-11-22T03:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Vancouver Canucks",
     "abrev": "VAN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-    "score": 3
+    "score": 4
    },
    "ext": {
     "nom": "Minnesota Wild",
@@ -35,7 +35,7 @@
     "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
     "score": 3
    },
-   "fin": "OT"
+   "fin": "SO"
   },
   {
    "id": 2026020370,
@@ -371,13 +371,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
    "conf": "Western",
    "div": "Central",
-   "mj": 24,
+   "mj": 25,
    "v": 17,
    "d": 3,
-   "dp": 4,
-   "pts": 38,
-   "bp": 87,
-   "bc": 52
+   "dp": 5,
+   "pts": 39,
+   "bp": 90,
+   "bc": 56
   },
   {
    "nom": "Hurricanes de la Caroline",
@@ -805,13 +805,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 24,
-   "v": 5,
+   "mj": 25,
+   "v": 6,
    "d": 18,
    "dp": 1,
-   "pts": 11,
-   "bp": 67,
-   "bc": 105
+   "pts": 13,
+   "bp": 71,
+   "bc": 108
   }
  ]
 }
