@@ -1,10 +1,10 @@
 {
- "maj": "2026-11-23T03:11:56+00:00",
+ "maj": "2026-11-23T04:25:31+00:00",
  "recents": [
   {
    "id": 2026020377,
    "date": "2026-11-23T01:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Vancouver Canucks",
     "abrev": "VAN",
@@ -15,7 +15,7 @@
     "nom": "Chicago Blackhawks",
     "abrev": "CHI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-    "score": 5
+    "score": 6
    },
    "fin": ""
   },
@@ -758,6 +758,20 @@
    "bc": 68
   },
   {
+   "nom": "Blackhawks de Chicago",
+   "abrev": "CHI",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 24,
+   "v": 8,
+   "d": 14,
+   "dp": 2,
+   "pts": 18,
+   "bp": 64,
+   "bc": 96
+  },
+  {
    "nom": "Kings de Los Angeles",
    "abrev": "LAK",
    "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
@@ -770,20 +784,6 @@
    "pts": 16,
    "bp": 58,
    "bc": 70
-  },
-  {
-   "nom": "Blackhawks de Chicago",
-   "abrev": "CHI",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 23,
-   "v": 7,
-   "d": 14,
-   "dp": 2,
-   "pts": 16,
-   "bp": 58,
-   "bc": 93
   },
   {
    "nom": "Penguins de Pittsburgh",
@@ -805,13 +805,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 25,
+   "mj": 26,
    "v": 6,
-   "d": 18,
+   "d": 19,
    "dp": 1,
    "pts": 13,
-   "bp": 71,
-   "bc": 108
+   "bp": 74,
+   "bc": 114
   }
  ]
 }
