@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-23T02:06:31+00:00",
+ "maj": "2026-11-23T03:11:56+00:00",
  "recents": [
   {
    "id": 2026020377,
@@ -9,20 +9,20 @@
     "nom": "Vancouver Canucks",
     "abrev": "VAN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-    "score": 1
+    "score": 3
    },
    "ext": {
     "nom": "Chicago Blackhawks",
     "abrev": "CHI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-    "score": 4
+    "score": 5
    },
    "fin": ""
   },
   {
    "id": 2026020376,
    "date": "2026-11-23T00:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Dallas Stars",
     "abrev": "DAL",
@@ -40,20 +40,20 @@
   {
    "id": 2026020375,
    "date": "2026-11-23T00:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "St. Louis Blues",
     "abrev": "STL",
     "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
-    "score": 1
+    "score": 5
    },
    "ext": {
     "nom": "Edmonton Oilers",
     "abrev": "EDM",
     "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-    "score": 3
+    "score": 4
    },
-   "fin": ""
+   "fin": "SO"
   },
   {
    "id": 2026020374,
@@ -399,13 +399,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 25,
+   "mj": 26,
    "v": 17,
    "d": 5,
-   "dp": 3,
-   "pts": 37,
-   "bp": 97,
-   "bc": 72
+   "dp": 4,
+   "pts": 38,
+   "bp": 101,
+   "bc": 77
   },
   {
    "nom": "Sénateurs d'Ottawa",
@@ -450,6 +450,20 @@
    "bc": 68
   },
   {
+   "nom": "Stars de Dallas",
+   "abrev": "DAL",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 23,
+   "v": 15,
+   "d": 6,
+   "dp": 2,
+   "pts": 32,
+   "bp": 65,
+   "bc": 56
+  },
+  {
    "nom": "Canadiens de Montréal",
    "abrev": "MTL",
    "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
@@ -476,20 +490,6 @@
    "pts": 31,
    "bp": 83,
    "bc": 61
-  },
-  {
-   "nom": "Stars de Dallas",
-   "abrev": "DAL",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 22,
-   "v": 14,
-   "d": 6,
-   "dp": 2,
-   "pts": 30,
-   "bp": 64,
-   "bc": 56
   },
   {
    "nom": "Devils du New Jersey",
@@ -548,6 +548,20 @@
    "bc": 71
   },
   {
+   "nom": "Blues de St. Louis",
+   "abrev": "STL",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 24,
+   "v": 13,
+   "d": 9,
+   "dp": 2,
+   "pts": 28,
+   "bp": 82,
+   "bc": 77
+  },
+  {
    "nom": "Islanders de New York",
    "abrev": "NYI",
    "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
@@ -588,20 +602,6 @@
    "pts": 27,
    "bp": 80,
    "bc": 81
-  },
-  {
-   "nom": "Blues de St. Louis",
-   "abrev": "STL",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 23,
-   "v": 12,
-   "d": 9,
-   "dp": 2,
-   "pts": 26,
-   "bp": 77,
-   "bc": 73
   },
   {
    "nom": "Jets de Winnipeg",
@@ -772,20 +772,6 @@
    "bc": 70
   },
   {
-   "nom": "Penguins de Pittsburgh",
-   "abrev": "PIT",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-   "conf": "Eastern",
-   "div": "Metropolitan",
-   "mj": 22,
-   "v": 7,
-   "d": 13,
-   "dp": 2,
-   "pts": 16,
-   "bp": 67,
-   "bc": 80
-  },
-  {
    "nom": "Blackhawks de Chicago",
    "abrev": "CHI",
    "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
@@ -798,6 +784,20 @@
    "pts": 16,
    "bp": 58,
    "bc": 93
+  },
+  {
+   "nom": "Penguins de Pittsburgh",
+   "abrev": "PIT",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+   "conf": "Eastern",
+   "div": "Metropolitan",
+   "mj": 23,
+   "v": 7,
+   "d": 14,
+   "dp": 2,
+   "pts": 16,
+   "bp": 67,
+   "bc": 81
   },
   {
    "nom": "Canucks de Vancouver",
