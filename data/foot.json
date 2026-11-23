@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-23T20:41:16+00:00",
+ "maj": "2026-11-23T21:31:07+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -1139,9 +1139,7 @@
      "d": "2026-11-23T20:00:00Z",
      "dom": "Levante",
      "ext": "Elche",
-     "st": "in",
-     "sd": 0,
-     "se": 0
+     "st": "pre"
     },
     {
      "d": "2026-11-27T20:00:00Z",
@@ -1282,63 +1280,63 @@
      "st": "annule"
     },
     {
-     "d": "2026-12-11T20:00:00Z",
-     "dom": "Elche",
-     "ext": "Sevilla FC",
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Espanyol",
+     "ext": "Celta",
      "st": "pre"
     },
     {
-     "d": "2026-12-12T13:00:00Z",
-     "dom": "Levante",
-     "ext": "Alavés",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-12T15:15:00Z",
-     "dom": "Villarreal",
-     "ext": "Rayo Vallecano",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-12T17:30:00Z",
+     "d": "2026-12-13T00:00:00Z",
      "dom": "Málaga",
      "ext": "Barça",
      "st": "pre"
     },
     {
-     "d": "2026-12-12T20:00:00Z",
-     "dom": "Real Betis",
-     "ext": "Santander",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-13T13:00:00Z",
-     "dom": "Atleti",
-     "ext": "Valencia",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-13T15:15:00Z",
-     "dom": "Deportivo",
-     "ext": "Athletic",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-13T17:30:00Z",
-     "dom": "Real Sociedad",
-     "ext": "Getafe",
-     "st": "pre"
-    },
-    {
-     "d": "2026-12-13T20:00:00Z",
+     "d": "2026-12-13T00:00:00Z",
      "dom": "Real Madrid",
      "ext": "Osasuna",
      "st": "pre"
     },
     {
-     "d": "2026-12-14T20:00:00Z",
-     "dom": "Espanyol",
-     "ext": "Celta",
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Deportivo",
+     "ext": "Athletic",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Levante",
+     "ext": "Alavés",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Elche",
+     "ext": "Sevilla FC",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Villarreal",
+     "ext": "Rayo Vallecano",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Real Betis",
+     "ext": "Santander",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Real Sociedad",
+     "ext": "Getafe",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-13T00:00:00Z",
+     "dom": "Atleti",
+     "ext": "Valencia",
      "st": "pre"
     }
    ],
@@ -1471,12 +1469,12 @@
     },
     {
      "r": 15,
-     "eq": "Levante",
+     "eq": "Elche",
      "j": 13,
-     "g": 2,
-     "n": 6,
-     "p": 5,
-     "pts": 12
+     "g": 3,
+     "n": 4,
+     "p": 6,
+     "pts": 13
     },
     {
      "r": 16,
@@ -1507,7 +1505,7 @@
     },
     {
      "r": 19,
-     "eq": "Elche",
+     "eq": "Levante",
      "j": 13,
      "g": 2,
      "n": 5,
@@ -1603,7 +1601,9 @@
      "d": "2026-11-23T19:45:00Z",
      "dom": "Monza",
      "ext": "Fiorentina",
-     "st": "pre"
+     "st": "in",
+     "sd": 3,
+     "se": 0
     },
     {
      "d": "2026-11-27T19:45:00Z",
