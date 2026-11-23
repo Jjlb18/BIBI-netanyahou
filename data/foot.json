@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-23T00:00:51+00:00",
+ "maj": "2026-11-23T00:52:52+00:00",
  "competitions": {
   "ucl": {
    "matchs": [
@@ -617,17 +617,13 @@
      "d": "2026-11-22T14:00:00Z",
      "dom": "Hull City",
      "ext": "Brighton Hove",
-     "st": "post",
-     "sd": 2,
-     "se": 0
+     "st": "pre"
     },
     {
      "d": "2026-11-22T16:30:00Z",
      "dom": "Liverpool",
      "ext": "Man United",
-     "st": "post",
-     "sd": 4,
-     "se": 0
+     "st": "pre"
     },
     {
      "d": "2026-11-23T20:00:00Z",
@@ -867,6 +863,12 @@
      "d": "2026-12-13T19:00:00Z",
      "dom": "Crystal Palace",
      "ext": "Man United",
+     "st": "pre"
+    },
+    {
+     "d": "2026-12-14T20:00:00Z",
+     "dom": "Hull City",
+     "ext": "Tottenham",
      "st": "pre"
     }
    ],
