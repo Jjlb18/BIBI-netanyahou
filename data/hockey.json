@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-24T03:48:39+00:00",
+ "maj": "2026-11-24T04:55:48+00:00",
  "recents": [
   {
    "id": 2026020384,
@@ -15,7 +15,7 @@
     "nom": "Minnesota Wild",
     "abrev": "MIN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
-    "score": 2
+    "score": 3
    },
    "fin": ""
   },
@@ -27,13 +27,13 @@
     "nom": "Seattle Kraken",
     "abrev": "SEA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "Anaheim Ducks",
     "abrev": "ANA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-    "score": 0
+    "score": 1
    },
    "fin": ""
   },
