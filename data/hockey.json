@@ -1,6 +1,24 @@
 {
- "maj": "2026-11-24T01:54:25+00:00",
+ "maj": "2026-11-24T02:47:22+00:00",
  "recents": [
+  {
+   "id": 2026020383,
+   "date": "2026-11-24T02:40:00Z",
+   "etat": "in",
+   "dom": {
+    "nom": "Seattle Kraken",
+    "abrev": "SEA",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+    "score": 0
+   },
+   "ext": {
+    "nom": "Anaheim Ducks",
+    "abrev": "ANA",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+    "score": 0
+   },
+   "fin": ""
+  },
   {
    "id": 2026020382,
    "date": "2026-11-24T00:30:00Z",
@@ -33,7 +51,7 @@
     "nom": "Toronto Maple Leafs",
     "abrev": "TOR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
-    "score": 1
+    "score": 2
    },
    "fin": ""
   },
@@ -63,20 +81,20 @@
     "nom": "Montréal Canadiens",
     "abrev": "MTL",
     "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "Los Angeles Kings",
     "abrev": "LAK",
     "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
-    "score": 1
+    "score": 2
    },
    "fin": ""
   },
   {
    "id": 2026020378,
    "date": "2026-11-24T00:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "New Jersey Devils",
     "abrev": "NJD",
@@ -162,45 +180,9 @@
     "score": 6
    },
    "fin": ""
-  },
-  {
-   "id": 2026020373,
-   "date": "2026-11-22T17:30:00Z",
-   "etat": "post",
-   "dom": {
-    "nom": "New York Rangers",
-    "abrev": "NYR",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-    "score": 2
-   },
-   "ext": {
-    "nom": "Caroline Hurricanes",
-    "abrev": "CAR",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-    "score": 5
-   },
-   "fin": ""
   }
  ],
  "avenir": [
-  {
-   "id": 2026020383,
-   "date": "2026-11-24T02:40:00Z",
-   "etat": "pre",
-   "dom": {
-    "nom": "Seattle Kraken",
-    "abrev": "SEA",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-    "score": null
-   },
-   "ext": {
-    "nom": "Anaheim Ducks",
-    "abrev": "ANA",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-    "score": null
-   },
-   "fin": ""
-  },
   {
    "id": 2026020384,
    "date": "2026-11-24T03:00:00Z",
@@ -362,6 +344,24 @@
     "score": null
    },
    "fin": ""
+  },
+  {
+   "id": 2026020393,
+   "date": "2026-11-26T00:00:00Z",
+   "etat": "pre",
+   "dom": {
+    "nom": "Columbus Blue Jackets",
+    "abrev": "CBJ",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+    "score": null
+   },
+   "ext": {
+    "nom": "New Jersey Devils",
+    "abrev": "NJD",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+    "score": null
+   },
+   "fin": ""
   }
  ],
  "classement": [
@@ -464,6 +464,20 @@
    "bc": 56
   },
   {
+   "nom": "Devils du New Jersey",
+   "abrev": "NJD",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+   "conf": "Eastern",
+   "div": "Metropolitan",
+   "mj": 24,
+   "v": 16,
+   "d": 8,
+   "dp": 0,
+   "pts": 32,
+   "bp": 91,
+   "bc": 75
+  },
+  {
    "nom": "Canadiens de Montréal",
    "abrev": "MTL",
    "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
@@ -490,20 +504,6 @@
    "pts": 31,
    "bp": 83,
    "bc": 61
-  },
-  {
-   "nom": "Devils du New Jersey",
-   "abrev": "NJD",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
-   "conf": "Eastern",
-   "div": "Metropolitan",
-   "mj": 23,
-   "v": 15,
-   "d": 8,
-   "dp": 0,
-   "pts": 30,
-   "bp": 88,
-   "bc": 73
   },
   {
    "nom": "Avalanche du Colorado",
@@ -749,13 +749,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
    "conf": "Eastern",
    "div": "Metropolitan",
-   "mj": 21,
+   "mj": 22,
    "v": 9,
-   "d": 12,
+   "d": 13,
    "dp": 0,
    "pts": 18,
-   "bp": 54,
-   "bc": 68
+   "bp": 56,
+   "bc": 71
   },
   {
    "nom": "Blackhawks de Chicago",
