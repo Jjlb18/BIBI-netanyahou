@@ -1,21 +1,21 @@
 {
- "maj": "2026-11-25T02:51:04+00:00",
+ "maj": "2026-11-25T03:52:01+00:00",
  "recents": [
   {
    "id": 2026020385,
    "date": "2026-11-25T01:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Edmonton Oilers",
     "abrev": "EDM",
     "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-    "score": 2
+    "score": 3
    },
    "ext": {
     "nom": "Vegas Golden Knights",
     "abrev": "VGK",
     "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-    "score": 2
+    "score": 5
    },
    "fin": ""
   },
@@ -399,13 +399,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 26,
+   "mj": 27,
    "v": 17,
-   "d": 5,
+   "d": 6,
    "dp": 4,
    "pts": 38,
-   "bp": 101,
-   "bc": 77
+   "bp": 104,
+   "bc": 82
   },
   {
    "nom": "Sénateurs d'Ottawa",
@@ -427,13 +427,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 25,
-   "v": 14,
+   "mj": 26,
+   "v": 15,
    "d": 6,
    "dp": 5,
-   "pts": 33,
-   "bp": 85,
-   "bc": 75
+   "pts": 35,
+   "bp": 90,
+   "bc": 78
   },
   {
    "nom": "Lightning de Tampa Bay",
