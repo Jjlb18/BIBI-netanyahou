@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-26T03:13:57+00:00",
+ "maj": "2026-11-26T04:21:31+00:00",
  "recents": [
   {
    "id": 2026020398,
@@ -9,7 +9,7 @@
     "nom": "Anaheim Ducks",
     "abrev": "ANA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-    "score": 0
+    "score": 3
    },
    "ext": {
     "nom": "San Jose Sharks",
@@ -45,7 +45,7 @@
     "nom": "Colorado Avalanche",
     "abrev": "COL",
     "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
-    "score": 1
+    "score": 4
    },
    "ext": {
     "nom": "Montréal Canadiens",
@@ -58,12 +58,12 @@
   {
    "id": 2026020396,
    "date": "2026-11-26T01:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Minnesota Wild",
     "abrev": "MIN",
     "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
-    "score": 2
+    "score": 3
    },
    "ext": {
     "nom": "Utah Mammoth",
@@ -76,18 +76,18 @@
   {
    "id": 2026020395,
    "date": "2026-11-26T01:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Dallas Stars",
     "abrev": "DAL",
     "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "Nashville Predators",
     "abrev": "NSH",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-    "score": 1
+    "score": 3
    },
    "fin": ""
   },
@@ -385,13 +385,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
    "conf": "Western",
    "div": "Central",
-   "mj": 26,
+   "mj": 27,
    "v": 18,
-   "d": 3,
+   "d": 4,
    "dp": 5,
    "pts": 41,
-   "bp": 95,
-   "bc": 58
+   "bp": 98,
+   "bc": 62
   },
   {
    "nom": "Oilers d'Edmonton",
@@ -450,20 +450,6 @@
    "bc": 77
   },
   {
-   "nom": "Stars de Dallas",
-   "abrev": "DAL",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 23,
-   "v": 15,
-   "d": 6,
-   "dp": 2,
-   "pts": 32,
-   "bp": 65,
-   "bc": 56
-  },
-  {
    "nom": "Lightning de Tampa Bay",
    "abrev": "TBL",
    "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
@@ -476,6 +462,20 @@
    "pts": 32,
    "bp": 85,
    "bc": 71
+  },
+  {
+   "nom": "Stars de Dallas",
+   "abrev": "DAL",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 24,
+   "v": 15,
+   "d": 7,
+   "dp": 2,
+   "pts": 32,
+   "bp": 66,
+   "bc": 59
   },
   {
    "nom": "Canadiens de Montréal",
@@ -504,6 +504,20 @@
    "pts": 31,
    "bp": 85,
    "bc": 65
+  },
+  {
+   "nom": "Predators de Nashville",
+   "abrev": "NSH",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 24,
+   "v": 13,
+   "d": 6,
+   "dp": 5,
+   "pts": 31,
+   "bp": 74,
+   "bc": 70
   },
   {
    "nom": "Panthers de la Floride",
@@ -548,20 +562,6 @@
    "bc": 68
   },
   {
-   "nom": "Predators de Nashville",
-   "abrev": "NSH",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 23,
-   "v": 12,
-   "d": 6,
-   "dp": 5,
-   "pts": 29,
-   "bp": 71,
-   "bc": 69
-  },
-  {
    "nom": "Islanders de New York",
    "abrev": "NYI",
    "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
@@ -590,6 +590,20 @@
    "bc": 80
   },
   {
+   "nom": "Mammoth de l'Utah",
+   "abrev": "UTA",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 26,
+   "v": 13,
+   "d": 10,
+   "dp": 3,
+   "pts": 29,
+   "bp": 86,
+   "bc": 88
+  },
+  {
    "nom": "Rangers de New York",
    "abrev": "NYR",
    "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
@@ -602,20 +616,6 @@
    "pts": 27,
    "bp": 70,
    "bc": 68
-  },
-  {
-   "nom": "Mammoth de l'Utah",
-   "abrev": "UTA",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 25,
-   "v": 12,
-   "d": 10,
-   "dp": 3,
-   "pts": 27,
-   "bp": 82,
-   "bc": 85
   },
   {
    "nom": "Sabres de Buffalo",
