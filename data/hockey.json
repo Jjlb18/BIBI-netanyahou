@@ -1,6 +1,24 @@
 {
- "maj": "2026-11-27T18:24:22+00:00",
+ "maj": "2026-11-27T19:37:03+00:00",
  "recents": [
+  {
+   "id": 2026020403,
+   "date": "2026-11-27T19:00:00Z",
+   "etat": "in",
+   "dom": {
+    "nom": "St. Louis Blues",
+    "abrev": "STL",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+    "score": 2
+   },
+   "ext": {
+    "nom": "Dallas Stars",
+    "abrev": "DAL",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+    "score": 0
+   },
+   "fin": ""
+  },
   {
    "id": 2026020402,
    "date": "2026-11-27T18:00:00Z",
@@ -9,13 +27,13 @@
     "nom": "Nashville Predators",
     "abrev": "NSH",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-    "score": 1
+    "score": 2
    },
    "ext": {
     "nom": "Utah Mammoth",
     "abrev": "UTA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-    "score": 0
+    "score": 2
    },
    "fin": ""
   },
@@ -27,13 +45,13 @@
     "nom": "New Jersey Devils",
     "abrev": "NJD",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
-    "score": 0
+    "score": 2
    },
    "ext": {
     "nom": "Calgary Flames",
     "abrev": "CGY",
     "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-    "score": 0
+    "score": 3
    },
    "fin": ""
   },
@@ -51,7 +69,7 @@
     "nom": "Toronto Maple Leafs",
     "abrev": "TOR",
     "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
-    "score": 0
+    "score": 1
    },
    "fin": ""
   },
@@ -162,45 +180,9 @@
     "score": 1
    },
    "fin": ""
-  },
-  {
-   "id": 2026020393,
-   "date": "2026-11-26T00:00:00Z",
-   "etat": "post",
-   "dom": {
-    "nom": "Columbus Blue Jackets",
-    "abrev": "CBJ",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
-    "score": 2
-   },
-   "ext": {
-    "nom": "New Jersey Devils",
-    "abrev": "NJD",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
-    "score": 3
-   },
-   "fin": "SO"
   }
  ],
  "avenir": [
-  {
-   "id": 2026020403,
-   "date": "2026-11-27T19:00:00Z",
-   "etat": "pre",
-   "dom": {
-    "nom": "St. Louis Blues",
-    "abrev": "STL",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
-    "score": null
-   },
-   "ext": {
-    "nom": "Dallas Stars",
-    "abrev": "DAL",
-    "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-    "score": null
-   },
-   "fin": ""
-  },
   {
    "id": 2026020404,
    "date": "2026-11-27T20:00:00Z",
@@ -359,6 +341,24 @@
     "nom": "Winnipeg Jets",
     "abrev": "WPG",
     "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+    "score": null
+   },
+   "fin": ""
+  },
+  {
+   "id": 2026020413,
+   "date": "2026-11-28T01:00:00Z",
+   "etat": "pre",
+   "dom": {
+    "nom": "Buffalo Sabres",
+    "abrev": "BUF",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+    "score": null
+   },
+   "ext": {
+    "nom": "Pittsburgh Penguins",
+    "abrev": "PIT",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
     "score": null
    },
    "fin": ""
