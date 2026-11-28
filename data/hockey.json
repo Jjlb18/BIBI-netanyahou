@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-28T02:03:55+00:00",
+ "maj": "2026-11-28T02:44:17+00:00",
  "recents": [
   {
    "id": 2026020414,
@@ -9,7 +9,7 @@
     "nom": "Edmonton Oilers",
     "abrev": "EDM",
     "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-    "score": 0
+    "score": 2
    },
    "ext": {
     "nom": "Seattle Kraken",
@@ -27,13 +27,13 @@
     "nom": "Buffalo Sabres",
     "abrev": "BUF",
     "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
-    "score": 2
+    "score": 3
    },
    "ext": {
     "nom": "Pittsburgh Penguins",
     "abrev": "PIT",
     "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-    "score": 2
+    "score": 4
    },
    "fin": ""
   },
@@ -45,7 +45,7 @@
     "nom": "New York Islanders",
     "abrev": "NYI",
     "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-    "score": 0
+    "score": 1
    },
    "ext": {
     "nom": "Winnipeg Jets",
