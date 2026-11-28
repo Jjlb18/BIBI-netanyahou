@@ -1,10 +1,10 @@
 {
- "maj": "2026-11-28T03:45:33+00:00",
+ "maj": "2026-11-28T04:51:16+00:00",
  "recents": [
   {
    "id": 2026020414,
    "date": "2026-11-28T01:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Edmonton Oilers",
     "abrev": "EDM",
@@ -22,7 +22,7 @@
   {
    "id": 2026020413,
    "date": "2026-11-28T01:00:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "Buffalo Sabres",
     "abrev": "BUF",
@@ -33,7 +33,7 @@
     "nom": "Pittsburgh Penguins",
     "abrev": "PIT",
     "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-    "score": 5
+    "score": 6
    },
    "fin": ""
   },
@@ -399,13 +399,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
    "conf": "Western",
    "div": "Pacific",
-   "mj": 27,
+   "mj": 28,
    "v": 17,
-   "d": 6,
+   "d": 7,
    "dp": 4,
    "pts": 38,
-   "bp": 104,
-   "bc": 82
+   "bp": 106,
+   "bc": 86
   },
   {
    "nom": "Sénateurs d'Ottawa",
@@ -623,13 +623,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
    "conf": "Eastern",
    "div": "Atlantic",
-   "mj": 25,
+   "mj": 26,
    "v": 11,
-   "d": 10,
+   "d": 11,
    "dp": 4,
    "pts": 26,
-   "bp": 78,
-   "bc": 84
+   "bp": 81,
+   "bc": 90
   },
   {
    "nom": "Flyers de Philadelphie",
@@ -660,6 +660,20 @@
    "bc": 102
   },
   {
+   "nom": "Kraken de Seattle",
+   "abrev": "SEA",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+   "conf": "Western",
+   "div": "Pacific",
+   "mj": 23,
+   "v": 12,
+   "d": 10,
+   "dp": 1,
+   "pts": 25,
+   "bp": 75,
+   "bc": 78
+  },
+  {
    "nom": "Ducks d'Anaheim",
    "abrev": "ANA",
    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
@@ -686,20 +700,6 @@
    "pts": 24,
    "bp": 70,
    "bc": 94
-  },
-  {
-   "nom": "Kraken de Seattle",
-   "abrev": "SEA",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-   "conf": "Western",
-   "div": "Pacific",
-   "mj": 22,
-   "v": 11,
-   "d": 10,
-   "dp": 1,
-   "pts": 23,
-   "bp": 71,
-   "bc": 76
   },
   {
    "nom": "Red Wings de Detroit",
@@ -791,13 +791,13 @@
    "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
    "conf": "Eastern",
    "div": "Metropolitan",
-   "mj": 24,
-   "v": 7,
+   "mj": 25,
+   "v": 8,
    "d": 15,
    "dp": 2,
-   "pts": 16,
-   "bp": 70,
-   "bc": 87
+   "pts": 18,
+   "bp": 76,
+   "bc": 90
   },
   {
    "nom": "Canucks de Vancouver",
