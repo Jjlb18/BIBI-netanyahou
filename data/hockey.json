@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-28T02:44:17+00:00",
+ "maj": "2026-11-28T03:45:33+00:00",
  "recents": [
   {
    "id": 2026020414,
@@ -15,7 +15,7 @@
     "nom": "Seattle Kraken",
     "abrev": "SEA",
     "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-    "score": 1
+    "score": 4
    },
    "fin": ""
   },
@@ -33,14 +33,14 @@
     "nom": "Pittsburgh Penguins",
     "abrev": "PIT",
     "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-    "score": 4
+    "score": 5
    },
    "fin": ""
   },
   {
    "id": 2026020412,
    "date": "2026-11-28T00:30:00Z",
-   "etat": "in",
+   "etat": "post",
    "dom": {
     "nom": "New York Islanders",
     "abrev": "NYI",
@@ -534,6 +534,20 @@
    "bc": 79
   },
   {
+   "nom": "Jets de Winnipeg",
+   "abrev": "WPG",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+   "conf": "Western",
+   "div": "Central",
+   "mj": 27,
+   "v": 14,
+   "d": 9,
+   "dp": 4,
+   "pts": 32,
+   "bp": 86,
+   "bc": 87
+  },
+  {
    "nom": "Bruins de Boston",
    "abrev": "BOS",
    "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
@@ -576,32 +590,18 @@
    "bc": 93
   },
   {
-   "nom": "Jets de Winnipeg",
-   "abrev": "WPG",
-   "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
-   "conf": "Western",
-   "div": "Central",
-   "mj": 26,
-   "v": 13,
-   "d": 9,
-   "dp": 4,
-   "pts": 30,
-   "bp": 83,
-   "bc": 86
-  },
-  {
    "nom": "Islanders de New York",
    "abrev": "NYI",
    "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
    "conf": "Eastern",
    "div": "Metropolitan",
-   "mj": 24,
+   "mj": 25,
    "v": 12,
-   "d": 7,
+   "d": 8,
    "dp": 5,
    "pts": 29,
-   "bp": 76,
-   "bc": 69
+   "bp": 77,
+   "bc": 72
   },
   {
    "nom": "Rangers de New York",
